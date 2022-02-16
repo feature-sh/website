@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+
+    "format": "prettier --write ./components/**/*.tsx ./pages/**/*.tsx ./layouts/**/*.tsx"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.3",

@@ -1,9 +1,11 @@
-export type NavigationItem = {
-	i18nLabel: string;
-	route?: string;
-};
+/* Not used yet */
 
-export const items: { [key: string]: NavigationItem } =  {
+export type NavigationItem = {
+	i18nLabel: string
+	route?: string
+}
+
+export const items: { [key: string]: NavigationItem } = {
 	product: {
 		i18nLabel: 'navitem_product',
 		route: '/product',
@@ -32,5 +34,5 @@ export const items: { [key: string]: NavigationItem } =  {
 	pricing: {
 		i18nLabel: 'navitem_pricing',
 		route: '/pricing',
-	}
+	},
 }
