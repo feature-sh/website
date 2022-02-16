@@ -1,7 +1,4 @@
-import { useState } from 'react'
-import { items as navItems } from '../constants/navigation'
 import { classNames } from '../utils/classNames'
-
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
