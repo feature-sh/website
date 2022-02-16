@@ -5,6 +5,7 @@ import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 
 import Header from '../components/Header';
+import Footer from '../components/Footer'
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
@@ -31,6 +32,7 @@ const Home = () => {
           <h2>{t('hero_subheading')}</h2>
         </main>
       </div>
+      <Footer />
     </Fragment>
   )
 }
