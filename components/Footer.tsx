@@ -1,3 +1,4 @@
+import {useTranslation} from 'next-i18next';
 import Image from 'next/image';
 
 // tailwind navigation - to be replaced {{{
@@ -94,6 +95,8 @@ const navigation = {
 // }}}
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation('footer');
+
   return (
     <footer className="bg-white" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
@@ -110,7 +113,7 @@ const Footer: React.FC = () => {
               alt="Company name"
             />
             <p className="text-base text-gray-500">
-              Making the world a better place through constructing elegant hierarchies.
+              {t('feature_description')}
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
@@ -177,7 +180,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="pt-8 mt-12 border-t border-gray-200">
-          <p className="text-base text-gray-400 xl:text-center">&copy; 2020 Workflow, Inc. All rights reserved.</p>
+          <p className="text-base text-gray-400 xl:text-center">&copy; {new Date(Date.now()).getFullYear()} Feature. {t('copyright_notice')}</p>
         </div>
       </div>
     </footer>
