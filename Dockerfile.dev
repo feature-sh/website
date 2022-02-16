@@ -1,0 +1,11 @@
+# build: docker build -f Dockerfile.dev . -t feature/dev
+# run (example): docker run -v$PWD:/usr/app -p8080:3000 feature/dev
+
+FROM		node:16-alpine3.14
+
+# application folder must be mounted on /usr/app in development
+WORKDIR		/usr/app
+
+COPY		./docker_entrypoint.dev.sh /entrypoint.sh
+
+ENTRYPOINT	[ "sh", "/entrypoint.sh" ]
