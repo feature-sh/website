@@ -19,18 +19,18 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 }
 
 const Home: NextPageWithLayout = () => {
-  const { t } = useTranslation('homepage')
+  const { t: translate } = useTranslation('homepage')
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
-        <title>{t('title')}</title>
-        <meta name="description" content={t('description')} />
+        <title>{translate('title')}</title>
+        <meta name="description" content={translate('description')} />
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1>{t('hero_heading')}</h1>
-        <h2>{t('hero_subheading')}</h2>
+        <h1>{translate('hero_heading')}</h1>
+        <h2>{translate('hero_subheading')}</h2>
       </main>
     </div>
   )

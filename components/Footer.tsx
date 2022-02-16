@@ -95,7 +95,7 @@ const navigation = {
 // }}}
 
 const Footer: React.FC = () => {
-  const { t } = useTranslation('footer')
+  const { t: translate } = useTranslation('footer')
 
   return (
     <footer className="bg-white" aria-labelledby="footer-heading">
@@ -113,7 +113,7 @@ const Footer: React.FC = () => {
               alt="Company name"
             />
             <p className="text-base text-gray-500">
-              {t('feature_description')}
+              {translate('feature_description')}
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
@@ -206,7 +206,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 border-t border-gray-200 pt-8">
           <p className="text-base text-gray-400 xl:text-center">
             &copy; {new Date(Date.now()).getFullYear()} Feature.{' '}
-            {t('copyright_notice')}
+            {translate('copyright_notice')}
           </p>
         </div>
       </div>
