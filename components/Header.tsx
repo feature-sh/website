@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { items as navItems } from '../constants/navigation'
-import { classNames } from '../utils/classNames';
+import { classNames } from '../utils/classNames'
 
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
@@ -16,10 +16,10 @@ import {
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
-import Image from 'next/image';
+import Image from 'next/image'
 
-import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
+import { useTranslation } from 'next-i18next'
+import Link from 'next/link'
 
 // {{{ tailwind example metadata - will be replaced
 
@@ -93,7 +93,7 @@ const resources = [
 // }}}
 
 const Header: React.FC = () => {
-	const { t } = useTranslation('header');
+	const { t } = useTranslation('header')
 
 	return (
 		<Popover className="relative bg-white">
@@ -118,11 +118,9 @@ const Header: React.FC = () => {
 				<div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
 					<Popover.Group as="nav" className="flex space-x-10">
 						<Link href="/product">
-						<a
-							className="text-base font-medium text-gray-500 hover:text-gray-900"
-						>
-							{t('navitem_product')}
-						</a>
+							<a className="text-base font-medium text-gray-500 hover:text-gray-900">
+								{t('navitem_product')}
+							</a>
 						</Link>
 						<Popover className="relative">
 							{({ open }) => (
@@ -203,7 +201,7 @@ const Header: React.FC = () => {
 								</>
 							)}
 						</Popover>
-						
+
 						<Popover className="relative">
 							{({ open }) => (
 								<>
@@ -259,18 +257,14 @@ const Header: React.FC = () => {
 					</Popover.Group>
 					<div className="flex items-center md:ml-12">
 						<Link href="/dashboard">
-						<a
-							className="text-base font-medium text-gray-500 hover:text-gray-900"
-						>
-							{t('navitem_dashboard')}
-						</a>
+							<a className="text-base font-medium text-gray-500 hover:text-gray-900">
+								{t('navitem_dashboard')}
+							</a>
 						</Link>
-						<Link href="/book-a-demo">
-						<a
-							className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
-						>
-							{t('navitem_book')}
-						</a>
+						<Link href="/book">
+							<a className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700">
+								{t('navitem_book')}
+							</a>
 						</Link>
 					</div>
 				</div>
@@ -293,10 +287,11 @@ const Header: React.FC = () => {
 						<div className="px-5 pt-5 pb-6">
 							<div className="flex items-center justify-between">
 								<div>
-									<img
-										className="w-auto h-8"
-										src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-										alt="Workflow"
+									<Image
+										src="/logo.svg"
+										width={40}
+										height={40}
+										alt="feature's logo"
 									/>
 								</div>
 								<div className="-mr-2">
@@ -327,26 +322,19 @@ const Header: React.FC = () => {
 						</div>
 						<div className="px-5 py-6">
 							<div className="grid grid-cols-2 gap-4">
-								<a
-									href="#"
-									className="text-base font-medium text-gray-900 hover:text-gray-700"
-								>
-									Pricing
-								</a>
+								<Link href="/product">
+									<a className="text-base font-medium text-gray-900 hover:text-gray-700">
+										{t('navitem_product')}
+									</a>
+								</Link>
 
-								<a
-									href="#"
-									className="text-base font-medium text-gray-900 hover:text-gray-700"
-								>
-									Docs
-								</a>
+								<Link href="/blog">
+									<a className="text-base font-medium text-gray-900 hover:text-gray-700">
+										{t('navitem_blog')}
+									</a>
+								</Link>
 
-								<a
-									href="#"
-									className="text-base font-medium text-gray-900 hover:text-gray-700"
-								>
-									Enterprise
-								</a>
+								{/*
 								{resources.map((item) => (
 									<a
 										key={item.name}
@@ -356,20 +344,19 @@ const Header: React.FC = () => {
 										{item.name}
 									</a>
 								))}
+								*/}
 							</div>
 							<div className="mt-6">
-								<a
-									href="#"
-									className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
-								>
-									Sign up
-								</a>
-								<p className="mt-6 text-base font-medium text-center text-gray-500">
-									Existing customer?{' '}
-									<a href="#" className="text-indigo-600 hover:text-indigo-500">
-										Sign in
+								<Link href="/book">
+									<a className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700">
+										{t('navitem_book')}
 									</a>
-								</p>
+								</Link>
+								<Link href="/dashboard">
+									<a className="block mt-5 text-center text-indigo-600 hover:text-indigo-500">
+										Or go to your dashboard
+									</a>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -379,4 +366,4 @@ const Header: React.FC = () => {
 	)
 }
 
-export default Header;
+export default Header
