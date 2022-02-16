@@ -1,7 +1,8 @@
 {
 	"navitem_product": "Product",
-	"navitem_feature": "Feature",
+	"navitem_features": "Feature",
 	"navitem_blog": "Blog",
 	"navitem_dashboard": "Dashboard",
-	"navitem_book": "Book a demo"
+	"navitem_book": "Book a demo",
+	"navitem_pricing": "Pricing"
 }
