@@ -1,43 +1,36 @@
 export type NavigationItem = {
-	i18n_label: string;
-	route: string;
-	id: number;
+	i18nLabel: string;
+	route?: string;
 };
 
 export const items: { [key: string]: NavigationItem } =  {
 	product: {
-		i18n_label: 'navitem_product',
+		i18nLabel: 'navitem_product',
 		route: '/product',
-		id: 1
 	},
 
 	features: {
-		i18n_label: 'navitem_features',
+		i18nLabel: 'navitem_features',
 		route: '/features',
-		id: 2
 	},
 
 	blog: {
-		i18n_label: 'feature_blog',
+		i18nLabel: 'feature_blog',
 		route: '/blog',
-		id: 3
 	},
 
 	dashboard: {
-		i18n_label: 'navitem_dashboard',
+		i18nLabel: 'navitem_dashboard',
 		route: '/dashboard',
-		id: 4
 	},
 
 	book: {
-		i18n_label: 'navitem_book',
+		i18nLabel: 'navitem_book',
 		route: '/book-a-demo',
-		id: 5
 	},
 
 	pricing: {
-		i18n_label: 'navitem_pricing',
+		i18nLabel: 'navitem_pricing',
 		route: '/pricing',
-		id: 6
 	}
 }
