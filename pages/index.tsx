@@ -1,11 +1,10 @@
-import { Fragment } from 'react'
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 
-import Header from '../components/Header';
-import Footer from '../components/Footer'
+import {NextPageWithLayout} from './_app'
+import withMainLayout from '../layouts/withMainLayout'
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
@@ -15,12 +14,10 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   }
 }
 
-const Home = () => {
+const Home: NextPageWithLayout = () => {
   const { t } = useTranslation('homepage')
 
   return (
-    <Fragment>
-      <Header />
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
         <Head>
           <title>Feature</title>
@@ -32,9 +29,9 @@ const Home = () => {
           <h2>{t('hero_subheading')}</h2>
         </main>
       </div>
-      <Footer />
-    </Fragment>
   )
 }
+
+Home.withLayout = withMainLayout;
 
 export default Home;
