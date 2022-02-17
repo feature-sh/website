@@ -3,5 +3,9 @@
 	"description": "meta description blablablah",
 	"hero_heading_part1": "Incitez les développeurs",
 	"hero_heading_part2": "à réaliser vos issues Github",
-	"hero_subheading": "Attachez une récompense a vos fonctionnalités, fixes, audit... Pour inciter les développeurs à les réaliser dans le temps imparti."
+	"hero_subheading": "Attachez une récompense a vos fonctionnalités, fixes, audit... Pour inciter les développeurs à les réaliser dans le temps imparti.",
+
+	"video_demo_heading": "Faites une offre à un développeur en quelques secondes",
+	"video_demo_subheading": "Gérez plus rapidement",
+	"video_demo_description": "Directly on Github your will create the deal and it will automatically appears to developpers avec une preuve de mise sous séquestre de la récompense pour inciter les developeurs à réaliser la tache."
 }

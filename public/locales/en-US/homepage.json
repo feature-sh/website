@@ -3,5 +3,9 @@
 	"description": "meta description blablablah",
 	"hero_heading_part1": "Incentive Developers",
 	"hero_heading_part2": "to do your Github Issues",
-	"hero_subheading": "Attach directly a Reward in Github to your features, fixes, audit... to incentive Developers to complete them in a given time."
+	"hero_subheading": "Attach directly a Reward in Github to your features, fixes, audit... to incentive Developers to complete them in a given time.",
+
+	"video_demo_heading": "Offer a Deal to Developers in a Few Seconds",
+	"video_demo_subheading": "Deal Faster",
+	"video_demo_description": "Directly on Github your will create the deal and it will automatically appears to developpers avec une preuve de mise sous séquestre de la récompense pour inciter les developeurs à réaliser la tache."
 }
