@@ -1,6 +1,7 @@
 {
 	"title": "Incitez les développeurs à réaliser vos issues Github",
 	"description": "meta description blablablah",
-	"hero_heading": "Incitez les développeurs à réaliser vos issues Github",
+	"hero_heading_part1": "Incitez les développeurs",
+	"hero_heading_part2": "à réaliser vos issues Github",
 	"hero_subheading": "Attachez une récompense a vos fonctionnalités, fixes, audit... Pour inciter les développeurs à les réaliser dans le temps imparti."
 }
