@@ -1,9 +1,9 @@
-import '../styles/globals.css'
+import { ReactElement, ReactNode, Fragment } from 'react'
+import { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
-import { NextPage } from 'next'
-import { ReactElement, ReactNode } from 'react'
-import { Fragment } from 'react'
+
+import '../styles/globals.css'
 
 export type NextPageWithLayout = NextPage & {
   withLayout: (page: ReactElement) => ReactNode

@@ -1,5 +1,7 @@
-import { classNames } from '../utils/classNames'
 import { Fragment } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useTranslation } from 'next-i18next'
 import { Popover, Transition } from '@headlessui/react'
 import {
   ChartBarIcon,
@@ -13,10 +15,7 @@ import {
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
-import Image from 'next/image'
-
-import { useTranslation } from 'next-i18next'
-import Link from 'next/link'
+import { classNames } from '../utils/classNames'
 
 // {{{ tailwind example metadata - will be replaced
 

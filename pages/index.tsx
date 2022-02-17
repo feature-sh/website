@@ -1,6 +1,6 @@
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 
 import { NextPageWithLayout } from './_app'
