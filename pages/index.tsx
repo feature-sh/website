@@ -2,12 +2,15 @@ import { useRef, useState } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import { ArrowRightIcon } from '@heroicons/react/outline'
 
 import { NextPageWithLayout } from './_app'
 import withMainLayout from '../layouts/withMainLayout'
 import { VideoDemo, videoDemos } from '../constants/videoDemo'
+import { features } from '../constants/features'
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
@@ -108,15 +111,15 @@ const VideoDemoSection: React.FC = () => {
   }
 
   return (
-    <section className="flex flex-col justify-center p-8 py-16 text-center lg:py-24">
-      <h3 className="text-2xl font-normal font-bold uppercase sm:text-3xl xl:text-4xl">
-        {translate('video_demo_subheading')}
-      </h3>
-      <h2 className="mt-4 text-3xl font-bold sm:text-4xl xl:text-5xl">
-        {translate('video_demo_heading')}
+    <section className="flex flex-col justify-center p-8 py-16 text-center bg-gray-100 lg:py-24">
+      <h2 className="text-2xl font-normal font-bold uppercase sm:text-3xl xl:text-4xl">
+        {translate('features_subheading')}
       </h2>
-      <p className="mt-6 text-gray-800 text-md sm:text-lg lg:text-xl xl:text-2xl">
-        {translate('video_demo_description')}
+      <h3 className="mt-4 text-3xl font-bold sm:text-4xl xl:text-5xl">
+        {translate('features_heading')}
+      </h3>
+      <p className="mx-auto mt-6 text-gray-800 text-md max-w-7xl sm:text-lg lg:text-xl xl:text-2xl">
+        {translate('features_description')}
       </p>
       <div className="flex flex-wrap items-start justify-center mt-8 start gap-y-4 gap-x-4 md:gap-x-8">
         {videoDemos.map((demo) => (
@@ -147,6 +150,56 @@ const VideoDemoSection: React.FC = () => {
   )
 }
 
+const FeaturesSection = () => {
+  const { t: translate } = useTranslation('homepage')
+
+  return (
+    <section className="px-2 py-16 bg-white lg:py-28">
+      <h2 className="text-2xl font-normal font-bold text-center uppercase sm:text-3xl xl:text-4xl">
+        {translate('video_demo_subheading')}
+      </h2>
+      <h3 className="mt-4 text-3xl font-bold text-center sm:text-4xl xl:text-5xl">
+        {translate('video_demo_heading')}
+      </h3>
+      <p className="mx-auto mt-6 text-center text-gray-800 text-md max-w-7xl sm:text-lg lg:text-xl xl:text-2xl">
+        {translate('video_demo_description')}
+      </p>
+      <div className="max-w-xl px-4 mx-auto mt-20 sm:px-6 lg:max-w-7xl lg:px-8">
+        <dl className="space-y-10 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+          {features.map((feature) => (
+            <div key={feature.i18nLabel}>
+              <dt>
+                <div className="flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                  <feature.icon className="w-6 h-6" aria-hidden="true" />
+                </div>
+                <p className="flex items-center justify-between w-full h-12 mt-5 text-lg font-medium text-gray-900 leading-6">
+                  <span>{translate(feature.i18nLabel)}</span>
+                  {feature.isPremium && (
+                    <span className="px-3 py-1 text-sm font-bold uppercase rounded bg-orange-400/50">
+                      Premium
+                    </span>
+                  )}
+                </p>
+              </dt>
+              <dd className="mt-2 text-base text-gray-500">
+                {translate(feature.i18nDescription)}
+              </dd>
+            </div>
+          ))}
+        </dl>
+        <div className="flex justify-center lg:justify-end">
+          <Link href="#">
+            <a className="flex items-center mt-12 text-right gap-x-2">
+              {translate('features_more')}
+              <ArrowRightIcon className="w-5 h-5" />
+            </a>
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 const Home: NextPageWithLayout = () => {
   const { t: translate } = useTranslation('homepage')
 
@@ -160,6 +213,7 @@ const Home: NextPageWithLayout = () => {
       <main>
         <HeroSection />
         <VideoDemoSection />
+        <FeaturesSection />
       </main>
     </>
   )
