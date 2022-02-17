@@ -1,27 +1,28 @@
-# Next.js + Tailwind CSS Example
+# feature-sh front-end
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+The front-end for Feature.sh, built with [NextJS](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/).
 
-## Preview
+## Development server
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+Install dependencies and start the dev server as follows:
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+```sh
+npm install && npm run dev
 
-## Deploy your own
+# OR, if using yarn
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+yarn install && yarn dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Format codebase
+
+The codebase is formatted using the [prettier](https://prettier.io) tool.
+Issuing the command `yarn format` will make use of the local installation of prettier
+to format the entire codebase.
+
+## Internationalization
+
+Internationalized routing is handled natively by NextJS through [sub-path routing](https://nextjs.org/docs/advanced-features/i18n-routing#sub-path-routing).
+
+Management of translations is done with the `next-i18next` library. Supported locales can be found inside the `public/locales` directory. Translations are
+stored inside different `.json` files commonly referred as translation namespaces.

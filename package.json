@@ -3,10 +3,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+
+    "format": "prettier --write ./components/**/*.tsx ./pages/**/*.tsx ./layouts/**/*.tsx"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.3",
+    "@heroicons/react": "^1.0.5",
     "next": "latest",
+    "next-i18next": "^10.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

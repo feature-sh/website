@@ -1,8 +1,22 @@
-import '../styles/globals.css'
+import { ReactElement, ReactNode } from 'react'
+import { NextPage } from 'next'
 import type { AppProps } from 'next/app'
+import { appWithTranslation } from 'next-i18next'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import '../styles/globals.css'
+
+export type NextPageWithLayout = NextPage & {
+  withLayout: (page: ReactElement) => ReactNode
 }
 
-export default MyApp
+export type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout
+}
+
+const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const withLayout = Component.withLayout || ((page) => page)
+
+  return <>{withLayout(<Component {...pageProps} />)}</>
+}
+
+export default appWithTranslation(MyApp)
