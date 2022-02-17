@@ -31,5 +31,9 @@
 	"features_accounting_heading": "Accounting",
 	"features_accounting_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
 
-	"features_more": "More features"
+	"features_more": "More features",
+
+	"testimonial_at": "at",
+
+	"testimonial_example_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit."
 }
