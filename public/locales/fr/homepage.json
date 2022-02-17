@@ -35,5 +35,9 @@
 
 	"testimonial_at": "à",
 
-	"testimonial_example_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit."
+	"testimonial_example_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.",
+
+	"blog_heading": "En lisant nos articles",
+	"blog_subheading": "Apprendre",
+	"blog_description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed."
 }
