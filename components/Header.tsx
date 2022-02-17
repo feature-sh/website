@@ -106,9 +106,9 @@ const Header: React.FC = () => {
           </a>
         </div>
         <div className="-my-2 -mr-2 md:hidden">
-          <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+          <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
             <span className="sr-only">Open menu</span>
-            <MenuIcon className="h-6 w-6" aria-hidden="true" />
+            <MenuIcon className="w-6 h-6" aria-hidden="true" />
           </Popover.Button>
         </div>
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
@@ -146,18 +146,18 @@ const Header: React.FC = () => {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 mt-3 -ml-4 w-screen max-w-md transform lg:max-w-3xl">
+                    <Popover.Panel className="absolute z-10 w-screen max-w-md mt-3 -ml-4 transform lg:max-w-3xl">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                        <div className="relative px-5 py-6 bg-white grid gap-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                           {solutions.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                              className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50"
                             >
-                              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
+                              <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md sm:h-12 sm:w-12">
                                 <item.icon
-                                  className="h-6 w-6"
+                                  className="w-6 h-6"
                                   aria-hidden="true"
                                 />
                               </div>
@@ -172,10 +172,10 @@ const Header: React.FC = () => {
                             </a>
                           ))}
                         </div>
-                        <div className="bg-gray-50 p-5 sm:p-8">
+                        <div className="p-5 bg-gray-50 sm:p-8">
                           <a
                             href="#"
-                            className="-m-3 flow-root rounded-md p-3 hover:bg-gray-100"
+                            className="p-3 -m-3 flow-root rounded-md hover:bg-gray-100"
                           >
                             <div className="flex items-center">
                               <div className="text-base font-medium text-gray-900">
@@ -226,14 +226,14 @@ const Header: React.FC = () => {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
+                    <Popover.Panel className="absolute z-10 w-screen max-w-xs px-2 mt-3 left-1/2 -translate-x-1/2 transform sm:px-0">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                        <div className="relative px-5 py-6 bg-white grid gap-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 block rounded-md p-3 hover:bg-gray-50"
+                              className="block p-3 -m-3 rounded-md hover:bg-gray-50"
                             >
                               <p className="text-base font-medium text-gray-900">
                                 {item.name}
@@ -258,7 +258,7 @@ const Header: React.FC = () => {
               </a>
             </Link>
             <Link href="/book">
-              <a className="ml-8 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+              <a className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700">
                 {translate('navitem_book')}
               </a>
             </Link>
@@ -277,9 +277,9 @@ const Header: React.FC = () => {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
+          className="absolute inset-x-0 top-0 p-2 origin-top-right transform transition md:hidden"
         >
-          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="bg-white rounded-lg shadow-lg divide-y-2 divide-gray-50 ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -291,9 +291,9 @@ const Header: React.FC = () => {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <XIcon className="w-6 h-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -303,10 +303,10 @@ const Header: React.FC = () => {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
+                      className="flex items-center p-3 -m-3 rounded-lg hover:bg-gray-50"
                     >
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white">
-                        <item.icon className="h-6 w-6" aria-hidden="true" />
+                      <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md">
+                        <item.icon className="w-6 h-6" aria-hidden="true" />
                       </div>
                       <div className="ml-4 text-base font-medium text-gray-900">
                         {item.name}
@@ -330,26 +330,15 @@ const Header: React.FC = () => {
                   </a>
                 </Link>
 
-                {/*
-								{resources.map((item) => (
-									<a
-										key={item.name}
-										href={item.href}
-										className="text-base font-medium text-gray-900 hover:text-gray-700"
-									>
-										{item.name}
-									</a>
-								))}
-								*/}
               </div>
               <div className="mt-6">
                 <Link href="/book">
-                  <a className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+                  <a className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700">
                     {translate('navitem_book')}
                   </a>
                 </Link>
                 <Link href="/dashboard">
-                  <a className="mt-5 block text-center text-indigo-600 hover:text-indigo-500">
+                  <a className="block mt-5 text-center text-indigo-600 hover:text-indigo-500">
                     Or go to your dashboard
                   </a>
                 </Link>
