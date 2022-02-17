@@ -6,18 +6,18 @@ export type VideoDemo = {
 export const videoDemos: VideoDemo[] = [
 	{
 		label: 'Ethereum',
-		videoUrl: '/blockchain.mp4',
+		videoUrl: '/video1.mp4',
 	},
 	{
 		label: 'Polygon',
-		videoUrl: '/blockchain2.mp4',
+		videoUrl: '/video2.mp4',
 	},
 	{
 		label: 'Amount 10',
-		videoUrl: '/blockchain.mp4',
+		videoUrl: '/video3.mp4',
 	},
 	{
 		label: 'Amount 100',
-		videoUrl: '/blockchain2.mp4',
+		videoUrl: '/video4.mp4',
 	},
 ]

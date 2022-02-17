@@ -138,14 +138,20 @@ const VideoDemoSection: React.FC = () => {
         ))}
       </div>
       <div className="mt-8 flex justify-center">
-        <video
-          controls
-          autoPlay
-          className="aspect-video max-w-full rounded md:w-3/4 md:border-2 md:border-indigo-500 md:p-2 xl:w-2/4"
-          src={selectedDemo.videoUrl}
+        <div
+          className="aspect-video relative max-w-full animate-fadeIn rounded p-2 md:w-3/4 xl:w-2/4"
+          key={selectedDemo.label}
         >
-          Sorry, look like your browser can't play videos :(
-        </video>
+          <div className="absolute inset-0 translate-x-4 translate-y-4 border-4 border-indigo-500" />
+          <video
+            controls
+            autoPlay
+            className="relative z-10 h-full w-full drop-shadow-md"
+            src={selectedDemo.videoUrl}
+          >
+            Sorry, look like your browser can't play videos :(
+          </video>
+        </div>
       </div>
     </section>
   )
