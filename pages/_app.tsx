@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode, Fragment } from 'react'
+import { ReactElement, ReactNode } from 'react'
 import { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
@@ -16,7 +16,7 @@ export type AppPropsWithLayout = AppProps & {
 const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   const withLayout = Component.withLayout || ((page) => page)
 
-  return <Fragment>{withLayout(<Component {...pageProps} />)}</Fragment>
+  return <>{withLayout(<Component {...pageProps} />)}</>
 }
 
 export default appWithTranslation(MyApp)
