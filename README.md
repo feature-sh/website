@@ -7,6 +7,10 @@ The front-end for Feature.sh, built with [NextJS](https://nextjs.org/) and [Tail
 Install dependencies and start the dev server as follows:
 
 ```sh
+npm install && npm run dev
+
+# OR, if using yarn
+
 yarn install && yarn dev
 ```
 
