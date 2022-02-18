@@ -228,10 +228,6 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
     nextTestimonial(true)
   }, slideInterval * 1000)
 
-  useEffect(() => {
-    console.log('test. id: ', currentTestimonialId)
-  }, [currentTestimonialId])
-
   // gen fake testimonials only one time
   const testimonials = useMemo(() => genFakeTestimonials(n), [])
 
@@ -254,8 +250,6 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
   }
 
   const testimonial = testimonials[currentTestimonialId]
-
-  console.log(testimonial.photo)
 
   return (
     <div className="bg-white px-4 pt-16 lg:px-16 lg:py-24">
