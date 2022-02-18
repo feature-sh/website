@@ -5,6 +5,13 @@ import { useEffect, useRef } from 'react'
 
 export const useInterval = (callback: Function, delay: number) => {
 	const savedCallback = useRef<Function | null>(null)
+	const currentInterval = useRef<number | null>(null)
+
+	const resetInterval = () => {
+		if (currentInterval.current) {
+			clearInterval(currentInterval.current)
+		}
+	}
 
 	// Remember the latest callback.
 	useEffect(() => {
@@ -16,9 +23,14 @@ export const useInterval = (callback: Function, delay: number) => {
 		function tick() {
 			savedCallback.current!()
 		}
-		let id = setInterval(tick, delay)
-		return () => clearInterval(id)
-	}, [delay])
+		currentInterval.current = window.setInterval(tick, delay)
+
+		return () => {
+			resetInterval()
+		}
+	}, [delay, resetInterval])
+
+	return resetInterval
 }
 
 export default useInterval
