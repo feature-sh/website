@@ -10,6 +10,7 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from '@heroicons/react/outline'
+import { Fade } from 'react-awesome-reveal'
 
 import { NextPageWithLayout } from './_app'
 import { useInterval } from '../hooks/useInterval'
@@ -142,22 +143,21 @@ const VideoDemoSection: React.FC = () => {
           </button>
         ))}
       </div>
-      <div className="mt-8 flex justify-center">
-        <div
-          className="aspect-video relative max-w-full animate-fadeIn rounded p-2 md:w-3/4 xl:w-2/4"
-          key={selectedDemo.label}
-        >
-          <div className="absolute inset-0 translate-x-4 translate-y-4 border-4 border-indigo-500" />
-          <video
-            controls
-            autoPlay
-            className="relative z-10 h-full w-full drop-shadow-md"
-            src={selectedDemo.videoUrl}
-          >
-            Sorry, look like your browser can't play videos :(
-          </video>
+      <Fade key={selectedDemo.label}>
+        <div className="mt-8 flex justify-center">
+          <div className="aspect-video relative max-w-full rounded p-2 md:w-3/4 xl:w-2/4">
+            <div className="absolute inset-0 translate-x-4 translate-y-4 border-4 border-indigo-500" />
+            <video
+              controls
+              autoPlay
+              className="relative z-10 h-full w-full drop-shadow-md"
+              src={selectedDemo.videoUrl}
+            >
+              Sorry, look like your browser can't play videos :(
+            </video>
+          </div>
         </div>
-      </div>
+      </Fade>
     </section>
   )
 }
@@ -261,19 +261,19 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
               className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
             />
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
-              <div className="aspect-w-10 aspect-h-6 overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-                <img
-                  className="object-cover object-center lg:h-full lg:w-full"
-                  src={`${testimonial.photo}?random=${
-                    Math.random() * Number.MAX_VALUE
-                  }`}
-                  alt=""
-                />
-              </div>
+              <Fade key={currentTestimonialId}>
+                <div className="aspect-w-10 aspect-h-6 mx-auto flex w-1/2 items-center overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full lg:w-full">
+                  <img
+                    className="object-cover object-center lg:h-full lg:w-full"
+                    src={testimonial.photo}
+                    alt=""
+                  />
+                </div>
+              </Fade>
             </div>
           </div>
           <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
-            <div className="mx-auto flex min-h-[45vh] max-w-md flex-col justify-between gap-y-8 px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:pt-8 lg:pb-4">
+            <div className="mx-auto flex h-full max-w-md flex-col justify-between gap-y-8 px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:pt-8 lg:pb-4">
               <blockquote>
                 <div>
                   <svg
@@ -284,18 +284,27 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                   >
                     <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                   </svg>
-                  <p className="mt-6 text-2xl font-medium text-white">
-                    {translate(testimonials[currentTestimonialId].i18nContent)}
-                  </p>
+                  <Fade key={currentTestimonialId}>
+                    <p
+                      className="mt-6 text-2xl font-medium text-white"
+                      key={currentTestimonialId}
+                    >
+                      {translate(
+                        testimonials[currentTestimonialId].i18nContent
+                      )}
+                    </p>
+                  </Fade>
                 </div>
                 <footer className="mt-6">
-                  <p className="text-base font-medium text-white">
-                    {testimonial.author}
-                  </p>
-                  <p className="h-12 text-base font-medium text-indigo-100">
-                    {testimonial.role} {translate('testimonial_at')}{' '}
-                    {testimonial.workplace}
-                  </p>
+                  <Fade key={currentTestimonialId}>
+                    <p className="text-base font-medium text-white">
+                      {testimonial.author}
+                    </p>
+                    <p className="h-12 text-base font-medium text-indigo-100">
+                      {testimonial.role} {translate('testimonial_at')}{' '}
+                      {testimonial.workplace}
+                    </p>
+                  </Fade>
                 </footer>
               </blockquote>
               <div className="flex flex-col items-center gap-y-4">
@@ -315,9 +324,10 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                   />
                 </div>
                 {/* carrousel dot indicator */}
-                <div className="flex items-center gap-x-2">
+                <div className="flex items-center gap-x-3">
                   {testimonials.map((_, index) => (
                     <button
+                      key={index}
                       className={`h-2 w-2 bg-white ${
                         index === currentTestimonialId
                           ? 'opacity-100'
