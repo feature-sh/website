@@ -5,7 +5,7 @@
     "build": "next build",
     "start": "next start",
 
-    "format": "prettier --write ./components/**/*.tsx ./pages/**/*.tsx ./layouts/**/*.tsx",
+    "format": "prettier --write './components/**/*.{ts,tsx}' './pages/**/*.{ts,tsx}' './layouts/**/*.{ts,tsx}' './constants/**/*.{ts,tsx}'",
     "docker-dev": "node ./scripts/docker_run.js dev",
     "docker-prod": "node ./scripts/docker_run.js prod"
   },
