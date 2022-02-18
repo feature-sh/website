@@ -1,6 +1,43 @@
 {
 	"title": "Incitez les développeurs à réaliser vos issues Github",
 	"description": "meta description blablablah",
-	"hero_heading": "Incitez les développeurs à réaliser vos issues Github",
-	"hero_subheading": "Attachez une récompense a vos fonctionnalités, fixes, audit... Pour inciter les développeurs à les réaliser dans le temps imparti."
+	"hero_heading_part1": "Incitez les développeurs",
+	"hero_heading_part2": "à réaliser vos issues Github",
+	"hero_subheading": "Attachez une récompense a vos fonctionnalités, fixes, audit... Pour inciter les développeurs à les réaliser dans le temps imparti.",
+
+	"video_demo_heading": "Faites une offre à un développeur en quelques secondes",
+	"video_demo_subheading": "Gérez plus rapidement",
+	"video_demo_description": "Directly on Github your will create the deal and it will automatically appears to developpers avec une preuve de mise sous séquestre de la récompense pour inciter les developeurs à réaliser la tache.",
+
+	"features_heading": "Faites une offre à un développeur en quelques secondes",
+	"features_subheading": "Gérez plus rapidement",
+	"features_description": "Directly on Github your will create the deal and it will automatically appears to developpers avec une preuve de mise sous séquestre de la récompense pour inciter les developeurs à réaliser la tache.",
+
+	"features_gamify_heading": "Comme un jeu",
+	"features_gamify_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+
+	"features_reward_heading": "Récompenses",
+	"features_reward_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+
+	"features_badge_heading": "Badges",
+	"features_badge_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+
+	"features_prioritarize_heading": "Prioritarisation",
+	"features_prioritarize_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+
+	"features_performance_heading": "Performance",
+	"features_performance_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+
+	"features_accounting_heading": "Comptabilité",
+	"features_accounting_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+
+	"features_more": "Plus de fonctionnalités",
+
+	"testimonial_at": "à",
+
+	"testimonial_example_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.",
+
+	"blog_heading": "En lisant nos articles",
+	"blog_subheading": "Apprendre",
+	"blog_description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed."
 }

@@ -1,1 +1,6 @@
 node_modules
+scripts
+README.md
+Dockerfile
+Dockerfile.dev
+*.log
