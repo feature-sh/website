@@ -7,22 +7,18 @@ The front-end for Feature.sh, built with [NextJS](https://nextjs.org/) and [Tail
 ### Docker
 
 A development Dockerfile has been set up to ease the development process.
-One can build the development image as shown below:
+One can execute the following script to build and run an instance of the dev container:
 
 ```sh
-docker build -f Dockerfile.dev . -t feature/dev
-```
+npm run docker-dev
 
-And then, run a container based on the freshly built image:
+# OR, if using yarn
 
-```sh
-docker run -v$PWD:/usr/app -p8080:3000 feature/dev
+yarn docker-dev
 ```
 
 The app directory is bind mounted inside the container in development, which means that every change
 made on the host also impacts the running container.
-
-**Protip**: replace `8080` by the port on which you want to access the app on your machine.
 
 ### Bare metal
 
@@ -38,12 +34,29 @@ yarn install && yarn dev
 
 ## Production
 
+### Docker
+
 A production Dockerfile has been created to easily deploy the app.
-The build and run procedure is the following:
+To build and run an instance of the production image, execute the `docker-prod` node script:
 
 ```sh
-docker build . -t feature/prod
-docker run -p8080:3000 feature/prod
+npm run docker-prod
+
+# OR, if using yarn
+
+yarn docker-prod
+```
+
+### Bare metal
+
+Install dependencies, build, and start the production server as follows:
+
+```sh
+npm install && npm run build && npm run start
+
+# OR, if using yarn
+
+yarn install && yarn build && yarn start
 ```
 
 ## Format codebase
