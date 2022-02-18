@@ -1,17 +1,22 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import { ArrowRightIcon } from '@heroicons/react/outline'
+import {
+  ArrowRightIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+} from '@heroicons/react/outline'
 
 import { NextPageWithLayout } from './_app'
+import { useInterval } from '../hooks/useInterval'
 import withMainLayout from '../layouts/withMainLayout'
 import { VideoDemo, videoDemos } from '../constants/videoDemo'
 import { features } from '../constants/features'
-import { testimonials } from '../constants/testimonials'
+import { genFakeTestimonials } from '../constants/testimonials'
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
@@ -207,66 +212,135 @@ const FeaturesSection = () => {
   )
 }
 
-const TestimonialSection: React.FC = () => {
+type TestimonialSectionProps = {
+  slideInterval: number // in seconds
+  n: number // temporary: number of fake testimonials to generate
+}
+
+const TestimonialSection: React.FC<TestimonialSectionProps> = ({
+  n,
+  slideInterval,
+}) => {
   const { t: translate } = useTranslation('homepage')
+  const [currentTestimonialId, setCurrentTestimonialId] = useState(0)
+
+  const resetInterval = useInterval(() => {
+    nextTestimonial(true)
+  }, slideInterval * 1000)
+
+  useEffect(() => {
+    console.log('test. id: ', currentTestimonialId)
+  }, [currentTestimonialId])
+
+  // gen fake testimonials only one time
+  const testimonials = useMemo(() => genFakeTestimonials(n), [])
+
+  const nextTestimonial = (auto: boolean = false) => {
+    if (!auto) {
+      resetInterval()
+    }
+    setCurrentTestimonialId((currentTestimonialId + 1) % testimonials.length)
+  }
+
+  const previousTestimonial = (auto: boolean = false) => {
+    if (!auto) {
+      resetInterval()
+    }
+    setCurrentTestimonialId(
+      currentTestimonialId === 0
+        ? testimonials.length - 1
+        : currentTestimonialId - 1
+    )
+  }
+
+  const testimonial = testimonials[currentTestimonialId]
+
+  console.log(testimonial.photo)
 
   return (
-    <>
-      {testimonials.map((testimonial) => (
-        <div
-          key={testimonial.i18nContent}
-          className="bg-white px-4 pt-16 lg:px-16 lg:py-24"
-        >
-          <div className="bg-indigo-600 pb-16 lg:relative lg:z-10 lg:pb-0">
-            <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
-              <div className="relative lg:-my-8">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
+    <div className="bg-white px-4 pt-16 lg:px-16 lg:py-24">
+      <div className="bg-indigo-600 pb-8 lg:relative lg:z-10 lg:pb-0">
+        <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
+          <div className="relative lg:-my-8">
+            <div
+              aria-hidden="true"
+              className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
+            />
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
+              <div className="aspect-w-10 aspect-h-6 overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
+                <img
+                  className="object-cover object-center lg:h-full lg:w-full"
+                  src={`${testimonial.photo}?random=${
+                    Math.random() * Number.MAX_VALUE
+                  }`}
+                  alt=""
                 />
-                <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
-                  <div className="aspect-w-10 aspect-h-6 overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-                    <img
-                      className="object-cover lg:h-full lg:w-full"
-                      src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                      alt=""
-                    />
-                  </div>
-                </div>
               </div>
-              <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
-                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
-                  <blockquote>
-                    <div>
-                      <svg
-                        className="h-12 w-12 text-white opacity-25"
-                        fill="currentColor"
-                        viewBox="0 0 32 32"
-                        aria-hidden="true"
-                      >
-                        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                      </svg>
-                      <p className="mt-6 text-2xl font-medium text-white">
-                        {translate(testimonial.i18nContent)}
-                      </p>
-                    </div>
-                    <footer className="mt-6">
-                      <p className="text-base font-medium text-white">
-                        {testimonial.author}
-                      </p>
-                      <p className="text-base font-medium text-indigo-100">
-                        {testimonial.role} {translate('testimonial_at')}{' '}
-                        {testimonial.workplace}
-                      </p>
-                    </footer>
-                  </blockquote>
+            </div>
+          </div>
+          <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
+            <div className="mx-auto flex min-h-[45vh] max-w-md flex-col justify-between gap-y-8 px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:pt-8 lg:pb-4">
+              <blockquote>
+                <div>
+                  <svg
+                    className="h-12 w-12 text-white opacity-25"
+                    fill="currentColor"
+                    viewBox="0 0 32 32"
+                    aria-hidden="true"
+                  >
+                    <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                  </svg>
+                  <p className="mt-6 text-2xl font-medium text-white">
+                    {translate(testimonials[currentTestimonialId].i18nContent)}
+                  </p>
+                </div>
+                <footer className="mt-6">
+                  <p className="text-base font-medium text-white">
+                    {testimonial.author}
+                  </p>
+                  <p className="h-12 text-base font-medium text-indigo-100">
+                    {testimonial.role} {translate('testimonial_at')}{' '}
+                    {testimonial.workplace}
+                  </p>
+                </footer>
+              </blockquote>
+              <div className="flex flex-col items-center gap-y-4">
+                {/* carrousel controls */}
+                <div className="flex items-center gap-x-2">
+                  <ChevronLeftIcon
+                    className="h-6 w-6 text-white"
+                    onClick={() => {
+                      previousTestimonial(false)
+                    }}
+                  />
+                  <ChevronRightIcon
+                    className="h-6 w-6 text-white"
+                    onClick={() => {
+                      nextTestimonial(false)
+                    }}
+                  />
+                </div>
+                {/* carrousel dot indicator */}
+                <div className="flex items-center gap-x-2">
+                  {testimonials.map((_, index) => (
+                    <button
+                      className={`h-2 w-2 bg-white ${
+                        index === currentTestimonialId
+                          ? 'opacity-100'
+                          : 'opacity-50'
+                      } rounded-full`}
+                      onClick={() => {
+                        setCurrentTestimonialId(index)
+                      }}
+                    ></button>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
-      ))}
-    </>
+      </div>
+    </div>
   )
 }
 
@@ -425,7 +499,7 @@ const Home: NextPageWithLayout = () => {
         <HeroSection />
         <VideoDemoSection />
         <FeaturesSection />
-        <TestimonialSection />
+        <TestimonialSection n={10} slideInterval={3} />
         <BlogSection />
       </main>
     </>

@@ -4,7 +4,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-
     "format": "prettier --write ./components/**/*.tsx ./pages/**/*.tsx ./layouts/**/*.tsx",
     "docker-dev": "node ./scripts/docker_run.js dev",
     "docker-prod": "node ./scripts/docker_run.js prod"
@@ -19,6 +18,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.6",
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.0",
