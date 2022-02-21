@@ -5,19 +5,11 @@ export type VideoDemo = {
 
 export const videoDemos: VideoDemo[] = [
   {
-    label: 'Ethereum',
-    videoUrl: '/video1.mp4',
-  },
-  {
-    label: 'Polygon',
+    label: '🏗 Feat: Add a swapper for 1ETH on Polygon',
     videoUrl: '/video2.mp4',
   },
   {
-    label: 'Amount 10',
+    label: '🧑‍🔧 Fix: Eth to Wei unit for 100DAI on Gnosis Chain',
     videoUrl: '/video3.mp4',
-  },
-  {
-    label: 'Amount 100',
-    videoUrl: '/video4.mp4',
   },
 ]
