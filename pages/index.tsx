@@ -260,9 +260,9 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
               aria-hidden="true"
               className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
             />
-            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:px-10 lg:flex items-center">
               <Fade key={currentTestimonialId}>
-                <div className="aspect-w-10 aspect-h-6 mx-auto flex w-1/2 items-center overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full lg:w-full">
+                <div className="aspect-w-10 aspect-h-6 mx-auto flex w-2/3 sm:w-1/2 lg:w-full items-center overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full lg:w-full">
                   <img
                     className="object-cover object-center lg:h-full lg:w-full"
                     src={testimonial.photo}
@@ -272,7 +272,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
               </Fade>
             </div>
           </div>
-          <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
+          <div className="mt-6 h-full lg:col-span-2 lg:m-0 lg:pl-8 py-3">
             <div className="mx-auto flex h-full max-w-md flex-col justify-between gap-y-8 px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:pt-8 lg:pb-4">
               <blockquote>
                 <div>
@@ -286,7 +286,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                   </svg>
                   <Fade key={currentTestimonialId}>
                     <p
-                      className="mt-6 text-2xl font-medium text-white"
+                      className="mt-6 text-md md:text-lg lg:text-xl xl:text-2xl font-medium text-white"
                       key={currentTestimonialId}
                     >
                       {translate(
@@ -297,10 +297,10 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                 </div>
                 <footer className="mt-6">
                   <Fade key={currentTestimonialId}>
-                    <p className="text-base font-medium text-white">
+                    <p className="text-sm md:text-md lg:text-lg xl:text-xl text-base font-medium text-white">
                       {testimonial.author}
                     </p>
-                    <p className="h-12 text-base font-medium text-indigo-100">
+                    <p className="h-12 text-sm md:text-md lg:text-lg xl:text-xl text-base font-medium text-indigo-100">
                       {testimonial.role} {translate('testimonial_at')}{' '}
                       {testimonial.workplace}
                     </p>
@@ -308,21 +308,6 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                 </footer>
               </blockquote>
               <div className="flex flex-col items-center gap-y-4">
-                {/* carrousel controls */}
-                <div className="flex items-center gap-x-2">
-                  <ChevronLeftIcon
-                    className="h-6 w-6 text-white"
-                    onClick={() => {
-                      previousTestimonial(false)
-                    }}
-                  />
-                  <ChevronRightIcon
-                    className="h-6 w-6 text-white"
-                    onClick={() => {
-                      nextTestimonial(false)
-                    }}
-                  />
-                </div>
                 {/* carrousel dot indicator */}
                 <div className="flex items-center gap-x-3">
                   {testimonials.map((_, index) => (
