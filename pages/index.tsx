@@ -59,12 +59,14 @@ const HeroSection: React.FC = () => {
           <div className="px-2 sm:px-6 sm:text-center lg:col-span-3 lg:flex lg:items-center lg:px-0 lg:text-left">
             <div className="lg:py-2 lg:pl-16">
               <h1 className="mt-4 flex flex-col gap-y-2 text-center text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-5xl lg:mt-6 lg:text-left xl:text-6xl">
-                <span className="block">{translate('hero_heading_part1')}</span>
+                <span className="block whitespace-pre-line">
+                  {translate('hero_heading_part1')}
+                </span>
                 <span className="block text-indigo-400">
                   {translate('hero_heading_part2')}
                 </span>
               </h1>
-              <p className="mt-3 text-center text-base text-gray-300 sm:mt-5 sm:text-xl lg:max-w-3xl lg:text-left lg:text-lg xl:text-xl">
+              <p className="mt-3 whitespace-pre-line text-center text-base text-gray-300 sm:mt-5 sm:text-xl lg:max-w-3xl lg:text-left lg:text-lg xl:text-xl">
                 {translate('hero_subheading')}
               </p>
               <div className="mt-10 sm:mt-12">
@@ -125,7 +127,7 @@ const VideoDemoSection: React.FC = () => {
       <h3 className="mt-4 text-3xl font-bold sm:text-4xl xl:text-5xl">
         {translate('features_heading')}
       </h3>
-      <p className="text-md mx-auto mt-6 max-w-7xl text-gray-800 sm:text-lg lg:text-xl xl:text-2xl">
+      <p className="text-md mx-auto mt-6 max-w-7xl whitespace-pre-line text-gray-800 sm:text-lg lg:text-xl xl:text-2xl">
         {translate('features_description')}
       </p>
       <div className="start mt-8 flex flex-wrap items-start justify-center gap-y-4 gap-x-4 md:gap-x-8">
@@ -260,9 +262,9 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
               aria-hidden="true"
               className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
             />
-            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:px-10 lg:flex items-center">
+            <div className="mx-auto max-w-md items-center px-4 sm:max-w-3xl sm:px-6 lg:flex lg:h-full lg:px-10">
               <Fade key={currentTestimonialId}>
-                <div className="aspect-w-10 aspect-h-6 mx-auto flex w-2/3 sm:w-1/2 lg:w-full items-center overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full lg:w-full">
+                <div className="aspect-w-10 aspect-h-6 mx-auto flex w-2/3 items-center overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 sm:w-1/2 lg:aspect-none lg:h-full lg:w-full lg:w-full">
                   <img
                     className="object-cover object-center lg:h-full lg:w-full"
                     src={testimonial.photo}
@@ -272,7 +274,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
               </Fade>
             </div>
           </div>
-          <div className="mt-6 h-full lg:col-span-2 lg:m-0 lg:pl-8 py-3">
+          <div className="mt-6 h-full py-3 lg:col-span-2 lg:m-0 lg:pl-8">
             <div className="mx-auto flex h-full max-w-md flex-col justify-between gap-y-8 px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:pt-8 lg:pb-4">
               <blockquote>
                 <div>
@@ -286,7 +288,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                   </svg>
                   <Fade key={currentTestimonialId}>
                     <p
-                      className="mt-6 text-md md:text-lg lg:text-xl xl:text-2xl font-medium text-white"
+                      className="text-md mt-6 font-medium text-white md:text-lg lg:text-xl xl:text-2xl"
                       key={currentTestimonialId}
                     >
                       {translate(
@@ -297,10 +299,10 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                 </div>
                 <footer className="mt-6">
                   <Fade key={currentTestimonialId}>
-                    <p className="text-sm md:text-md lg:text-lg xl:text-xl text-base font-medium text-white">
+                    <p className="md:text-md text-sm text-base font-medium text-white lg:text-lg xl:text-xl">
                       {testimonial.author}
                     </p>
-                    <p className="h-12 text-sm md:text-md lg:text-lg xl:text-xl text-base font-medium text-indigo-100">
+                    <p className="md:text-md h-12 text-sm text-base font-medium text-indigo-100 lg:text-lg xl:text-xl">
                       {testimonial.role} {translate('testimonial_at')}{' '}
                       {testimonial.workplace}
                     </p>

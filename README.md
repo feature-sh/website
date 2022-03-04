@@ -62,7 +62,7 @@ yarn install && yarn build && yarn start
 ## Format codebase
 
 The codebase is formatted using the [prettier](https://prettier.io) tool.
-Issuing the command `yarn format` will make use of the local installation of prettier
+Issuing the command `npm run format` or `yarn format` will make use of the local installation of prettier
 to format the entire codebase.
 
 ## Internationalization
