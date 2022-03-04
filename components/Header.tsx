@@ -129,13 +129,14 @@ const Header: React.FC = () => {
           </Popover.Button>
         </div>
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
-          <Popover.Group as="nav" className="flex space-x-10">
+          {/* TODO this part is commented in waiting the pages implementation */}
+          {/* <Popover.Group as="nav" className="flex space-x-10">
             <Link href="/product">
               <a className="text-base font-medium text-neutral-200 hover:text-white">
                 {translate('navitem_product')}
               </a>
-            </Link>
-            <Popover className="relative">
+            </Link> */}
+            {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -220,9 +221,11 @@ const Header: React.FC = () => {
                 {translate('navitem_blog')}
               </a>
             </Link>
-          </Popover.Group>
+          </Popover.Group> */}
+          {/* FIXME remove this div if there is any item menu */}
+          <div />
           <div className="flex items-center md:ml-12">
-            <Link href="/dashboard">
+            <Link href="https://dashboard.feature.sh">
               <a className="text-base font-medium text-neutral-200 hover:text-white">
                 {translate('navitem_dashboard')}
               </a>
