@@ -6,12 +6,12 @@ export type Language = {
 export type LanguageDict = { [key: string]: Language }
 
 export const languages: LanguageDict = {
-    'en-US': {
-        i18nDisplayName: 'language_english',
-        isDefaultLocale: true,
-    },
-    'fr': {
-        i18nDisplayName: 'language_french',
-        isDefaultLocale: false,
-    },
+  'en-US': {
+    i18nDisplayName: 'language_english',
+    isDefaultLocale: true,
+  },
+  fr: {
+    i18nDisplayName: 'language_french',
+    isDefaultLocale: false,
+  },
 }

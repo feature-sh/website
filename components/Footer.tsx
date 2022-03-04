@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
-import LanguageSwitcher from "./language-switcher";
-import {languages} from "../constants/lang";
+import LanguageSwitcher from './language-switcher'
+import { languages } from '../constants/lang'
 
 // tailwind navigation - to be replaced {{{
 const navigation = {

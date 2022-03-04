@@ -136,7 +136,7 @@ const Header: React.FC = () => {
                 {translate('navitem_product')}
               </a>
             </Link> */}
-            {/* <Popover className="relative">
+          {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
