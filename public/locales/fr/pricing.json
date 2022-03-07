@@ -1,0 +1,18 @@
+{
+  "billing_monthly": "mois",
+  "billing_yearly": "an",
+  "billing_free": "Gratuit",
+  "billing_quote": "Devis",
+
+  "plan_1_title": "Freelancer",
+  "plan_1_description": "L'essentiel pour travailler au mieux avec vos clients.",
+  "plan_1_cta": "Commencer Gratuitement",
+
+  "plan_2_title": "Startup",
+  "plan_2_description": "Une offre qui évolue avec votre business",
+  "plan_2_cta": "Paiement Mensuel",
+
+  "plan_3_title": "Entreprise",
+  "plan_3_description": "Support et suivi dédiés",
+  "plan_3_cta": "Contactez Nous"
+}

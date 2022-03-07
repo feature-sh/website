@@ -1,0 +1,18 @@
+{
+  "billing_monthly": "month",
+  "billing_yearly": "year",
+  "billing_free": "Free",
+  "billing_quote": "Quote",
+
+  "plan_1_title": "Freelancer",
+  "plan_1_description": "The essentials to provide your best work for clients.",
+  "plan_1_cta": "Start for Free",
+
+  "plan_2_title": "Startup",
+  "plan_2_description": "A plan that scales with your rapidly growing business.",
+  "plan_2_cta": "Monthly Billing",
+
+  "plan_3_title": "Enterprise",
+  "plan_3_description": "Dedicated support and infrastructure for your company.",
+  "plan_3_cta": "Contact Us"
+}
