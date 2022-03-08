@@ -118,7 +118,6 @@ const Footer: React.FC = () => {
               {translate('feature_description')}
             </p>
 
-            <LanguageSwitcher languages={languages} />
 
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
@@ -203,9 +202,12 @@ const Footer: React.FC = () => {
                       </a>
                     </li>
                   ))}
+                  <LanguageSwitcher languages={languages} hasIcon={false} />
                 </ul>
               </div>
             </div>
+          </div>
+          <div>
           </div>
         </div>
         <div className="mt-12 border-t border-gray-200 pt-8">
