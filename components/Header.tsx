@@ -90,7 +90,7 @@ const resources = [
 
 const Header: React.FC = () => {
   const { t: translate } = useTranslation('header')
-  const [isOpaque, setIsOpaque] = useState(false)
+  const [isOpaque, setIsOpaque] = useState(true)
 
   const handleScroll = () => {
     setIsOpaque(window.scrollY > 20)
@@ -136,7 +136,7 @@ const Header: React.FC = () => {
                 {translate('navitem_product')}
               </a>
             </Link> */}
-            {/* <Popover className="relative">
+          {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button

@@ -1,17 +1,23 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import { ArrowRightIcon } from '@heroicons/react/outline'
+import {
+  ArrowRightIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+} from '@heroicons/react/outline'
+import { Fade } from 'react-awesome-reveal'
 
 import { NextPageWithLayout } from './_app'
+import { useInterval } from '../hooks/useInterval'
 import withMainLayout from '../layouts/withMainLayout'
 import { VideoDemo, videoDemos } from '../constants/videoDemo'
 import { features } from '../constants/features'
-import { testimonials } from '../constants/testimonials'
+import { genFakeTestimonials } from '../constants/testimonials'
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
@@ -53,12 +59,14 @@ const HeroSection: React.FC = () => {
           <div className="px-2 sm:px-6 sm:text-center lg:col-span-3 lg:flex lg:items-center lg:px-0 lg:text-left">
             <div className="lg:py-2 lg:pl-16">
               <h1 className="mt-4 flex flex-col gap-y-2 text-center text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-5xl lg:mt-6 lg:text-left xl:text-6xl">
-                <span className="block whitespace-pre-line">{translate('hero_heading_part1')}</span>
+                <span className="block whitespace-pre-line">
+                  {translate('hero_heading_part1')}
+                </span>
                 <span className="block text-indigo-400">
                   {translate('hero_heading_part2')}
                 </span>
               </h1>
-              <p className="mt-3 text-center text-base text-gray-300 sm:mt-5 sm:text-xl lg:max-w-3xl lg:text-left lg:text-lg xl:text-xl whitespace-pre-line">
+              <p className="mt-3 whitespace-pre-line text-center text-base text-gray-300 sm:mt-5 sm:text-xl lg:max-w-3xl lg:text-left lg:text-lg xl:text-xl">
                 {translate('hero_subheading')}
               </p>
               <div className="mt-10 sm:mt-12">
@@ -119,7 +127,7 @@ const VideoDemoSection: React.FC = () => {
       <h3 className="mt-4 text-3xl font-bold sm:text-4xl xl:text-5xl">
         {translate('features_heading')}
       </h3>
-      <p className="text-md mx-auto mt-6 max-w-7xl text-gray-800 sm:text-lg lg:text-xl xl:text-2xl whitespace-pre-line">
+      <p className="text-md mx-auto mt-6 max-w-7xl whitespace-pre-line text-gray-800 sm:text-lg lg:text-xl xl:text-2xl">
         {translate('features_description')}
       </p>
       <div className="start mt-8 flex flex-wrap items-start justify-center gap-y-4 gap-x-4 md:gap-x-8">
@@ -137,22 +145,21 @@ const VideoDemoSection: React.FC = () => {
           </button>
         ))}
       </div>
-      <div className="mt-8 flex justify-center">
-        <div
-          className="aspect-video relative max-w-full animate-fadeIn rounded p-2 md:w-3/4 xl:w-2/4"
-          key={selectedDemo.label}
-        >
-          <div className="absolute inset-0 translate-x-4 translate-y-4 border-4 border-indigo-500" />
-          <video
-            controls
-            autoPlay
-            className="relative z-10 h-full w-full drop-shadow-md"
-            src={selectedDemo.videoUrl}
-          >
-            Sorry, look like your browser can't play videos :(
-          </video>
+      <Fade key={selectedDemo.label}>
+        <div className="mt-8 flex justify-center">
+          <div className="aspect-video relative max-w-full rounded p-2 md:w-3/4 xl:w-2/4">
+            <div className="absolute inset-0 translate-x-4 translate-y-4 border-4 border-indigo-500" />
+            <video
+              controls
+              autoPlay
+              className="relative z-10 h-full w-full drop-shadow-md"
+              src={selectedDemo.videoUrl}
+            >
+              Sorry, look like your browser can't play videos :(
+            </video>
+          </div>
         </div>
-      </div>
+      </Fade>
     </section>
   )
 }
@@ -207,66 +214,124 @@ const FeaturesSection = () => {
   )
 }
 
-const TestimonialSection: React.FC = () => {
+type TestimonialSectionProps = {
+  slideInterval: number // in seconds
+  n: number // temporary: number of fake testimonials to generate
+}
+
+const TestimonialSection: React.FC<TestimonialSectionProps> = ({
+  n,
+  slideInterval,
+}) => {
   const { t: translate } = useTranslation('homepage')
+  const [currentTestimonialId, setCurrentTestimonialId] = useState(0)
+
+  const resetInterval = useInterval(() => {
+    nextTestimonial(true)
+  }, slideInterval * 1000)
+
+  // gen fake testimonials only one time
+  const testimonials = useMemo(() => genFakeTestimonials(n), [])
+
+  const nextTestimonial = (auto: boolean = false) => {
+    if (!auto) {
+      resetInterval()
+    }
+    setCurrentTestimonialId((currentTestimonialId + 1) % testimonials.length)
+  }
+
+  const previousTestimonial = (auto: boolean = false) => {
+    if (!auto) {
+      resetInterval()
+    }
+    setCurrentTestimonialId(
+      currentTestimonialId === 0
+        ? testimonials.length - 1
+        : currentTestimonialId - 1
+    )
+  }
+
+  const testimonial = testimonials[currentTestimonialId]
 
   return (
-    <>
-      {testimonials.map((testimonial) => (
-        <div
-          key={testimonial.i18nContent}
-          className="bg-white px-4 pt-16 lg:px-16 lg:py-24"
-        >
-          <div className="bg-indigo-600 pb-16 lg:relative lg:z-10 lg:pb-0">
-            <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
-              <div className="relative lg:-my-8">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
-                />
-                <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
-                  <div className="aspect-w-10 aspect-h-6 overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-                    <img
-                      className="object-cover lg:h-full lg:w-full"
-                      src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                      alt=""
-                    />
-                  </div>
+    <div className="bg-white px-4 pt-16 lg:px-16 lg:py-24">
+      <div className="bg-indigo-600 pb-8 lg:relative lg:z-10 lg:pb-0">
+        <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
+          <div className="relative lg:-my-8">
+            <div
+              aria-hidden="true"
+              className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
+            />
+            <div className="mx-auto max-w-md items-center px-4 sm:max-w-3xl sm:px-6 lg:flex lg:h-full lg:px-10">
+              <Fade key={currentTestimonialId}>
+                <div className="aspect-w-10 aspect-h-6 mx-auto flex w-2/3 items-center overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 sm:w-1/2 lg:aspect-none lg:h-full lg:w-full lg:w-full">
+                  <img
+                    className="object-cover object-center lg:h-full lg:w-full"
+                    src={testimonial.photo}
+                    alt=""
+                  />
                 </div>
-              </div>
-              <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
-                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
-                  <blockquote>
-                    <div>
-                      <svg
-                        className="h-12 w-12 text-white opacity-25"
-                        fill="currentColor"
-                        viewBox="0 0 32 32"
-                        aria-hidden="true"
-                      >
-                        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                      </svg>
-                      <p className="mt-6 text-2xl font-medium text-white">
-                        {translate(testimonial.i18nContent)}
-                      </p>
-                    </div>
-                    <footer className="mt-6">
-                      <p className="text-base font-medium text-white">
-                        {testimonial.author}
-                      </p>
-                      <p className="text-base font-medium text-indigo-100">
-                        {testimonial.role} {translate('testimonial_at')}{' '}
-                        {testimonial.workplace}
-                      </p>
-                    </footer>
-                  </blockquote>
+              </Fade>
+            </div>
+          </div>
+          <div className="mt-6 h-full py-3 lg:col-span-2 lg:m-0 lg:pl-8">
+            <div className="mx-auto flex h-full max-w-md flex-col justify-between gap-y-8 px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:pt-8 lg:pb-4">
+              <blockquote>
+                <div>
+                  <svg
+                    className="h-12 w-12 text-white opacity-25"
+                    fill="currentColor"
+                    viewBox="0 0 32 32"
+                    aria-hidden="true"
+                  >
+                    <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                  </svg>
+                  <Fade key={currentTestimonialId}>
+                    <p
+                      className="text-md mt-6 font-medium text-white md:text-lg lg:text-xl xl:text-2xl"
+                      key={currentTestimonialId}
+                    >
+                      {translate(
+                        testimonials[currentTestimonialId].i18nContent
+                      )}
+                    </p>
+                  </Fade>
+                </div>
+                <footer className="mt-6">
+                  <Fade key={currentTestimonialId}>
+                    <p className="md:text-md text-sm text-base font-medium text-white lg:text-lg xl:text-xl">
+                      {testimonial.author}
+                    </p>
+                    <p className="md:text-md h-12 text-sm text-base font-medium text-indigo-100 lg:text-lg xl:text-xl">
+                      {testimonial.role} {translate('testimonial_at')}{' '}
+                      {testimonial.workplace}
+                    </p>
+                  </Fade>
+                </footer>
+              </blockquote>
+              <div className="flex flex-col items-center gap-y-4">
+                {/* carrousel dot indicator */}
+                <div className="flex items-center gap-x-3">
+                  {testimonials.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`h-2 w-2 bg-white ${
+                        index === currentTestimonialId
+                          ? 'opacity-100'
+                          : 'opacity-50'
+                      } rounded-full`}
+                      onClick={() => {
+                        setCurrentTestimonialId(index)
+                      }}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
-      ))}
-    </>
+      </div>
+    </div>
   )
 }
 
@@ -425,9 +490,8 @@ const Home: NextPageWithLayout = () => {
         <HeroSection />
         <VideoDemoSection />
         <FeaturesSection />
-        <TestimonialSection />
-        {/* TODO add blog feature */}
-        {/* <BlogSection /> */}
+        <TestimonialSection n={10} slideInterval={3} />
+        <BlogSection />
       </main>
     </>
   )

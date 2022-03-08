@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
+import LanguageSwitcher from './language-switcher'
+import { languages } from '../constants/lang'
 
 // tailwind navigation - to be replaced {{{
 const navigation = {
@@ -115,6 +117,8 @@ const Footer: React.FC = () => {
             <p className="text-base text-gray-500">
               {translate('feature_description')}
             </p>
+
+
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <a
@@ -198,9 +202,12 @@ const Footer: React.FC = () => {
                       </a>
                     </li>
                   ))}
+                  <LanguageSwitcher languages={languages} hasIcon={false} />
                 </ul>
               </div>
             </div>
+          </div>
+          <div>
           </div>
         </div>
         <div className="mt-12 border-t border-gray-200 pt-8">
