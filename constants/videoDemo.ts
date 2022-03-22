@@ -6,7 +6,7 @@ export type VideoDemo = {
 export const videoDemos: VideoDemo[] = [
   {
     label: '🏗 Feat: Add a swapper for 1ETH on Polygon',
-    videoUrl: '/video2.mp4',
+    videoUrl: '/Feature demo - beta version - passing cas-.mp4',
   },
   {
     label: '🧑‍🔧 Fix: Eth to Wei unit for 100DAI on Gnosis Chain',
