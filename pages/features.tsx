@@ -1,12 +1,25 @@
-import {ChevronRightIcon, StarIcon} from "@heroicons/react/outline";
 import Image from 'next/image';
-
 
 import {NextPageWithLayout} from "./_app";
 import withMainLayout from "../layouts/withMainLayout";
-import Home from "./index";
+import {GetStaticProps} from "next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale as string, [
+                'feature',
+                'header',
+                'footer',
+            ])),
+        },
+    }
+}
 
 const Features: NextPageWithLayout = () => {
+    const { t: translate } = useTranslation('feature')
 
     return (
         <div className="bg-white pb-8 sm:pb-12 xl:pb-12">
@@ -16,15 +29,13 @@ const Features: NextPageWithLayout = () => {
                 <div
                     className="text-center xl:text-left max-w-5xl mx-auto">
                     <h1 className="text-5xl font-extrabold text-white tracking-tight md:text-6xl">
-                        Boost your development
+                        {translate('hero_headline')}
                     </h1>
                     <h2 className="text-5xl font-extrabold text-indigo-500 text-white tracking-tight md:text-6xl">
-                        with our Features
+                        {translate('hero_subheadline')}
                     </h2>
-                    <p className="mt-6 max-w-3xl mx-auto text-xl text-gray-300">
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
-                        commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt
-                        sunt.
+                    <p className="mt-6 max-w-3xl mx-auto xl:mx-0 text-xl text-gray-300">
+                        {translate('hero_description')}
                     </p>
                 </div>
 
