@@ -58,7 +58,9 @@ const Features: NextPageWithLayout = () => {
         </div>
       </div>
 
-      <section className="relative overflow-hidden pt-16 pb-32">
+      <section className="relative overflow-hidden pt-16 pb-32" style={{
+        background: 'linear-gradient(180deg, rgba(0, 194, 0, 0.05) 0%, rgba(0, 194, 0, 0) 100%)',
+      }}>
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
           <div>
             <h2 className="text-base font-semibold uppercase tracking-wider text-green-500">
