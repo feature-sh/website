@@ -1,5 +1,19 @@
 {
   "hero_headline": "Boostez votre développement",
   "hero_subheadline": "grâce à nos fonctionnalités",
-  "hero_description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt."
+  "hero_description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.",
+
+  "start_headline": "Créez un deal",
+  "start_subheadline": "Feature Bot App",
+  "start_block_1_headline": "Interaction native avec GitHub",
+  "start_block_1_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "start_block_1_cta": "Commencer maintenant",
+
+  "start_block_2_headline": "Intégration directe du paiement sur GitHub",
+  "start_block_2_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "start_block_2_cta": "Commencez maintenant",
+
+  "start_block_3_headline": "Personnalisation des Transactions",
+  "start_block_3_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "start_block_3_cta": "Commencez maintenant"
 }
