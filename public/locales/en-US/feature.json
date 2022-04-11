@@ -16,5 +16,28 @@
 
   "start_block_3_headline": "Personalize your transactions",
   "start_block_3_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
-  "start_block_3_cta": "Get started"
+  "start_block_3_cta": "Get started",
+
+  "execute_headline": "Execute your deal",
+  "execute_subheadline": "Feature GitHub App",
+
+  "execute_block_1_headline": "Compatible with many wallets",
+  "execute_block_1_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "execute_block_1_cta": "Get started",
+
+  "execute_block_1_torus_description": "Integrate Wallet by Torus into your app and get a direct connection to Ethereum, Polygon, BSC and other blockchains.",
+  "execute_block_1_wallet_connect_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
+  "execute_block_1_metamask_description": "Available as a browser extension and as a mobile app, MetaMask equips you with a key vault, secure login, token wallet, and token exchange",
+
+  "execute_block_2_headline": "Connection to different networks",
+  "execute_block_2_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "execute_block_2_cta": "Get started",
+
+  "execute_block_2_polygon_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
+  "execute_block_2_arbitratum_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
+  "execute_block_2_gnosis_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
+
+  "execute_block_3_headline": "Dead simple invoicing",
+  "execute_block_3_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "execute_block_3_cta": "Get started"
 }

@@ -7,11 +7,14 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import {
   CashIcon,
-  CogIcon,
+  CogIcon, CreditCardIcon,
+  CubeTransparentIcon,
   InboxIcon,
   SparklesIcon,
 } from '@heroicons/react/outline'
-import { GitHubIcon } from '../components/icons'
+import { GitHubIcon, WalletIcon } from '../components/icons'
+import { wallets } from '../constants/wallets'
+import { chains } from '../constants/chains'
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
@@ -58,9 +61,14 @@ const Features: NextPageWithLayout = () => {
         </div>
       </div>
 
-      <section className="relative overflow-hidden pt-16 pb-32" style={{
-        background: 'linear-gradient(180deg, rgba(0, 194, 0, 0.05) 0%, rgba(0, 194, 0, 0) 100%)',
-      }}>
+      {/* Start your  deal */}
+      <section
+        className="relative overflow-hidden pt-16 pb-32"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(0, 194, 0, 0.05) 0%, rgba(0, 194, 0, 0) 100%)',
+        }}
+      >
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
           <div>
             <h2 className="text-base font-semibold uppercase tracking-wider text-green-500">
@@ -183,7 +191,7 @@ const Features: NextPageWithLayout = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-12 flex lg:pt-6 flex-shrink-0 flex-col items-center justify-center sm:mt-16 lg:mt-0">
+            <div className="mt-12 flex flex-shrink-0 flex-col items-center justify-center sm:mt-16 lg:mt-0 lg:pt-6">
               {[1, 2, 3].map((txnExampleId) => (
                 <Image
                   key={txnExampleId}
@@ -193,6 +201,177 @@ const Features: NextPageWithLayout = () => {
                   height={142}
                 />
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Execute your deal */}
+
+      <section
+        className="relative overflow-hidden pt-16 pb-32"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(119, 85, 255, 0.05) 0%, rgba(119, 85, 255, 0) 100%);',
+        }}
+      >
+        <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+          <div>
+            <h2 className="text-base font-semibold uppercase tracking-wider text-indigo-500">
+              {translate('execute_headline')}
+            </h2>
+            <p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              {translate('execute_subheadline')}
+            </p>
+          </div>
+        </div>
+        <div className="relative mt-24">
+          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+            <div className="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
+              <div>
+                <div>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500/20 bg-gradient-to-r">
+                    <WalletIcon
+                      className="h-6 w-6 text-indigo-500 text-white"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+                <div className="mt-6">
+                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    {translate('execute_block_1_headline')}
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-500">
+                    {translate('execute_block_1_description')}
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      href="#"
+                      className="inline-flex rounded-md border border-transparent bg-indigo-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
+                    >
+                      {translate('execute_block_1_cta')}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 flex items-center sm:mt-16 lg:mt-0">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {wallets.map((wallet) => (
+                  <div
+                    key={wallet.name}
+                    className="relative flex flex-col gap-y-2 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-md focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
+                  >
+                    <div className="flex-shrink-0">
+                      <Image
+                        height={35}
+                        width={35}
+                        src={wallet.logoUrl}
+                        alt=""
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <a href="#" className="focus:outline-none">
+                        <span className="absolute inset-0" aria-hidden="true" />
+                        <p className="text-base font-semibold text-gray-900">
+                          {wallet.name}
+                        </p>
+                        <p className="mt-2 text-sm text-black/80">
+                          {translate(wallet.description)}
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-24">
+          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+            <div className="mx-auto max-w-xl px-4 sm:px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0">
+              <div>
+                <div>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500/20">
+                    <CubeTransparentIcon
+                      className="h-6 w-6 text-white text-indigo-500"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+                <div className="mt-6">
+                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    {translate('execute_block_2_headline')}
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-500">
+                    {translate('execute_block_2_description')}
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      href="#"
+                      className="inline-flex rounded-md border border-transparent bg-indigo-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
+                    >
+                      {translate('start_block_2_cta')}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 flex items-center sm:mt-16 lg:col-start-1 lg:mt-0">
+              <div className="grid grid-cols-1 gap-4">
+                {chains.map((chain) => (
+                  <div
+                    key={chain.name}
+                    className="relative flex items-start gap-y-3 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-md focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
+                  >
+                    <Image src={chain.logoUrl} width={30} height={30} />
+
+                    <div className="ml-6 min-w-0 flex-1">
+                      <p className="text-base font-semibold text-gray-900">
+                        {chain.name}
+                      </p>
+                      <p className="text-sm text-gray-500 mt-2">
+                        {translate(chain.description)}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="relative mt-24">
+          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-8 lg:pl-8">
+            <div className="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:px-0 flex flex-col justify-center">
+              <div>
+                <div>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500/20 bg-gradient-to-r">
+                    <CreditCardIcon
+                      className="h-6 w-6 text-indigo-500 text-white"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+                <div className="mt-6">
+                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    {translate('execute_block_3_headline')}
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-500">
+                    {translate('execute_block_3_description')}
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      href="#"
+                      className="inline-flex rounded-md border border-transparent bg-indigo-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
+                    >
+                      {translate('execute_block_3_cta')}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 flex flex-shrink-0 flex-col items-center justify-center sm:mt-16 lg:mt-0 lg:pt-6">
+              <Image src={'/features/claim-example.png'} alt={'Screenshot of a claim made with Feature App'} width={426} height={594} />
             </div>
           </div>
         </div>
