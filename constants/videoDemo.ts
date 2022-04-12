@@ -5,11 +5,11 @@ export type VideoDemo = {
 
 export const videoDemos: VideoDemo[] = [
   {
-    label: '🏗 Feat: Add a swapper for 10 MATIC on Polygon',
+    label: "video_demo_wording_polygon", // Real label defined in locales
     videoUrl: '/feature-demo-beta-version-polygon.mp4',
   },
   {
-    label: '🧑‍🔧 Fix: Eth to Wei unit for 10 XDAI on Gnosis Chain',
+    label: "video_demo_wording_gnosis", // Real label defined in locales
     videoUrl: '/feature-demo-beta-version-xdai.mp4',
   },
 ]

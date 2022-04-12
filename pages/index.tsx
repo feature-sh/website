@@ -141,7 +141,7 @@ const VideoDemoSection: React.FC = () => {
               handleDemoChange(demo)
             }}
           >
-            {demo.label}
+            {translate(demo.label)}
           </button>
         ))}
       </div>
