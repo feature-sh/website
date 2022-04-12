@@ -112,15 +112,17 @@ const Header: React.FC = () => {
     >
       <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
-          <a href="#" className="flex">
-            <span className="sr-only">Workflow</span>
-            <Image
-              src="/logo.svg"
-              width={40}
-              height={40}
-              alt="feature's logo"
-            />
-          </a>
+          <Link href="/">
+            <a className="flex">
+              <span className="sr-only">Feature</span>
+              <Image
+                src="/logo.svg"
+                width={40}
+                height={40}
+                alt="feature's logo"
+              />
+            </a>
+          </Link>
         </div>
         <div className="-my-2 -mr-2 md:hidden">
           <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -130,13 +132,13 @@ const Header: React.FC = () => {
         </div>
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
           {/* TODO this part is commented in waiting the pages implementation */}
-          {/* <Popover.Group as="nav" className="flex space-x-10">
-            <Link href="/product">
+          <Popover.Group as="nav" className="flex space-x-10">
+            <Link href="/features">
               <a className="text-base font-medium text-neutral-200 hover:text-white">
-                {translate('navitem_product')}
+                {translate('navitem_features')}
               </a>
-            </Link> */}
-          {/* <Popover className="relative">
+            </Link>
+            {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -215,13 +217,16 @@ const Header: React.FC = () => {
                 </>
               )}
             </Popover>
+            */}
 
+            {/*
             <Link href="/blog">
               <a className="text-base font-medium text-neutral-200 hover:text-white">
                 {translate('navitem_blog')}
               </a>
             </Link>
-          </Popover.Group> */}
+            */}
+          </Popover.Group>
           {/* FIXME remove this div if there is any item menu */}
           <div />
           <div className="flex items-center md:ml-12">
