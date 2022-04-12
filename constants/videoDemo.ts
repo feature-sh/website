@@ -9,7 +9,7 @@ export const videoDemos: VideoDemo[] = [
     videoUrl: '/feature-demo-beta-version-polygon.mp4',
   },
   {
-    label: '🧑‍🔧 Fix: Eth to Wei unit for 10DAI on Gnosis Chain',
+    label: '🧑‍🔧 Fix: Eth to Wei unit for 10 XDAI on Gnosis Chain',
     videoUrl: '/feature-demo-beta-version-xdai.mp4',
   },
 ]

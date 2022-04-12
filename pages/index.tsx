@@ -150,6 +150,11 @@ const VideoDemoSection: React.FC = () => {
           <div className="aspect-video relative max-w-full rounded p-2 md:w-3/4 xl:w-2/4">
             <div className="absolute inset-0 translate-x-4 translate-y-4 border-4 border-indigo-500" />
             <video
+              title={
+                selectedDemo.videoUrl.includes("polygon")
+                ? "Demo video for how to create a deal on the Polygon (Matic) blockchain with Feature Bot on a GitHub issue"
+                : "Demo video for how to create a deal on the Gnosis (xDai) blockchain with Feature Bot on a GitHub issue"
+              }
               controls
               autoPlay
               className="relative z-10 h-full w-full drop-shadow-md"
