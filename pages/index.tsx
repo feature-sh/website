@@ -1,15 +1,11 @@
-import { useEffect, useRef, useState, useMemo } from 'react'
+import { useRef, useState, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import {
-  ArrowRightIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from '@heroicons/react/outline'
+import { ArrowRightIcon } from '@heroicons/react/outline'
 import { Fade } from 'react-awesome-reveal'
 
 import { NextPageWithLayout } from './_app'

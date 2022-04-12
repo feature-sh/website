@@ -12,10 +12,9 @@ import {
   CreditCardIcon,
   CubeTransparentIcon,
   FolderOpenIcon,
-  InboxIcon,
-  SparklesIcon,
   TrendingUpIcon,
 } from '@heroicons/react/outline'
+
 import { GitHubIcon, TargetIcon, WalletIcon } from '../components/icons'
 import { wallets } from '../constants/wallets'
 import { chains } from '../constants/chains'

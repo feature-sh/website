@@ -138,6 +138,11 @@ const Header: React.FC = () => {
                 {translate('navitem_features')}
               </a>
             </Link>
+            <Link href="https://docs.feature.sh">
+              <a className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
+                {translate('navitem_docs')}
+              </a>
+            </Link>
             {/* <Popover className="relative">
               {({ open }) => (
                 <>
@@ -230,11 +235,6 @@ const Header: React.FC = () => {
           {/* FIXME remove this div if there is any item menu */}
           <div />
           <div className="flex items-center md:ml-12">
-            <Link href="https://docs.feature.sh">
-              <a className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
-                {translate('navitem_docs')}
-              </a>
-            </Link>
             <Link href="https://dashboard.feature.sh">
               <a className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
                 {translate('navitem_dashboard')}
