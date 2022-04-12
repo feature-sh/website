@@ -151,9 +151,9 @@ const VideoDemoSection: React.FC = () => {
             <div className="absolute inset-0 translate-x-4 translate-y-4 border-4 border-indigo-500" />
             <video
               title={
-                selectedDemo.videoUrl.includes("polygon")
-                ? "Demo video for how to create a deal on the Polygon (Matic) blockchain with Feature Bot on a GitHub issue"
-                : "Demo video for how to create a deal on the Gnosis (xDai) blockchain with Feature Bot on a GitHub issue"
+                selectedDemo.videoUrl.includes('polygon')
+                  ? 'Demo video for how to create a deal on the Polygon (Matic) blockchain with Feature Bot on a GitHub issue'
+                  : 'Demo video for how to create a deal on the Gnosis (xDai) blockchain with Feature Bot on a GitHub issue'
               }
               controls
               autoPlay
