@@ -227,7 +227,7 @@ const Header: React.FC = () => {
           <div className="flex items-center md:ml-12">
             <Link href="https://docs.feature.sh">
               <a className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
-                Docs
+                {translate('navitem_docs')}
               </a>
             </Link>
             <Link href="https://dashboard.feature.sh">
