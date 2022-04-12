@@ -90,7 +90,7 @@ const Features: NextPageWithLayout = () => {
                 <div>
                   <span className="flex h-12 w-12 items-center justify-center rounded-md bg-green-500/20 bg-gradient-to-r">
                     <GitHubIcon
-                      className="h-6 w-6 fill-green-500 text-white"
+                      className="h-6 w-6 text-green-500"
                       aria-hidden="true"
                     />
                   </span>
@@ -216,7 +216,7 @@ const Features: NextPageWithLayout = () => {
         className="relative overflow-hidden pt-16 pb-32"
         style={{
           background:
-            'linear-gradient(180deg, rgba(119, 85, 255, 0.05) 0%, rgba(119, 85, 255, 0) 100%);',
+            'linear-gradient(180deg, rgba(119, 85, 255, 0.05) 0%, rgba(119, 85, 255, 0) 100%)',
         }}
       >
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
@@ -236,7 +236,7 @@ const Features: NextPageWithLayout = () => {
                 <div>
                   <span className="flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500/20 bg-gradient-to-r">
                     <WalletIcon
-                      className="h-6 w-6 text-indigo-500 text-white"
+                      className="h-6 w-6 text-indigo-500"
                       aria-hidden="true"
                     />
                   </span>
@@ -392,7 +392,7 @@ const Features: NextPageWithLayout = () => {
         className="relative overflow-hidden pt-16 pb-32"
         style={{
           background:
-            'linear-gradient(180deg, rgba(0, 141, 235, 0.05) 0%, rgba(0, 141, 235, 0) 100%);',
+            'linear-gradient(180deg, rgba(0, 141, 235, 0.05) 0%, rgba(0, 141, 235, 0) 100%)',
         }}
       >
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
