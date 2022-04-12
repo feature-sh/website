@@ -1,0 +1,59 @@
+{
+  "hero_headline": "Boostez votre développement",
+  "hero_subheadline": "grâce à nos fonctionnalités",
+  "hero_description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.",
+
+  "start_headline": "Créez un deal",
+  "start_subheadline": "Feature Bot App",
+  "start_block_1_headline": "Interaction native avec GitHub",
+  "start_block_1_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "start_block_1_cta": "Commencer maintenant",
+
+  "start_block_2_headline": "Intégration directe du paiement sur GitHub",
+  "start_block_2_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "start_block_2_cta": "Commencez maintenant",
+
+  "start_block_3_headline": "Personnalisation des Transactions",
+  "start_block_3_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "start_block_3_cta": "Commencez maintenant",
+
+  "execute_headline": "Execute your deal",
+  "execute_subheadline": "Feature GitHub App",
+
+  "execute_block_1_headline": "Compatible avec différents portefeuils",
+  "execute_block_1_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+
+  "execute_block_1_torus_description": "Integrate Wallet by Torus into your app and get a direct connection to Ethereum, Polygon, BSC and other blockchains.",
+  "execute_block_1_wallet_connect_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
+  "execute_block_1_metamask_description": "Available as a browser extension and as a mobile app, MetaMask equips you with a key vault, secure login, token wallet, and token exchange",
+  "execute_block_1_fortmatic_description": "One SDK to let users interact with your dApp through a beautiful user experience from any browser or device.",
+
+  "execute_block_2_headline": "Connexion à différent réseaux",
+  "execute_block_2_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "execute_block_2_cta": "Commencez maintenant",
+
+  "execute_block_2_polygon_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
+  "execute_block_2_arbitratum_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
+  "execute_block_2_gnosis_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
+
+  "execute_block_3_headline": "Facturation simplifiée",
+  "execute_block_3_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "execute_block_3_cta": "Commencez maintenant",
+
+  "manage_headline": "Gérer vos deals",
+  "manage_subheadline": "Feature Insights",
+
+  "manage_block_1_headline": "Suivi de l'évolution de vos deals",
+  "manage_block_1_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "manage_block_1_cta": "Commencez maintenant",
+
+  "manage_block_2_headline": "Gestion de votre facturation",
+  "manage_block_2_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "manage_block_2_cta": "Commencez maintenant",
+
+  "manage_block_3_headline": "Suivi de la vélocité de votre Équipe de Développement",
+  "manage_block_3_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "manage_block_3_feature_1": "Badges NFT",
+  "manage_block_3_feature_2": "Suivi des performances",
+  "manage_block_3_cta": "Commencez maintenant"
+}
