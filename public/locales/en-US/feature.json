@@ -39,5 +39,22 @@
 
   "execute_block_3_headline": "Dead simple invoicing",
   "execute_block_3_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
-  "execute_block_3_cta": "Get started"
+  "execute_block_3_cta": "Get started",
+
+  "manage_headline": "Manage your deal",
+  "manage_subheadline": "Feature Insights",
+
+  "manage_block_1_headline": "Track your deals",
+  "manage_block_1_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "manage_block_1_cta": "Get started",
+
+  "manage_block_2_headline": "Invoice management",
+  "manage_block_2_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "manage_block_2_cta": "Get started",
+
+  "manage_block_3_headline": "Dev Team velocity monitoring",
+  "manage_block_3_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "manage_block_3_feature_1": "NFT badges",
+  "manage_block_3_feature_2": "Performance tracking",
+  "manage_block_3_cta": "Get started"
 }

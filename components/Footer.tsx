@@ -118,7 +118,6 @@ const Footer: React.FC = () => {
               {translate('feature_description')}
             </p>
 
-
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <a
@@ -207,8 +206,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-          <div>
-          </div>
+          <div></div>
         </div>
         <div className="mt-12 border-t border-gray-200 pt-8">
           <p className="text-base text-gray-400 xl:text-center">

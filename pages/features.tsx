@@ -7,12 +7,16 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import {
   CashIcon,
-  CogIcon, CreditCardIcon,
+  CheckIcon,
+  CogIcon,
+  CreditCardIcon,
   CubeTransparentIcon,
+  FolderOpenIcon,
   InboxIcon,
   SparklesIcon,
+  TrendingUpIcon,
 } from '@heroicons/react/outline'
-import { GitHubIcon, WalletIcon } from '../components/icons'
+import { GitHubIcon, TargetIcon, WalletIcon } from '../components/icons'
 import { wallets } from '../constants/wallets'
 import { chains } from '../constants/chains'
 
@@ -330,7 +334,7 @@ const Features: NextPageWithLayout = () => {
                       <p className="text-base font-semibold text-gray-900">
                         {chain.name}
                       </p>
-                      <p className="text-sm text-gray-500 mt-2">
+                      <p className="mt-2 text-sm text-gray-500">
                         {translate(chain.description)}
                       </p>
                     </div>
@@ -342,7 +346,7 @@ const Features: NextPageWithLayout = () => {
         </div>
         <div className="relative mt-24">
           <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-8 lg:pl-8">
-            <div className="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:px-0 flex flex-col justify-center">
+            <div className="mx-auto flex max-w-xl flex-col justify-center px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:px-0">
               <div>
                 <div>
                   <span className="flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500/20 bg-gradient-to-r">
@@ -371,7 +375,170 @@ const Features: NextPageWithLayout = () => {
               </div>
             </div>
             <div className="mt-12 flex flex-shrink-0 flex-col items-center justify-center sm:mt-16 lg:mt-0 lg:pt-6">
-              <Image src={'/features/claim-example.png'} alt={'Screenshot of a claim made with Feature App'} width={426} height={594} />
+              <Image
+                src={'/features/claim-example.png'}
+                alt={'Screenshot of a claim made with Feature App'}
+                width={426}
+                height={594}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Manage your deals */}
+
+      <section
+        className="relative overflow-hidden pt-16 pb-32"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(0, 141, 235, 0.05) 0%, rgba(0, 141, 235, 0) 100%);',
+        }}
+      >
+        <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+          <div>
+            <h2 className="text-base font-semibold uppercase tracking-wider text-blue-500">
+              {translate('manage_headline')}
+            </h2>
+            <p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              {translate('manage_subheadline')}
+            </p>
+          </div>
+        </div>
+        <div className="relative mt-24">
+          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+            <div className="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
+              <div>
+                <div>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-md bg-blue-500/20 bg-gradient-to-r">
+                    <TargetIcon
+                      className="h-6 w-6 text-blue-500"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+                <div className="mt-6">
+                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    {translate('manage_block_1_headline')}
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-500">
+                    {translate('manage_block_1_description')}
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      href="#"
+                      className="inline-flex rounded-md border border-transparent bg-blue-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
+                    >
+                      {translate('manage_block_1_cta')}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 sm:mt-16 lg:mt-0">
+              <div className="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                <img
+                  className="w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                  src="/features/track-deals.png"
+                  alt="feature.sh premium dashboard deal tracking feature"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-24">
+          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+            <div className="mx-auto max-w-xl px-4 sm:px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0">
+              <div>
+                <div>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-md bg-blue-500/20">
+                    <FolderOpenIcon
+                      className="h-6 w-6 text-white text-blue-500"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+                <div className="mt-6">
+                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    {translate('manage_block_2_headline')}
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-500">
+                    {translate('manage_block_2_description')}
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      href="#"
+                      className="inline-flex rounded-md border border-transparent bg-blue-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
+                    >
+                      {translate('manage_block_2_cta')}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 sm:mt-16 lg:col-start-1 lg:mt-0">
+              <div className="-ml-48 pr-4 sm:pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                <img
+                  className="w-full rounded-xl lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                  src="/features/invoicing-management.png"
+                  alt="feature dashboard invoice management page"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="relative mt-24">
+          <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-8 lg:pl-8">
+            <div className="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
+              <div>
+                <div>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-md bg-blue-500/20 bg-gradient-to-r">
+                    <TrendingUpIcon
+                      className="h-6 w-6 text-blue-500 text-white"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+                <div className="mt-6">
+                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    {translate('manage_block_3_headline')}
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-500">
+                    {translate('manage_block_3_description')}
+                  </p>
+                  <ul className="mt-6 space-y-3">
+                    <li className={'flex items-end gap-x-4'}>
+                      <div
+                        className={'inline-block rounded-md bg-blue-500/20 p-1'}
+                      >
+                        <CheckIcon className={'h-5 w-5 text-blue-600'} />
+                      </div>
+                      <span className={'text-gray-500'}>
+                        {translate('manage_block_3_feature_1')}
+                      </span>
+                    </li>
+                    <li className={'flex items-end gap-x-4'}>
+                      <div
+                        className={'inline-block rounded-md bg-blue-500/20 p-1'}
+                      >
+                        <CheckIcon className={'h-5 w-5 text-blue-600'} />
+                      </div>
+                      <span className={'text-gray-500'}>
+                        {translate('manage_block_3_feature_2')}
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 sm:mt-16 lg:mt-0">
+              <div className="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                <img
+                  className="w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                  src="/features/velocity-tracking.png"
+                  alt="feature.sh premium dashboard deal tracking feature"
+                />
+              </div>
             </div>
           </div>
         </div>

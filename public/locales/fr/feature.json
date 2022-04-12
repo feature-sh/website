@@ -38,5 +38,22 @@
 
   "execute_block_3_headline": "Facturation simplifiée",
   "execute_block_3_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
-  "execute_block_3_cta": "Commencez maintenant"
+  "execute_block_3_cta": "Commencez maintenant",
+
+  "manage_headline": "Gérer vos deals",
+  "manage_subheadline": "Feature Insights",
+
+  "manage_block_1_headline": "Suivi de l'évolution de vos deals",
+  "manage_block_1_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "manage_block_1_cta": "Commencez maintenant",
+
+  "manage_block_2_headline": "Gestion de votre facturation",
+  "manage_block_2_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "manage_block_2_cta": "Commencez maintenant",
+
+  "manage_block_3_headline": "Suivi de la vélocité de votre Équipe de Développement",
+  "manage_block_3_description": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
+  "manage_block_3_feature_1": "Badges NFT",
+  "manage_block_3_feature_2": "Suivi des performances",
+  "manage_block_3_cta": "Commencez maintenant"
 }
