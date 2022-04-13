@@ -3,15 +3,17 @@
 	"description": "Feature is a crypto freelancing market place to incentive contributors to develop the Github issues.",
 	"hero_heading_part1": "Boost your Development",
 	"hero_heading_part2": "with Elegant Incentives",
-	"hero_subheading": "Attach directly a Reward in Github to your features, fixes, tests...\nto incentive Developers to complete them in a given time.",
+	"hero_subheading": "Attach directly a Reward in Github to your features, fixes and tests\nto incentive Developers to complete them in a given time.",
+	"hero_try_free": "Try it for Free",
+	"hero_button_book_demo": "Book a Demo",
 
-	"video_demo_heading": "Offer a Deal to Developers in a Few Seconds",
+	"video_demo_heading": "Offer Deals to Developers in a Few Seconds",
 	"video_demo_subheading": "Deal Faster",
 	"video_demo_description": "Directly on Github your will create the deal and it will automatically appears to developers with an escrow proof to incentive contributors to achieve the issue.",
 	"video_demo_wording_polygon": "🏗 Feat: Add a swapper for 10 MATIC on Polygon",
 	"video_demo_wording_gnosis": "🧑‍🔧 Fix: Eth to Wei unit for 10 XDAI on Gnosis Chain",
 
-	"features_heading": "Real-time performance management delivers real impact",
+	"features_heading": "Real-time performance delivers real impact",
 	"features_subheading": "Manage for success",
 	"features_description": "",
 

@@ -1,9 +1,9 @@
+import { SVGProps } from 'react'
 import {
   GlobeAltIcon,
   LightningBoltIcon,
   ScaleIcon,
 } from '@heroicons/react/outline'
-import { SVGProps } from 'react'
 
 export type Feature = {
   i18nLabel: string
