@@ -118,13 +118,13 @@ const VideoDemoSection: React.FC = () => {
   return (
     <section className="flex flex-col justify-center bg-gray-100 p-8 py-16 text-center lg:py-24">
       <h2 className="text-2xl font-normal font-bold uppercase sm:text-3xl xl:text-4xl">
-        {translate('features_subheading')}
+        {translate('video_demo_subheading')}
       </h2>
       <h3 className="mt-4 text-3xl font-bold sm:text-4xl xl:text-5xl">
-        {translate('features_heading')}
+        {translate('video_demo_heading')}
       </h3>
       <p className="text-md mx-auto mt-6 max-w-7xl whitespace-pre-line text-gray-800 sm:text-lg lg:text-xl xl:text-2xl">
-        {translate('features_description')}
+        {translate('video_demo_description')}
       </p>
       <div className="start mt-8 flex flex-wrap items-start justify-center gap-y-4 gap-x-4 md:gap-x-8">
         {videoDemos.map((demo) => (
@@ -171,13 +171,13 @@ const FeaturesSection = () => {
   return (
     <section className="bg-white px-2 pt-16 pb-4 lg:pt-28 lg:pt-8">
       <h2 className="text-center text-2xl font-normal font-bold uppercase sm:text-3xl xl:text-4xl">
-        {translate('video_demo_subheading')}
+        {translate('features_subheading')}
       </h2>
       <h3 className="mt-4 text-center text-3xl font-bold sm:text-4xl xl:text-5xl">
-        {translate('video_demo_heading')}
+        {translate('features_heading')}
       </h3>
       <p className="text-md mx-auto mt-6 max-w-7xl text-center text-gray-800 sm:text-lg lg:text-xl xl:text-2xl">
-        {translate('video_demo_description')}
+        {translate('features_description')}
       </p>
       <div className="mx-auto mt-20 max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <dl className="space-y-10 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
