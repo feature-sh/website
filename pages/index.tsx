@@ -445,6 +445,28 @@ const BlogSection: React.FC = () => {
   )
 }
 
+const CTA: React.FC = () => {
+  const { t: translate } = useTranslation('homepage')
+
+  return (
+    <div className="bg-indigo-700">
+      <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+          <span className="block">Boost your productivity.</span>
+          <span className="block">Start using Feature today.</span>
+        </h2>
+        <Link href="https://beta.v1.evm.app.feature.sh" passHref={true}>
+          <a 
+            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto"
+          >
+            {translate('hero_try_free')}
+          </a>
+        </Link>
+      </div>
+    </div>
+  )
+}
+
 const Home: NextPageWithLayout = () => {
   const { t: translate } = useTranslation('homepage')
 
@@ -459,8 +481,9 @@ const Home: NextPageWithLayout = () => {
         <HeroSection />
         <VideoDemoSection />
         <FeaturesSection />
-        <TestimonialSection n={10} slideInterval={3} />
-        <BlogSection />
+        {/* <TestimonialSection n={10} slideInterval={3} /> */}
+        {/* <BlogSection /> */}
+        <CTA />
       </main>
     </>
   )
