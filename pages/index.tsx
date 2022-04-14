@@ -481,8 +481,9 @@ const Home: NextPageWithLayout = () => {
         <HeroSection />
         <VideoDemoSection />
         <FeaturesSection />
-        {/* <TestimonialSection n={10} slideInterval={3} /> */}
-        {/* <BlogSection /> */}
+        {/* We will enable these when we will have relevant data to show */}
+        {/*<TestimonialSection n={10} slideInterval={3} />*/}
+        {/*<BlogSection />*/}
         <CTA />
       </main>
     </>
