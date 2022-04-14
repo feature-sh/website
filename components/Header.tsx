@@ -138,6 +138,11 @@ const Header: React.FC = () => {
                 {translate('navitem_features')}
               </a>
             </Link>
+            <Link href="https://docs.feature.sh">
+              <a className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
+                {translate('navitem_docs')}
+              </a>
+            </Link>
             {/* <Popover className="relative">
               {({ open }) => (
                 <>
@@ -231,11 +236,11 @@ const Header: React.FC = () => {
           <div />
           <div className="flex items-center md:ml-12">
             <Link href="https://dashboard.feature.sh">
-              <a className="text-base font-medium text-neutral-200 hover:text-white">
+              <a className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
                 {translate('navitem_dashboard')}
               </a>
             </Link>
-            <Link href="/book">
+            <Link href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development" passHref={true}>
               <a className="ml-8 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                 {translate('navitem_book')}
               </a>

@@ -1,37 +1,39 @@
 {
 	"title": "Incentive Developers to do your Github issues | Feature",
 	"description": "Feature is a crypto freelancing market place to incentive contributors to develop the Github issues.",
-	"hero_heading_part1": "Incentive Developers",
-	"hero_heading_part2": "to do your Github Issues",
-	"hero_subheading": "Attach directly a Reward in Github to your features, fixes, tests...\nto incentive Developers to complete them in a given time.",
+	"hero_heading_part1": "Boost your Development",
+	"hero_heading_part2": "with Elegant Incentives",
+	"hero_subheading": "Attach directly a Reward in Github to your features, fixes and tests\nto incentive Developers to complete them in a given time.",
+	"hero_try_free": "Try it for Free",
+	"hero_button_book_demo": "Book a Demo",
 
-	"video_demo_heading": "Offer a Deal to Developers in a Few Seconds",
+	"video_demo_heading": "Offer Deals to Developers in a Few Seconds",
 	"video_demo_subheading": "Deal Faster",
 	"video_demo_description": "Directly on Github your will create the deal and it will automatically appears to developers with an escrow proof to incentive contributors to achieve the issue.",
 	"video_demo_wording_polygon": "🏗 Feat: Add a swapper for 10 MATIC on Polygon",
 	"video_demo_wording_gnosis": "🧑‍🔧 Fix: Eth to Wei unit for 10 XDAI on Gnosis Chain",
 
-	"features_heading": "Offer a Deal to Developers in a Few Seconds",
-	"features_subheading": "Deal Faster",
-	"features_description": "Directly on Github your will create the deal and it will automatically appears to developers\nwith an escrow proof to incentive contributors to achieve the issue.",
+	"features_heading": "Real-time performance delivers real impact",
+	"features_subheading": "Manage for success",
+	"features_description": "",
 
-	"features_gamify_heading": "Gamify",
-	"features_gamify_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+	"features_gamify_heading": "Gamification",
+	"features_gamify_description": "Reduce churn and burn. Each Github issues or ticket completed earns experience points (tokens) to see a clear path to success.",
 
 	"features_reward_heading": "Rewards",
-	"features_reward_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+	"features_reward_description": "Associating behaviors with recognition turns them into habits. Feature uses coin and tokens to instantly reward employees when a Github issue or a ticket is completed.",
 
 	"features_badge_heading": "Badges",
-	"features_badge_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+	"features_badge_description": "Feature allows managers to better engage with their developers by sending some badges who validated skills or contributions.",
 
-	"features_prioritarize_heading": "Prioritarize",
-	"features_prioritarize_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+	"features_prioritarize_heading": "Prioritization",
+	"features_prioritarize_description": "By giving a higher reward for urgent and important tasks you put all your chances on your side to get the task done in time.",
 
 	"features_performance_heading": "Performance",
-	"features_performance_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+	"features_performance_description": "By giving real time feedback to the developer through a dashboard that tracks the performance of each developer ensure you participate in its success.",
 
 	"features_accounting_heading": "Accounting",
-	"features_accounting_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+	"features_accounting_description": "Accounting is often a pain, especially when it comes to crypto rewards, which are often volatile. A simple interface calculates the equivalent in euros and dollars to simplify your life.",
 
 	"features_more": "More features",
 
