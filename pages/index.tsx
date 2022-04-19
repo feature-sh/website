@@ -171,7 +171,7 @@ const FeaturesSection = () => {
           ))}
         </dl>
         <div className="flex justify-center lg:justify-end">
-          <Link href="#">
+          <Link href="/features">
             <a className="mt-12 flex items-center gap-x-2 text-right">
               {translate('features_more')}
               <ArrowRightIcon className="h-5 w-5" />
@@ -197,7 +197,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
 
   const resetInterval = useInterval(() => {
     nextTestimonial(true)
-  }, slideInterval * 1000)
+  }, slideInterval * 3000)
 
   // gen fake testimonials only one time
   // const testimonials = useMemo(() => genFakeTestimonials(n), [])
