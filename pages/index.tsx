@@ -13,7 +13,7 @@ import { useInterval } from '../hooks/useInterval'
 import withMainLayout from '../layouts/withMainLayout'
 import { VideoDemo, videoDemos } from '../constants/videoDemo'
 import { features } from '../constants/features'
-import { genFakeTestimonials } from '../constants/testimonials'
+import { testimonials } from '../constants/testimonials'
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
@@ -200,7 +200,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
   }, slideInterval * 1000)
 
   // gen fake testimonials only one time
-  const testimonials = useMemo(() => genFakeTestimonials(n), [])
+  // const testimonials = useMemo(() => genFakeTestimonials(n), [])
 
   const nextTestimonial = (auto: boolean = false) => {
     if (!auto) {
@@ -481,8 +481,7 @@ const Home: NextPageWithLayout = () => {
         <HeroSection />
         <VideoDemoSection />
         <FeaturesSection />
-        {/* We will enable these when we will have relevant data to show */}
-        {/*<TestimonialSection n={10} slideInterval={3} />*/}
+        <TestimonialSection n={10} slideInterval={3} />
         {/*<BlogSection />*/}
         <CTA />
       </main>

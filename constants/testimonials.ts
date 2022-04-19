@@ -9,20 +9,44 @@ export type Testimonial = {
 }
 
 const peoplePics = [
-  '/testimonial1.jpg',
-  '/testimonial2.jpg',
-  '/testimonial3.jpg',
-  '/testimonial4.jpg',
+  '/product_lead_cofounder_flexteam.jpeg',
+  '/ceo_hackerhouse.jpg',
+  '/Yassine_adlive.jpg',
+  '/Julien-CEO-Ato.png',
 ]
 
 export const testimonials: Testimonial[] = [
   {
-    i18nContent: 'testimonial_example_content',
-    role: 'CEO',
-    workplace: 'Pure Insights',
-    author: 'Judith Black',
+    i18nContent: 'testimonial_example_content_1',
+    role: 'Co-Founder & Product Lead',
+    workplace: 'Flexteam',
+    author: 'Hulin Simon',
     photo:
-      'https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80',
+      '/product_lead_cofounder_flexteam.jpeg',
+  },
+  {
+    i18nContent: 'testimonial_example_content_2',
+    role: 'CEO',
+    workplace: 'Hackhouse',
+    author: 'Boumny Stéphane',
+    photo:
+      '/ceo_hackerhouse.jpg',
+  },
+  {
+    i18nContent: 'testimonial_example_content_3',
+    role: 'Header Bidding Expert',
+    workplace: 'Adlive',
+    author: 'Adissa Yassine',
+    photo:
+      '/Yassine_adlive.jpg',
+  },
+  {
+    i18nContent: 'testimonial_example_content_4',
+    role: 'CEO',
+    workplace: 'Ato',
+    author: 'Béranger Julien',
+    photo:
+      '/Julien-CEO-Ato.png',
   },
 ]
 
