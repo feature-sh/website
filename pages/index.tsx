@@ -223,9 +223,9 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
   const testimonial = testimonials[currentTestimonialId]
 
   return (
-    <div className="bg-white px-4 pt-16 lg:px-16 lg:py-24">
-      <div className="bg-indigo-600 pb-8 lg:relative lg:z-10 lg:pb-0">
-        <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
+    <div className="bg-white pt-16 lg:pt-24">
+      <div className="bg-indigo-700 lg:relative lg:z-10">
+        <div className="mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
           <div className="relative lg:-my-8">
             <div
               aria-hidden="true"
@@ -445,12 +445,39 @@ const BlogSection: React.FC = () => {
   )
 }
 
+const BlockchainAvailable: React.FC = () => {
+  return (
+    <div className="bg-white">
+      <div className="max-w-7xl mx-auto py-12 lg:py-16">
+        <p className="text-center text-base font-semibold uppercase text-gray-600 tracking-wider">
+          Deployed on
+        </p>
+        <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
+          <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+            <img
+              className="max-h-12 grayscale contrast-240"
+              src="/xdai-logo.png"
+              alt="Xdai logo"
+            />
+          </div>
+          <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+            <img className="max-h-12 grayscale contrast-50" src="/polygon-logo.webp" alt="Polygon logo" />
+          </div>
+          <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+            <img className="max-h-12 grayscale  contrast-70" src="/arbitrum-logo.png" alt="Arbitrum logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const CTA: React.FC = () => {
   const { t: translate } = useTranslation('homepage')
 
   return (
     <div className="bg-indigo-700">
-      <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+      <div className="max-w-2xl mx-auto text-center pb-16 px-4 sm:py-20 sm:px-6 lg:pb-8">
         <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
           <span className="block">Boost your productivity.</span>
           <span className="block">Start using Feature today.</span>
@@ -481,6 +508,7 @@ const Home: NextPageWithLayout = () => {
         <HeroSection />
         <VideoDemoSection />
         <FeaturesSection />
+        <BlockchainAvailable />
         <TestimonialSection n={10} slideInterval={3} />
         {/*<BlogSection />*/}
         <CTA />
