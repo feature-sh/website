@@ -479,8 +479,8 @@ const CTA: React.FC = () => {
     <div className="bg-indigo-700">
       <div className="max-w-2xl mx-auto text-center pb-16 px-4 sm:py-20 sm:px-6 lg:pb-8">
         <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-          <span className="block">Boost your productivity.</span>
-          <span className="block">Start using Feature today.</span>
+          <span className="block">Be like them</span>
+          <span className="block">And start your Feature</span>
         </h2>
         <Link href="https://beta.v1.evm.app.feature.sh" passHref={true}>
           <a 
