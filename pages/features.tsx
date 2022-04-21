@@ -1,10 +1,7 @@
-import Image from 'next/image'
-
-import { NextPageWithLayout } from './_app'
-import withMainLayout from '../layouts/withMainLayout'
 import { GetStaticProps } from 'next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import {
   CashIcon,
   CheckIcon,
@@ -15,6 +12,8 @@ import {
   TrendingUpIcon,
 } from '@heroicons/react/outline'
 
+import { NextPageWithLayout } from './_app'
+import withMainLayout from '../layouts/withMainLayout'
 import { GitHubIcon, TargetIcon, WalletIcon } from '../components/icons'
 import { wallets } from '../constants/wallets'
 import { chains } from '../constants/chains'
@@ -103,7 +102,7 @@ const Features: NextPageWithLayout = () => {
                   </p>
                   <div className="mt-6">
                     <a
-                      href="#"
+                      href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development?month=2022-04"
                       className="inline-flex rounded-md border border-transparent bg-green-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                     >
                       {translate('start_block_1_cta')}
@@ -144,7 +143,7 @@ const Features: NextPageWithLayout = () => {
                   </p>
                   <div className="mt-6">
                     <a
-                      href="#"
+                      href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development?month=2022-04"
                       className="inline-flex rounded-md border border-transparent bg-green-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                     >
                       {translate('start_block_2_cta')}
@@ -185,7 +184,7 @@ const Features: NextPageWithLayout = () => {
                   </p>
                   <div className="mt-6">
                     <a
-                      href="#"
+                      href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development?month=2022-04"
                       className="inline-flex rounded-md border border-transparent bg-green-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                     >
                       {translate('start_block_3_cta')}
@@ -249,7 +248,7 @@ const Features: NextPageWithLayout = () => {
                   </p>
                   <div className="mt-6">
                     <a
-                      href="#"
+                      href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development?month=2022-04"
                       className="inline-flex rounded-md border border-transparent bg-indigo-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                     >
                       {translate('execute_block_1_cta')}
@@ -274,7 +273,7 @@ const Features: NextPageWithLayout = () => {
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <a href="#" className="focus:outline-none">
+                      <a href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development?month=2022-04" className="focus:outline-none">
                         <span className="absolute inset-0" aria-hidden="true" />
                         <p className="text-base font-semibold text-gray-900">
                           {wallet.name}
@@ -311,7 +310,7 @@ const Features: NextPageWithLayout = () => {
                   </p>
                   <div className="mt-6">
                     <a
-                      href="#"
+                      href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development?month=2022-04"
                       className="inline-flex rounded-md border border-transparent bg-indigo-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                     >
                       {translate('start_block_2_cta')}
@@ -364,7 +363,7 @@ const Features: NextPageWithLayout = () => {
                   </p>
                   <div className="mt-6">
                     <a
-                      href="#"
+                      href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development?month=2022-04"
                       className="inline-flex rounded-md border border-transparent bg-indigo-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                     >
                       {translate('execute_block_3_cta')}
@@ -425,7 +424,7 @@ const Features: NextPageWithLayout = () => {
                   </p>
                   <div className="mt-6">
                     <a
-                      href="#"
+                      href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development?month=2022-04"
                       className="inline-flex rounded-md border border-transparent bg-blue-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                     >
                       {translate('manage_block_1_cta')}
@@ -466,7 +465,7 @@ const Features: NextPageWithLayout = () => {
                   </p>
                   <div className="mt-6">
                     <a
-                      href="#"
+                      href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development?month=2022-04"
                       className="inline-flex rounded-md border border-transparent bg-blue-500 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                     >
                       {translate('manage_block_2_cta')}
