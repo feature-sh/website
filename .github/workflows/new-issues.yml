@@ -1,4 +1,4 @@
-name: Add new issues to GitHub projects beta
+name: Add new issues to GitHub projects beta with milestone
 
 on:
   issues: 
@@ -18,6 +18,14 @@ jobs:
         with:
           # URL of the project to add issues to
           project-url: https://github.com/orgs/feature-sh/projects/1
-          # A GitHub personal access token with write access to the project
           github-token: ${{ secrets.GHPROJECT_TOKEN }}
+          
+      # TO DO: Find a way to add the lastest milestone without hardcoding it
+      - name: Add milestone to issue
+        # Edit issue data with GitHub's REST API
+        run: |
+          curl --request PATCH \
+          --url ${{ github.event.issue.url }} \
+          --header 'authorization: token ${{ secrets.GITHUB_TOKEN }}' \
+          --data '{"milestone": 2}'
           
