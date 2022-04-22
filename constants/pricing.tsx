@@ -34,7 +34,7 @@ export const pricing: { tiers: PricingTier[] } = {
       mostPopular: false,
     },
     {
-      payload: { price: 250 },
+      payload: { price: 50 },
       i18nBilling: 'billing_monthly' as I18nBilling,
       features: [
         '25 products',
