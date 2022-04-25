@@ -478,13 +478,10 @@ const CTA: React.FC = () => {
 
   return (
     <div className="bg-gray-900/[.99] flex">
-      <div className="mt-10 text-right w-2xl">
-        <Image className="invert rotate-180 mt-5" src="/arrow2.png" width="180%" height="180%" />
-      </div>
       <div className="max-w-2xl mx-auto text-center pb-16 px-4 sm:py-20 sm:px-6 lg:pb-8">
         <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
           <span className="block">Be like them</span>
-          <span className="block">And start your &nbsp; <Image src="/feature.png" width="159" height="25" /></span>
+          <span className="block">And start your Feature</span>
         </h2>
         <Link href="https://beta.v1.evm.app.feature.sh" passHref={true}>
           <a 
