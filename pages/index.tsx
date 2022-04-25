@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import { ArrowRightIcon } from '@heroicons/react/outline'
@@ -476,11 +477,14 @@ const CTA: React.FC = () => {
   const { t: translate } = useTranslation('homepage')
 
   return (
-    <div className="bg-indigo-700">
+    <div className="bg-gray-900/[.99] flex">
+      <div className="mt-10 text-right w-2xl">
+        <Image className="invert rotate-180 mt-5" src="/arrow2.png" width="180%" height="180%" />
+      </div>
       <div className="max-w-2xl mx-auto text-center pb-16 px-4 sm:py-20 sm:px-6 lg:pb-8">
         <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
           <span className="block">Be like them</span>
-          <span className="block">And start your Feature</span>
+          <span className="block">And start your &nbsp; <Image src="/feature.png" width="159" height="25" /></span>
         </h2>
         <Link href="https://beta.v1.evm.app.feature.sh" passHref={true}>
           <a 
@@ -502,6 +506,16 @@ const Home: NextPageWithLayout = () => {
       <Head>
         <title>{translate('title')}</title>
         <meta name="description" content={translate('description')} />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-DD1CHZZ4CQ" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-DD1CHZZ4CQ');
+        `}
+        </Script>
       </Head>
 
       <main>

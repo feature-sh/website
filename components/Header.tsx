@@ -13,9 +13,6 @@ import {
   ViewGridIcon,
   XIcon,
 } from '@heroicons/react/outline'
-import { ChevronDownIcon } from '@heroicons/react/solid'
-
-import { classNames } from '../utils/classNames'
 
 // {{{ tailwind example metadata - will be replaced
 
