@@ -410,9 +410,6 @@ const BlogSection: React.FC = () => {
           <h3 className="mt-4 text-center text-3xl font-bold sm:text-4xl xl:text-5xl">
             {translate('blog_heading')}
           </h3>
-          <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
-            {translate('blog_description')}
-          </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
