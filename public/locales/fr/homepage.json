@@ -18,10 +18,10 @@
 	"features_description": "",
 
 	"features_gamify_heading": "Gamification",
-	"features_gamify_description": "Réduisez l'ennui voire le burnout. Chaque Issue Github ou ticket complété permet de gagner des points d'expérience (tokens) pour suivre en temps réel la progression du développeur et le motiver davantage.",
+	"features_gamify_description": "Fini les tâches ennuyantes ! Maintenant, chaque issue GitHub terminée permet de gagner des points, montrant l'efficacité du développeur.",
 
 	"features_reward_heading": "Récompenses",
-	"features_reward_description": "Associer les comportements à la reconnaissance les transforme en habitudes. Feature utilise des pièces et des jetons pour récompenser instantanément les employés lorsqu'une issue Github ou un ticket est complété.",
+	"features_reward_description": "Feature permet aux développeurs d'être payé à la tâche, de manière sécurisée et instantanée, en cryptomonnaies.",
 
 	"features_badge_heading": "Badges",
 	"features_badge_description": "Feature permet aux managers de mieux s'engager auprès de leurs développeurs en leur envoyant des badges qui valident leurs compétences ou leurs contributions.",
@@ -30,10 +30,10 @@
 	"features_prioritarize_description": "En accordant une récompense plus élevée pour les tâches urgentes et importantes, vous mettez toutes les chances de votre côté pour que la tâche soit accomplie à temps.",
 
 	"features_performance_heading": "Performance",
-	"features_performance_description": "En donnant un retour d'information en temps réel au développeur grâce à un tableau de bord qui suit les performances de chaque développeur, vous vous assurez de participer à son succès.",
+	"features_performance_description": "Grâce à un tableau de bord qui suit les performances de chaque développeur en temps réel, vous pouvez directement faire un retour, permettant au développeur de réaliser une tâche plus efficacement.",
 
 	"features_accounting_heading": "Comptabilité",
-	"features_accounting_description": "La comptabilité est souvent un calvaire, surtout lorsqu'il s'agit de récompenses en crypto, qui sont souvent volatiles. Une interface simple calcule l'équivalent en euros et en dollars pour vous simplifier la vie.",
+	"features_accounting_description": "La comptabilité est souvent un calvaire, surtout lorsqu'il s'agit de cryptomonnaies, qui sont souvent instables. Une interface simple calcule l'équivalent en euros et en dollars pour vous simplifier la vie.",
 
 	"features_more": "Plus de fonctionnalités",
 
