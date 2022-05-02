@@ -38,3 +38,9 @@ yarn-error.log*
 
 # yarn
 yarn.lock
+
+.env
+
+
+# IDEs
+.idea

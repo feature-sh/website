@@ -273,7 +273,10 @@ const Features: NextPageWithLayout = () => {
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <a href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development?month=2022-04" className="focus:outline-none">
+                      <a
+                        href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development?month=2022-04"
+                        className="focus:outline-none"
+                      >
                         <span className="absolute inset-0" aria-hidden="true" />
                         <p className="text-base font-semibold text-gray-900">
                           {wallet.name}

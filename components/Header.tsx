@@ -237,7 +237,10 @@ const Header: React.FC = () => {
                 {translate('navitem_dashboard')}
               </a>
             </Link>
-            <Link href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development" passHref={true}>
+            <Link
+              href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development"
+              passHref={true}
+            >
               <a className="ml-8 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                 {translate('navitem_book')}
               </a>

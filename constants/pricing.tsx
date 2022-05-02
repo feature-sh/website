@@ -61,6 +61,6 @@ export const pricing: { tiers: PricingTier[] } = {
     ...plan,
     i18nTitle: `plan_${idx + 1}_title`,
     i18nDescription: `plan_${idx + 1}_description`,
-    i18nCta: `plan_${idx + 1}_cta`
+    i18nCta: `plan_${idx + 1}_cta`,
   })),
 }
