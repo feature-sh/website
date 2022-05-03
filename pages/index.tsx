@@ -53,20 +53,13 @@ const HeroSection: React.FC = () => {
                 {translate('hero_subheading')}
               </p>
               <div className="mt-10 flex sm:mt-12">
-                <Link href="https://beta.v1.evm.app.feature.sh" passHref={true}>
-                  <a className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent border-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+                  <a href={process.env.NEXT_PUBLIC_DAPP_BASE_URL || '#'} className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent border-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                     {translate('hero_try_free')}
                   </a>
-                </Link>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link
-                  href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development"
-                  passHref={true}
-                >
-                  <a className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+                  <a href={process.env.NEXT_PUBLIC_CALENDLY_URL_BOOK_A_DEMO || '#'} className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                     {translate('hero_button_book_demo')}
                   </a>
-                </Link>
               </div>
             </div>
           </div>
