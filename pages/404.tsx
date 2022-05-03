@@ -10,7 +10,7 @@ const NotFound: NextPageWithLayout = () => {
   const { t: translate } = useTranslation('404')
 
   return (
-    <div className="min-h-full bg-gray-900 px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
+    <div className="min-h-full bg-gray-900 px-4 sm:px-6 py-24 md:grid md:place-items-center lg:px-8">
       <div className="mx-auto max-w-max">
         <main className="sm:flex">
           <p className="text-4xl font-extrabold text-indigo-600 sm:text-5xl">

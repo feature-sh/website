@@ -11,7 +11,7 @@
   "start_block_1_cta": "Get started",
 
   "start_block_2_headline": "Direct payment integration on GitHub",
-  "start_block_2_description": "Payment is made directly on GitHub, without having to register to a third-party platform.",
+  "start_block_2_description": "Payment is made directly on GitHub. Dead simple.",
   "start_block_2_cta": "Get started",
 
   "start_block_3_headline": "Personalize your transactions",
@@ -28,14 +28,15 @@
   "execute_block_1_torus_description": "Integrate Wallet by Torus into your app and get a direct connection to Ethereum, Polygon, BSC and other blockchains.",
   "execute_block_1_wallet_connect_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
   "execute_block_1_metamask_description": "Available as a browser extension and as a mobile app, MetaMask equips you with a key vault, secure login, token wallet, and token exchange",
+  "execute_block_1_fortmatic_description": "An SDK to allow users to interact with your dApp through a beautiful user experience from any browser or device.",
 
   "execute_block_2_headline": "Connection to different networks",
   "execute_block_2_description": "Feature is deployed on several layer two blockchains to have high transaction speed with low fees.",
   "execute_block_2_cta": "Propose to new network",
 
-  "execute_block_2_polygon_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
-  "execute_block_2_arbitratum_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
-  "execute_block_2_gnosis_description": "Use WalletConnect to connect with wallets. Give users the choice to use your dapp with their favorite wallet on any device",
+  "execute_block_2_polygon_description": "Polygon believes in Web3 for all. Polygon is a decentralised Ethereum scaling platform that enables developers to build scalable user-friendly dApps with low transaction fees without ever sacrificing on security.",
+  "execute_block_2_arbitratum_description": "The ideal scaling solution for many DeFi apps Arbitrum Rollup can scale any Ethereum contract.",
+  "execute_block_2_gnosis_description": "Gnosis builds new market mechanisms for decentralized finance. Our three interoperable product lines allow you to securely create, trade, and hold digital assets on Ethereum.",
 
   "execute_block_3_headline": "Dead simple invoicing",
   "execute_block_3_description": "For each accounting transaction it is possible to associate an invoice to simplify the compatibility  (available on pro version).",

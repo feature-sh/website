@@ -5,6 +5,7 @@ import { useTranslation } from 'next-i18next'
 import { Popover, Transition } from '@headlessui/react'
 import {
   ChartBarIcon,
+  ChatIcon,
   CursorClickIcon,
   DocumentReportIcon,
   MenuIcon,
@@ -13,49 +14,31 @@ import {
   ViewGridIcon,
   XIcon,
 } from '@heroicons/react/outline'
-
-// {{{ tailwind example metadata - will be replaced
+import { BookOpenIcon } from '@heroicons/react/solid'
 
 const solutions = [
   {
-    name: 'Analytics',
+    name: 'Product',
     description:
       'Get a better understanding of where your traffic is coming from.',
-    href: '#',
-    icon: ChartBarIcon,
-  },
-  {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
-    icon: CursorClickIcon,
-  },
-  {
-    name: 'Security',
-    description: "Your customers' data will be safe and secure.",
-    href: '#',
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: 'Integrations',
-    description: "Connect with third-party tools that you're already using.",
     href: '#',
     icon: ViewGridIcon,
   },
   {
-    name: 'Automations',
-    description:
-      'Build strategic funnels that will drive your customers to convert',
-    href: '#',
-    icon: RefreshIcon,
+    name: 'Docs',
+    description: 'Speak directly to your customers in a more meaningful way.',
+    href: 'https://docs.feature.sh',
+    icon: BookOpenIcon,
   },
+  /*
   {
-    name: 'Reports',
-    description:
-      'Get detailed reports that will help you make more informed decisions ',
+    name: 'Blog',
+    description: "Your customers' data will be safe and secure.",
     href: '#',
-    icon: DocumentReportIcon,
+    icon: ChatIcon,
   },
+  */
+  
 ]
 const resources = [
   {
@@ -82,8 +65,6 @@ const resources = [
     href: '#',
   },
 ]
-
-// }}}
 
 const Header: React.FC = () => {
   const { t: translate } = useTranslation('header')
@@ -237,7 +218,9 @@ const Header: React.FC = () => {
                 {translate('navitem_dashboard')}
               </a>
             </Link>
-            <Link href="https://calendly.com/feature-sh/book-a-demo-to-boost-your-web3-development" passHref={true}>
+            <Link
+              href={process.env.NEXT_PUBLIC_CALENDLY_URL_BOOK_A_DEMO || '#'}
+            >
               <a className="ml-8 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                 {translate('navitem_book')}
               </a>
@@ -280,9 +263,11 @@ const Header: React.FC = () => {
               <div className="mt-6">
                 <nav className="grid gap-6">
                   {solutions.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
+                      >
+                    <a
                       className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
                     >
                       <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white">
@@ -292,33 +277,19 @@ const Header: React.FC = () => {
                         {item.name}
                       </div>
                     </a>
+                    </Link>
                   ))}
                 </nav>
               </div>
             </div>
             <div className="px-5 py-6">
-              <div className="grid grid-cols-2 gap-4">
-                <Link href="/product">
-                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    {translate('navitem_product')}
-                  </a>
-                </Link>
-
-                <Link href="/blog">
-                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    {translate('navitem_blog')}
-                  </a>
-                </Link>
-              </div>
-              <div className="mt-6">
-                <Link href="/book">
-                  <a className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+              <div>
+                  <a href={process.env.NEXT_PUBLIC_CALENDLY_URL_BOOK_A_DEMO || '#'} className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                     {translate('navitem_book')}
                   </a>
-                </Link>
-                <Link href="/dashboard">
+                <Link href="https://dashboard.feature.sh">
                   <a className="mt-5 block text-center text-indigo-600 hover:text-indigo-500">
-                    Or go to your dashboard
+                    Or try it for free
                   </a>
                 </Link>
               </div>

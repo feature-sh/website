@@ -21,32 +21,28 @@ export const testimonials: Testimonial[] = [
     role: 'Co-Founder & Product Lead',
     workplace: 'Flexteam',
     author: 'Hulin Simon',
-    photo:
-      '/product_lead_cofounder_flexteam.jpeg',
+    photo: '/product_lead_cofounder_flexteam.jpeg',
   },
   {
     i18nContent: 'testimonial_example_content_2',
     role: 'CEO',
     workplace: 'Hackhouse',
     author: 'Boumny Stéphane',
-    photo:
-      '/ceo_hackerhouse.jpg',
+    photo: '/ceo_hackerhouse.jpg',
   },
   {
     i18nContent: 'testimonial_example_content_3',
     role: 'Header Bidding Expert',
     workplace: 'Adlive',
     author: 'Adissa Yassine',
-    photo:
-      '/Yassine_adlive.jpg',
+    photo: '/Yassine_adlive.jpg',
   },
   {
     i18nContent: 'testimonial_example_content_4',
     role: 'CEO',
     workplace: 'Ato',
     author: 'Béranger Julien',
-    photo:
-      '/Julien-CEO-Ato.png',
+    photo: '/Julien-CEO-Ato.png',
   },
 ]
 
