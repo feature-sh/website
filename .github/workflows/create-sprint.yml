@@ -10,18 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get week number
-        # Check if current week number is odd, for running automation every 2 weeks
+        # Determine if current week number is odd or even, for running automation every 2 weeks
         run: echo "ODD_WEEK=$(expr $(date +%U) % 2)" >> $GITHUB_ENV
-
+        
       - name: Sprint Milestone Action
-        # Runs on odd week numbers (so ODD_WEEK = 1)
-        if: env.ODD_WEEK == 1
-        # 1) Set the due date in 2 weeks
+        # Runs on even week numbers (so ODD_WEEK = 0)
+        if: env.ODD_WEEK == 0
+        # 1) Set the due date in 3 weeks (1 week in advance + 2 active weeks)
         # 2) Get the last sprint number from the one of our repos
         # 3) Add 1 to the last sprint number
         # 4) Create the new milestone through GitHub REST API
         run: |
-          dueDate=$(date -d "2 weeks" +"%Y-%m-%d") \
+          dueDate=$(date -d "3 weeks" +"%Y-%m-%d") \
           && \
           lastSprintNumber=$(curl \
           -H "Accept: application/vnd.github.v3+json" \
