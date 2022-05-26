@@ -9,7 +9,7 @@ export type Testimonial = {
 }
 
 const peoplePics = [
-  '/product_lead_cofounder_flexteam.jpeg',
+  '/product_lead_cofounder_flexteam.png',
   '/ceo_hackerhouse.jpg',
   '/Yassine_adlive.jpg',
   '/Julien-CEO-Ato.png',
@@ -21,12 +21,12 @@ export const testimonials: Testimonial[] = [
     role: 'Co-Founder & Product Lead',
     workplace: 'Flexteam',
     author: 'Hulin Simon',
-    photo: '/product_lead_cofounder_flexteam.jpeg',
+    photo: '/product_lead_cofounder_flexteam.png',
   },
   {
     i18nContent: 'testimonial_example_content_2',
     role: 'CEO',
-    workplace: 'Hackhouse',
+    workplace: 'Hackerhouse',
     author: 'Boumny Stéphane',
     photo: '/ceo_hackerhouse.jpg',
   },
