@@ -52,14 +52,15 @@ const HeroSection: React.FC = () => {
               <p className="mt-3 whitespace-pre-line text-center text-base text-gray-300 sm:mt-5 sm:text-xl lg:max-w-3xl lg:text-left lg:text-lg xl:text-xl">
                 {translate('hero_subheading')}
               </p>
-              <div className="mt-10 flex sm:mt-12">
+              <div className="mx-auto mt-10 sm:mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                   <a href={process.env.NEXT_PUBLIC_DAPP_BASE_URL || '#'} className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent border-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                     {translate('hero_try_free')}
                   </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <a href={process.env.NEXT_PUBLIC_CALENDLY_URL_BOOK_A_DEMO || '#'} className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                     {translate('hero_button_book_demo')}
                   </a>
+                </div>
               </div>
             </div>
           </div>
