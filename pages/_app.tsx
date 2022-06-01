@@ -7,7 +7,7 @@ import '../styles/globals.css'
 import Head from 'next/head'
 import Script from 'next/script'
 
-export type NextPageWithLayout = NextPage & {
+export type NextPageWithLayout<T = {}> = NextPage<T> & {
   withLayout: (page: ReactElement) => ReactNode
 }
 
@@ -34,6 +34,9 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
           gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
         `}
       </Script>
+      <Script
+        src={`https://www.googleoptimize.com/optimize.js?id=${process.env.NEXT_PUBLIC_OPTIMIZE_CONTAINER_ID}`}
+      />
       {withLayout(<Component {...pageProps} />)}
     </>
   )

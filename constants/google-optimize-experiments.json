@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Change headings wording",
+    "id": "U5nsz_B-QG-TJHmaboBsqA",
+    "variants": [
+      {
+        "name": "original",
+        "id": 0,
+        "weight": 33.3333
+      },
+      {
+        "name": "Variant 1",
+        "id": 1,
+        "weight": 33.3333
+      },
+      {
+        "name": "Variant 2",
+        "id": 2,
+        "weight": 33.3333
+      }
+    ]
+  }
+]
