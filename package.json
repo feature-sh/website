@@ -14,7 +14,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@types/js-cookie": "^3.0.2",
     "js-cookie": "^3.0.1",
-    "next": "latest",
+    "next": "^12.1.0",
     "next-i18next": "^10.3.0",
     "react": "^17.0.2",
     "react-awesome-reveal": "^3.8.1",
