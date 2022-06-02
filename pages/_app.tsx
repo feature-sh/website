@@ -36,7 +36,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
       </Script>
       <Script
         src={`https://www.googleoptimize.com/optimize.js?id=${process.env.NEXT_PUBLIC_OPTIMIZE_CONTAINER_ID}`}
-        strategy="afterInteractive"
+        id="google-optimize"
       />
       {withLayout(<Component {...pageProps} />)}
     </>
