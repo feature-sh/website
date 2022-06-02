@@ -8,7 +8,6 @@ import {
 const optimizedPaths =
   process.env.GOOGLE_OPTIMIZE_OPTIMIZED_PATHS?.split(' ') || []
 
-console.log({ optimizedPaths })
 
 export const middleware = (req: NextRequest) => {
   let res = NextResponse.next()
@@ -34,6 +33,7 @@ export const middleware = (req: NextRequest) => {
 
   console.log({ path: url.pathname })
 
+  console.log({ optimizedPaths })
   if (optimizedPaths.includes(url.pathname)) {
 	console.log({ cookie })
 
