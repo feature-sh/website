@@ -34,6 +34,10 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
           gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
         `}
       </Script>
+      <Script
+        src={`https://www.googleoptimize.com/optimize.js?id=${process.env.NEXT_PUBLIC_OPTIMIZE_CONTAINER_ID}`}
+        strategy="afterInteractive"
+      />
       {withLayout(<Component {...pageProps} />)}
     </>
   )
