@@ -2,6 +2,7 @@ import { ReactElement, ReactNode } from 'react'
 import { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
+import { GoogleAnalyticsProvider } from '../context/google-analytics/google-analytics-provider'
 
 import '../styles/globals.css'
 import Head from 'next/head'
@@ -37,7 +38,9 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
       <Script
         src={`https://www.googleoptimize.com/optimize.js?id=${process.env.NEXT_PUBLIC_OPTIMIZE_CONTAINER_ID}`}
       />
-      {withLayout(<Component {...pageProps} />)}
+      <GoogleAnalyticsProvider>
+        {withLayout(<Component {...pageProps} />)}
+      </GoogleAnalyticsProvider>
     </>
   )
 }

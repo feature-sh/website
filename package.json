@@ -12,6 +12,8 @@
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
     "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@types/js-cookie": "^3.0.2",
+    "js-cookie": "^3.0.1",
     "next": "latest",
     "next-i18next": "^10.3.0",
     "react": "^17.0.2",

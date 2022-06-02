@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Cookies from 'js-cookie'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -20,6 +21,8 @@ import withMainLayout from '../../layouts/withMainLayout'
 import { VideoDemo, videoDemos } from '../../constants/videoDemo'
 import { features } from '../../constants/features'
 import { testimonials } from '../../constants/testimonials'
+import { useGoogleAnalytics } from '../../context/google-analytics/use-google-analytics'
+import { GOOGLE_OPTIMIZE_COOKIE_NAME } from '../../constants/google-optimize'
 
 const HeroSection: React.FC<{ localeNamespace: string }> = ({
   localeNamespace,
@@ -510,8 +513,19 @@ const Home: NextPageWithLayout<{
   variant: GoogleOptimizeExperimentVariant
   localeNamespace: string
 }> = ({ experiment, variant, localeNamespace }) => {
-  console.log({ experiment, variant })
   const { t: translate } = useTranslation(localeNamespace)
+  const ga = useGoogleAnalytics()
+
+  useEffect(() => {
+    const googleOptimizeCookie = Cookies.get(GOOGLE_OPTIMIZE_COOKIE_NAME)
+
+    if (ga && googleOptimizeCookie) {
+      console.log({ googleOptimizeCookie })
+      ga('set', 'exp', googleOptimizeCookie)
+    }
+    console.log('send page view')
+    ga('send', 'pageview')
+  }, [ga])
 
   return (
     <>
@@ -563,7 +577,6 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
     experiment.id,
     variant.id
   )
-  console.log({ localeNamespace })
 
   return {
     props: {
