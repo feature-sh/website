@@ -21,7 +21,7 @@ const solutions = [
     name: 'Product',
     description:
       'Get a better understanding of where your traffic is coming from.',
-    href: '#',
+    href: '/features',
     icon: ViewGridIcon,
   },
   {
