@@ -450,7 +450,7 @@ const BlockchainAvailable: React.FC = () => {
         <p className="text-center text-base font-semibold uppercase tracking-wider text-gray-600">
           Deployed on
         </p>
-        <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
+        <div className="mt-6 grid grid-cols-1 gap-0.5 md:grid-cols-3 lg:mt-8">
           <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
             <img
               className="contrast-240 max-h-12 grayscale"
