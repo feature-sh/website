@@ -278,7 +278,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
               </blockquote>
               <div className="flex flex-col items-center gap-y-4">
                 {/* carrousel dot indicator */}
-                <div className="flex items-center gap-x-3">
+                <div className="flex items-center gap-x-3 pb-8 md:pb-0">
                   {testimonials.map((_, index) => (
                     <button
                       key={index}
@@ -482,9 +482,9 @@ const CTA: React.FC = () => {
   const { t: translate } = useTranslation('homepage')
 
   return (
-    <div className="flex bg-gray-900/[.99]">
-      <div className="mx-auto max-w-2xl px-4 pb-16 text-center sm:py-20 sm:px-6 lg:pb-8">
-        <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+    <div className="flex bg-gray-900 py-16">
+      <div className="mx-auto max-w-2xl text-center">
+        <h2 className="text-3xl px-4 sm:px-6 font-extrabold text-white sm:text-4xl">
           <span className="block">Be like them</span>
           <span className="block">And start your Feature</span>
         </h2>
