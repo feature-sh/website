@@ -289,7 +289,7 @@ const Header: React.FC = () => {
                   </a>
                 <Link href="https://dashboard.feature.sh">
                   <a className="mt-5 block text-center text-indigo-600 hover:text-indigo-500">
-                    Or try it for free
+                    Sign in
                   </a>
                 </Link>
               </div>
