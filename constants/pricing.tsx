@@ -26,10 +26,11 @@ export const pricing: { tiers: PricingTier[] } = {
     {
       i18nBilling: 'billing_free' as I18nBilling,
       features: [
-        '5 products',
-        'Up to 1,000 subscribers',
-        'Basic analytics',
-        '48-hour support response time',
+        'Deal creation',
+        'Dashboard to track the deals',
+        'Easy accounting for crypto',
+        'Micro-certifications',
+        'Up to 5 members'
       ],
       mostPopular: false,
     },
@@ -37,23 +38,18 @@ export const pricing: { tiers: PricingTier[] } = {
       payload: { price: 50 },
       i18nBilling: 'billing_monthly' as I18nBilling,
       features: [
-        '25 products',
-        'Up to 10,000 subscribers',
-        'Advanced analytics',
-        '24-hour support response time',
-        'Marketing automations',
+        'Workflow automations',
+        'Tracking developer velocity',
+        'More than 5 members'
       ],
       mostPopular: true,
     },
     {
       i18nBilling: 'billing_quote' as I18nBilling,
       features: [
-        'Unlimited products',
-        'Unlimited subscribers',
-        'Advanced analytics',
-        '1-hour, dedicated support response time',
-        'Marketing automations',
-        'Custom integrations',
+        'Consulting on deal creation',
+        'Guarantee of task execution',
+        'Additional credits'
       ],
       mostPopular: false,
     },
