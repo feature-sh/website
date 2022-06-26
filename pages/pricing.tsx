@@ -23,9 +23,9 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 const faqs = [
   {
     id: 1,
-    question: "What's the best thing about Switzerland?",
+    question: "Is-it a decentralized dApp ?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "It's fully decentralized for the smart contract size. No ownership, no proxy pattern. The interface use Github, a centralized platform.",
   },
   // More questions...
 ]
@@ -213,8 +213,8 @@ const Pricing: NextPageWithLayout = () => {
                 <blockquote className="mt-6 text-white">
                   <p className="text-xl font-medium sm:text-2xl">
                     Workflow has completely transformed how we interact with
-                    customers. We've seen record bookings, higher customer
-                    satisfaction, and reduced churn.
+                    freelancers. We've seen more productivity, higher development interaction, 
+                    and reduced churn.
                   </p>
                   <footer className="mt-6">
                     <p className="flex flex-col font-medium">

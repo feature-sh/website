@@ -1,4 +1,5 @@
 {
+  "billing_user": "utilisateur",
   "billing_monthly": "mois",
   "billing_yearly": "an",
   "billing_free": "Gratuit",
@@ -14,5 +15,5 @@
 
   "plan_3_title": "Entreprise",
   "plan_3_description": "Support et suivi dédiés",
-  "plan_3_cta": "Contactez Nous"
+  "plan_3_cta": "Contactez-Nous"
 }

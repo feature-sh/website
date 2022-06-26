@@ -3,6 +3,7 @@
  */
 
 export type I18nBilling =
+  | 'billing_user'
   | 'billing_monthly'
   | 'billing_yearly'
   | 'billing_free'
@@ -19,7 +20,7 @@ export type PricingTier = {
 }
 
 export const isFrequencyPricing = (billing: I18nBilling) =>
-  billing === 'billing_monthly' || billing === 'billing_yearly'
+  billing === 'billing_monthly' || billing === 'billing_yearly' || billing === 'billing_user'
 
 export const pricing: { tiers: PricingTier[] } = {
   tiers: [
@@ -35,10 +36,10 @@ export const pricing: { tiers: PricingTier[] } = {
       mostPopular: false,
     },
     {
-      payload: { price: 50 },
-      i18nBilling: 'billing_monthly' as I18nBilling,
+      payload: { price: 19 },
+      i18nBilling: 'billing_user' as I18nBilling,
       features: [
-        'Workflow automations',
+        'Workflow automation',
         'Tracking developer velocity',
         'More than 5 members'
       ],

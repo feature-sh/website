@@ -39,8 +39,9 @@ yarn-error.log*
 # yarn
 yarn.lock
 
+# env
 .env
-
 
 # IDEs
 .idea
+.vscode

@@ -1,4 +1,5 @@
 {
+  "billing_user": "user",
   "billing_monthly": "month",
   "billing_yearly": "year",
   "billing_free": "Free",

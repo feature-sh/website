@@ -3,18 +3,14 @@ import { useTranslation } from 'next-i18next'
 import LanguageSwitcher from './language-switcher'
 import { languages } from '../constants/lang'
 
-// tailwind navigation - to be replaced {{{
 const navigation = {
   solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
     { name: 'Insights', href: '#' },
   ],
   support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Dune Analytics', href: '#' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Documentation', href: 'https://docs.feature.sh' },
+    { name: 'Dune Analytics', href: 'https://dune.com/liljakun/Feature-Gnosis-Chain-(xDai)-usage' },
   ],
   company: [
     { name: 'About', href: '#' },
@@ -24,9 +20,7 @@ const navigation = {
     { name: 'Partners', href: '#' },
   ],
   legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
+    { name: 'Policy', href: 'https://github.com/feature-sh/common/blob/main/POLICY.md' },
   ],
   social: [
     {
@@ -102,8 +96,6 @@ const navigation = {
     // },
   ],
 }
-
-// }}}
 
 const Footer: React.FC = () => {
   const { t: translate } = useTranslation('footer')
