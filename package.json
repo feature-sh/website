@@ -4,6 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "next lint",
     "format": "prettier --write './components/**/*.{ts,tsx}' './pages/**/*.{ts,tsx}' './layouts/**/*.{ts,tsx}' './constants/**/*.{ts,tsx}'",
     "docker-dev": "node ./scripts/docker_run.js dev",
     "docker-prod": "node ./scripts/docker_run.js prod"
@@ -30,6 +31,8 @@
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.1",
     "tailwindcss": "^3.0.7",
-    "typescript": "4.5.4"
+    "typescript": "4.5.4",
+    "eslint": "8.8.0",
+    "eslint-config-next": "12.0.10"
   }
 }

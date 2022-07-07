@@ -58,7 +58,7 @@ const Pricing: NextPageWithLayout = () => {
               Pricing plans for teams of all sizes
             </h1>
             <p className="mt-6 max-w-2xl text-xl text-gray-400">
-              Choose an affordable plan that's packed with the best features for
+              Choose an affordable plan that&#39;s packed with the best features for
               engaging your audience, creating customer loyalty, and driving
               sales.
             </p>
@@ -213,7 +213,7 @@ const Pricing: NextPageWithLayout = () => {
                 <blockquote className="mt-6 text-white">
                   <p className="text-xl font-medium sm:text-2xl">
                     Workflow has completely transformed how we interact with
-                    freelancers. We've seen more productivity, higher development interaction, 
+                    freelancers. We&#39;ve seen more productivity, higher development interaction, 
                     and reduced churn.
                   </p>
                   <footer className="mt-6">

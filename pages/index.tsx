@@ -122,7 +122,7 @@ const VideoDemoSection: React.FC = () => {
               className="relative z-10 h-full w-full drop-shadow-md"
               src={selectedDemo.videoUrl}
             >
-              Sorry, look like your browser can't play videos :(
+              Sorry, look like your browser can&#39;t play videos :(
             </video>
           </div>
         </div>
