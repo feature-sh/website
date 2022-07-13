@@ -2,10 +2,9 @@ import { ReactElement, ReactNode } from 'react'
 import { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
+import Script from 'next/script'
 
 import '../styles/globals.css'
-import Head from 'next/head'
-import Script from 'next/script'
 
 export type NextPageWithLayout = NextPage & {
   withLayout: (page: ReactElement) => ReactNode
@@ -39,17 +38,28 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
         id="google-optimize"
       />
       <Script>
-        var _paq = window._paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function() {
-          var u="https://feature.matomo.cloud/";
-          _paq.push(['setTrackerUrl', u+'matomo.php']);
-          _paq.push(['setSiteId', '1']);
-          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-          g.async=true; g.src='//cdn.matomo.cloud/feature.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-        })();
+        {`
+          var _paq = window._paq = window._paq || [];
+          /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+            var u="https://feature.matomo.cloud/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src='//cdn.matomo.cloud/feature.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+          })();
+        `}
+      </Script>
+      <Script>
+        {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5QL9D3K');
+        `}
       </Script>
       {withLayout(<Component {...pageProps} />)}
     </>
