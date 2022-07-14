@@ -20,6 +20,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <>
       <Script
+        id="googletagmanager"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
       />
@@ -37,7 +38,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
         src={`https://www.googleoptimize.com/optimize.js?id=${process.env.NEXT_PUBLIC_OPTIMIZE_CONTAINER_ID}`}
         id="google-optimize"
       />
-      <Script>
+      <Script id="matomo">
         {`
           var _paq = window._paq = window._paq || [];
           /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -52,7 +53,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
           })();
         `}
       </Script>
-      <Script>
+      <Script id="gtm">
         {`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
