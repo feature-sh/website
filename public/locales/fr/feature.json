@@ -20,7 +20,7 @@
   "execute_headline": "Exécutez votre deal",
   "execute_subheadline": "Feature GitHub App",
 
-  "execute_block_1_headline": "Compatible avec différents portefeuils",
+  "execute_block_1_headline": "Compatible avec différents portefeuilles",
   "execute_block_1_description": "Feature est compatible avec plusieurs types de wallets.",
 
   "execute_block_1_torus_description": "Intégrez Wallet par Torus dans votre application et obtenez une connexion directe à Ethereum, Polygon, BSC et autres blockchains.",
@@ -28,8 +28,8 @@
   "execute_block_1_metamask_description": "Disponible sous la forme d'une extension de navigateur et d'une application mobile, MetaMask vous équipe d'un coffre-fort de clés, d'une connexion sécurisée, d'un portefeuille de jetons et d'un système d'échange de jetons.",
   "execute_block_1_fortmatic_description": "Un SDK pour permettre aux utilisateurs d'interagir avec votre dApp grâce à une belle expérience utilisateur depuis n'importe quel navigateur ou appareil.",
 
-  "execute_block_2_headline": "Connexion à différent réseaux",
-  "execute_block_2_description": "Feature est déployé sur plusieurs blockchains dites de seconde couche pour avoir des temps de transactions élévés avec des frais faibles.",
+  "execute_block_2_headline": "Connexion à différents réseaux",
+  "execute_block_2_description": "Feature est déployé sur plusieurs blockchains dites de seconde couche afin de permettre des transactions rapides avec des frais faibles.",
   "execute_block_2_cta": "Proposer un nouveau réseau",
 
   "execute_block_2_polygon_description": "Polygon croit au Web3 pour tous. Polygon est une plateforme Ethereum décentralisée qui permet aux développeurs de créer des applications numériques conviviales et évolutives avec de faibles frais de transaction sans jamais sacrifier la sécurité.",
