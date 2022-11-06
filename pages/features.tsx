@@ -58,7 +58,7 @@ const Features: NextPageWithLayout = () => {
             height={467}
             className="shadow-xl"
             src={'/features/transactions.png'}
-            alt=""
+            alt="FEATURE transactions"
           />
         </div>
       </div>
@@ -269,7 +269,7 @@ const Features: NextPageWithLayout = () => {
                         height={35}
                         width={35}
                         src={wallet.logoUrl}
-                        alt=""
+                        alt="Crypto Wallet logos"
                       />
                     </div>
                     <div className="min-w-0 flex-1">
@@ -329,8 +329,7 @@ const Features: NextPageWithLayout = () => {
                     key={chain.name}
                     className="relative flex items-start gap-y-3 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-md focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
                   >
-                    <Image src={chain.logoUrl} width={30} height={30} />
-
+                    <Image src={chain.logoUrl} width={30} height={30} alt={`logo ${chain.name}`} />
                     <div className="ml-6 min-w-0 flex-1">
                       <p className="text-base font-semibold text-gray-900">
                         {chain.name}
