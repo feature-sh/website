@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-[70vh] overflow-hidden bg-gray-900 pb-4">
       <div className="absolute -right-14 -top-14 flex justify-center">
-        <Image src="/logos/github.svg" height={850} width={850} />
+        <Image src="/logos/github.svg" height={850} width={850} alt="Github logo" />
       </div>
 
       <div className="relative z-10 flex min-h-[70vh] items-center pt-32 lg:px-4 lg:pt-8">
@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           <div className="flex items-center justify-center py-8 lg:col-span-2 lg:py-0">
-            <Image src="/hero_snippet.png" width={579} height={377} />
+            <Image src="/hero_snippet.png" width={579} height={377} alt="Snippet code"/>
           </div>
         </div>
       </div>
