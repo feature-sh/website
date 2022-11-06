@@ -90,16 +90,14 @@ const Header: React.FC = () => {
     >
       <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
-          <Link href="/">
-            <a className="flex">
-              <span className="sr-only">Feature</span>
-              <Image
-                src="/logo.svg"
-                width={40}
-                height={40}
-                alt="feature's logo"
-              />
-            </a>
+          <Link passHref={true} href="/" className="flex">
+            <span className="sr-only">Feature</span>
+            <Image
+              src="/logo.svg"
+              width={40}
+              height={40}
+              alt="feature's logo"
+            />
           </Link>
         </div>
         <div className="-my-2 -mr-2 md:hidden">
@@ -111,15 +109,11 @@ const Header: React.FC = () => {
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
           {/* TODO this part is commented in waiting the pages implementation */}
           <Popover.Group as="nav" className="flex space-x-10">
-            <Link href="/features">
-              <a className="text-base font-medium text-neutral-200 hover:text-white">
-                {translate('navitem_features')}
-              </a>
+            <Link href="/features" className="text-base font-medium text-neutral-200 hover:text-white">
+              {translate('navitem_features')}
             </Link>
-            <Link href="https://docs.feature.sh">
-              <a className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
-                {translate('navitem_docs')}
-              </a>
+            <Link href="https://docs.feature.sh"  className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
+              {translate('navitem_docs')}
             </Link>
             {/* <Popover className="relative">
               {({ open }) => (
@@ -213,17 +207,14 @@ const Header: React.FC = () => {
           {/* FIXME remove this div if there is any item menu */}
           <div />
           <div className="flex items-center md:ml-12">
-            <Link href="https://dashboard.feature.sh">
-              <a className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
-                {translate('navitem_dashboard')}
-              </a>
+            <Link href="https://dashboard.feature.sh" className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
+              {translate('navitem_dashboard')}
             </Link>
             <Link
-              href={process.env.NEXT_PUBLIC_CALENDLY_URL_BOOK_A_DEMO || '#'}
+              href={process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'}
+              className="ml-8 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
             >
-              <a className="ml-8 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
-                {translate('navitem_book')}
-              </a>
+              {translate('navitem_book')}
             </Link>
           </div>
         </div>
@@ -266,8 +257,6 @@ const Header: React.FC = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      >
-                    <a
                       className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
                     >
                       <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white">
@@ -276,7 +265,6 @@ const Header: React.FC = () => {
                       <div className="ml-4 text-base font-medium text-gray-900">
                         {item.name}
                       </div>
-                    </a>
                     </Link>
                   ))}
                 </nav>
@@ -284,13 +272,11 @@ const Header: React.FC = () => {
             </div>
             <div className="px-5 py-6">
               <div>
-                  <a href={process.env.NEXT_PUBLIC_CALENDLY_URL_BOOK_A_DEMO || '#'} className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+                  <a href={process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'} className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                     {translate('navitem_book')}
                   </a>
-                <Link href="https://dashboard.feature.sh">
-                  <a className="mt-5 block text-center text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
+                <Link href="https://dashboard.feature.sh"  className="mt-5 block text-center text-indigo-600 hover:text-indigo-500">
+                  Sign in
                 </Link>
               </div>
             </div>
