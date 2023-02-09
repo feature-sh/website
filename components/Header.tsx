@@ -207,7 +207,7 @@ const Header: React.FC = () => {
           {/* FIXME remove this div if there is any item menu */}
           <div />
           <div className="flex items-center md:ml-12">
-            <Link href="https://v1.dashboard.feature.sh" className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
+            <Link href={process.env.DASHBOARD_URL || '#'} className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
               {translate('navitem_dashboard')}
             </Link>
             <Link
@@ -275,7 +275,7 @@ const Header: React.FC = () => {
                   <a href={process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'} className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                     {translate('navitem_book')}
                   </a>
-                <Link href="https://v1.dashboard.feature.sh"  className="mt-5 block text-center text-indigo-600 hover:text-indigo-500">
+                <Link href={process.env.DASHBOARD_URL || '#'}  className="mt-5 block text-center text-indigo-600 hover:text-indigo-500">
                   Sign in
                 </Link>
               </div>
