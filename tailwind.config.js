@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         hubot: ['Hubot Sans', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       keyframes: {
         growingFadeIn: {

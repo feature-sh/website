@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Work+Sans:wght@400;700&display=swap');
+
 @font-face {
     font-family: 'Hubot Sans';
     src:
@@ -10,6 +12,7 @@
     font-weight: 200 900;
     font-stretch: 75% 125%;
 }
+
 
 html, body, #__next {
     height: 100%;

@@ -32,12 +32,12 @@ const HeroSection: React.FC = () => {
 
   return (
     <>
-      <div className="px-6 py-24 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:-mt-[90px] lg:flex lg:h-screen lg:items-center">
+        <div className="mx-auto -mt-12 max-w-xl text-center">
           <h2 className="hubot-sans text-6xl font-black tracking-tight text-gray-900 sm:text-6xl">
             WEB3 DEVTOOL
           </h2>
-          <p className="mt-1 text-lg leading-8 text-gray-600">
+          <p className="mt-1 font-inter text-lg font-extralight leading-8 text-black">
             🏁The Fatest Way to Fix Github Issues 🐙 for Open Source Project 🦄
           </p>
         </div>
