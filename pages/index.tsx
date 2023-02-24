@@ -31,9 +31,14 @@ const HeroSection: React.FC = () => {
   const { t: translate } = useTranslation('homepage')
 
   return (
-    <section className="relative min-h-[70vh] overflow-hidden bg-gray-900 pb-4">
+    <section className="relative min-h-[70vh] overflow-hidden pb-4">
       <div className="absolute -right-14 -top-14 flex justify-center">
-        <Image src="/logos/github.svg" height={850} width={850} alt="Github logo" />
+        <Image
+          src="/logos/github.svg"
+          height={850}
+          width={850}
+          alt="Github logo"
+        />
       </div>
 
       <div className="relative z-10 flex min-h-[70vh] items-center pt-32 lg:px-4 lg:pt-8">
@@ -52,11 +57,19 @@ const HeroSection: React.FC = () => {
                 {translate('hero_subheading')}
               </p>
               <div className="mx-auto mt-10 sm:mt-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                  <a href={process.env.NEXT_PUBLIC_DAPP_BASE_URL || '#'} className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent border-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
+                  <a
+                    href={process.env.NEXT_PUBLIC_DAPP_BASE_URL || '#'}
+                    className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent border-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  >
                     {translate('hero_try_free')}
                   </a>
-                  <a href={process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'} className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+                  <a
+                    href={
+                      process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'
+                    }
+                    className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  >
                     {translate('hero_button_book_demo')}
                   </a>
                 </div>
@@ -64,7 +77,12 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           <div className="flex items-center justify-center py-8 lg:col-span-2 lg:py-0">
-            <Image src="/hero_snippet.png" width={579} height={377} alt="Snippet code"/>
+            <Image
+              src="/hero_snippet.png"
+              width={579}
+              height={377}
+              alt="Snippet code"
+            />
           </div>
         </div>
       </div>
@@ -168,7 +186,11 @@ const FeaturesSection = () => {
           ))}
         </dl>
         <div className="flex justify-center lg:justify-end">
-          <Link passHref href="/features" className="mt-12 flex items-center gap-x-2 text-right">
+          <Link
+            passHref
+            href="/features"
+            className="mt-12 flex items-center gap-x-2 text-right"
+          >
             {translate('features_more')}
             <ArrowRightIcon className="h-5 w-5" />
           </Link>
@@ -228,7 +250,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
             />
             <div className="mx-auto max-w-md items-center px-4 sm:max-w-3xl sm:px-6 lg:flex lg:h-full lg:px-10">
               <Fade key={currentTestimonialId}>
-                <div className="aspect-w-10 aspect-h-6 mx-auto flex w-2/3 items-center overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 sm:w-1/2 lg:aspect-none lg:h-full lg:w-full lg:w-full">
+                <div className="aspect-w-10 aspect-h-6 mx-auto flex w-2/3 items-center overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 sm:w-1/2 lg:aspect-none lg:h-full lg:w-full">
                   <img
                     className="object-cover object-center lg:h-full lg:w-full"
                     src={testimonial.photo}
@@ -448,23 +470,23 @@ const BlockchainAvailable: React.FC = () => {
           Deployed on
         </p>
         <div className="mt-6 grid grid-cols-1 gap-0.5 md:grid-cols-3 lg:mt-8">
-          <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+          <div className="col-span-1 flex justify-center bg-gray-50 px-8 py-8">
             <img
               className="contrast-240 max-h-12 grayscale"
               src="/xdai-logo.png"
               alt="Xdai logo"
             />
           </div>
-          <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+          <div className="col-span-1 flex justify-center bg-gray-50 px-8 py-8">
             <img
               className="max-h-12 contrast-50 grayscale"
               src="/polygon-logo.webp"
               alt="Polygon logo"
             />
           </div>
-          <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+          <div className="col-span-1 flex justify-center bg-gray-50 px-8 py-8">
             <img
-              className="contrast-70 max-h-12  grayscale"
+              className="contrast-70 max-h-12 grayscale"
               src="/arbitrum-logo.png"
               alt="Arbitrum logo"
             />
@@ -481,7 +503,7 @@ const CTA: React.FC = () => {
   return (
     <div className="flex bg-gray-900 py-16">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl px-4 sm:px-6 font-extrabold text-white sm:text-4xl">
+        <h2 className="px-4 text-3xl font-extrabold text-white sm:px-6 sm:text-4xl">
           <span className="block">Be like them</span>
           <span className="block">And start your Feature</span>
         </h2>
