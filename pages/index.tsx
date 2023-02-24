@@ -32,74 +32,43 @@ const HeroSection: React.FC = () => {
 
   return (
     <>
-      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:-mt-[90px] lg:flex lg:h-screen lg:items-center">
+      <div className="mx-auto px-4 py-32 lg:-mt-[90px] lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto -mt-12 max-w-xl text-center">
-          <h2 className="hubot-sans text-6xl font-black tracking-tight text-gray-900 sm:text-6xl">
+          <h1 className="hubot-sans text-6xl font-black tracking-tight text-gray-900 sm:text-6xl">
             WEB3 DEVTOOL
-          </h2>
-          <p className="mt-1 font-inter text-lg font-extralight leading-8 text-black">
+          </h1>
+          <h2 className="mt-1 font-inter text-lg font-extralight leading-8 text-black">
             🏁The Fatest Way to Fix Github Issues 🐙 for Open Source Project 🦄
-          </p>
+          </h2>
         </div>
       </div>
     </>
   )
 }
 
-const VideoDemoSection: React.FC = () => {
+const BuildFasterSection: React.FC = () => {
   const { t: translate } = useTranslation('homepage')
-  const [selectedDemo, setSelectedDemo] = useState<VideoDemo>(videoDemos[0])
-
-  const handleDemoChange = (demo: VideoDemo) => {
-    setSelectedDemo(demo)
-  }
 
   return (
-    <section className="flex flex-col justify-center bg-gray-100 p-8 py-16 text-center lg:py-24">
-      <h2 className="text-2xl font-normal font-bold uppercase sm:text-3xl xl:text-4xl">
-        {translate('video_demo_subheading')}
-      </h2>
-      <h3 className="mt-4 text-3xl font-bold sm:text-4xl xl:text-5xl">
-        {translate('video_demo_heading')}
-      </h3>
-      <p className="text-md mx-auto mt-6 max-w-7xl whitespace-pre-line text-gray-800 sm:text-lg lg:text-xl xl:text-2xl">
-        {translate('video_demo_description')}
-      </p>
-      <div className="start mt-8 flex flex-wrap items-start justify-center gap-y-4 gap-x-4 md:gap-x-8">
-        {videoDemos.map((demo) => (
-          <button
-            key={demo.label}
-            className={`${
-              selectedDemo === demo ? 'opacity-1' : 'opacity-80'
-            } sm:text-md  block rounded-md bg-indigo-600 px-4 py-3 font-medium text-white shadow hover:opacity-100 focus:outline-none lg:text-lg xl:text-xl`}
-            onClick={() => {
-              handleDemoChange(demo)
-            }}
-          >
-            {translate(demo.label)}
-          </button>
-        ))}
+    <section className="grid grid-cols-12">
+      <div className="hubot-sans2 col-span-4 col-start-3 row-span-3 border-[1px] border-r-0 border-black text-8xl font-extrabold">
+        BUILD FASTER
       </div>
-      <Fade key={selectedDemo.label}>
-        <div className="mt-8 flex justify-center">
-          <div className="aspect-video relative max-w-full rounded p-2 md:w-3/4 xl:w-2/4">
-            <div className="absolute inset-0 translate-x-4 translate-y-4 border-4 border-indigo-500" />
-            <video
-              title={
-                selectedDemo.videoUrl.includes('polygon')
-                  ? 'Demo video for how to create a deal on the Polygon (Matic) blockchain with Feature Bot on a GitHub issue'
-                  : 'Demo video for how to create a deal on the Gnosis (xDai) blockchain with Feature Bot on a GitHub issue'
-              }
-              controls
-              autoPlay
-              className="relative z-10 h-full w-full drop-shadow-md"
-              src={selectedDemo.videoUrl}
-            >
-              Sorry, look like your browser can&#39;t play videos :(
-            </video>
-          </div>
-        </div>
-      </Fade>
+      <div className="mona-sans col-span-4 border-[1px] border-b-0 border-black p-7 text-center text-3xl font-extrabold">
+        Give Economic 🤑
+        <br />
+        Incentives to Contribute
+      </div>
+      <div className="mona-sans col-span-4 border-[1px] border-black p-7 text-center text-3xl font-extrabold">
+        Give Economic 🤑
+        <br />
+        Incentives to Contribute
+      </div>
+      <div className="mona-sans col-span-4 border-[1px]  border-t-0 border-black p-7 text-center text-3xl font-extrabold">
+        Pay Contributors
+        <br />
+        Automatically 🤖
+      </div>
     </section>
   )
 }
@@ -487,7 +456,7 @@ const Home: NextPageWithLayout = () => {
 
       <main>
         <HeroSection />
-        <VideoDemoSection />
+        <BuildFasterSection />
         <FeaturesSection />
         <BlockchainAvailable />
         <TestimonialSection n={10} slideInterval={3} />

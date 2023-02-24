@@ -59,19 +59,6 @@ const resources = [
 
 const Header: React.FC = () => {
   const { t: translate } = useTranslation('header')
-  const [isOpaque, setIsOpaque] = useState(true)
-
-  const handleScroll = () => {
-    setIsOpaque(window.scrollY > 20)
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
 
   return (
     <Popover>
@@ -79,12 +66,7 @@ const Header: React.FC = () => {
         <div>
           <Link passHref={true} href="/" className="flex">
             <span className="sr-only">Feature</span>
-            <Image
-              src="/logo.svg"
-              width={40}
-              height={40}
-              alt="feature's logo"
-            />
+            <Image src="/logo.svg" width={40} height={40} alt="FEATURE logo" />
           </Link>
         </div>
         <div className="-my-2 -mr-2 md:hidden">
@@ -105,13 +87,13 @@ const Header: React.FC = () => {
           <div className="flex items-center md:ml-12">
             <Link
               href="https://v1.dashboard.feature.sh"
-              className="ml-8 text-base font-medium text-black hover:text-red-700"
+              className="ml-8 text-base font-medium text-black hover:text-green-700"
             >
               {translate('navitem_dashboard')}
             </Link>
             <Link
               href={process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'}
-              className="ml-8 inline-flex items-center justify-center border border-transparent bg-black px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700"
+              className="ml-8 inline-flex items-center justify-center border border-transparent bg-black px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-700"
             >
               {translate('navitem_book')}
             </Link>
