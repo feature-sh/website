@@ -31,62 +31,18 @@ const HeroSection: React.FC = () => {
   const { t: translate } = useTranslation('homepage')
 
   return (
-    <section className="relative min-h-[70vh] overflow-hidden pb-4">
-      <div className="absolute -right-14 -top-14 flex justify-center">
-        <Image
-          src="/logos/github.svg"
-          height={850}
-          width={850}
-          alt="Github logo"
-        />
-      </div>
-
-      <div className="relative z-10 flex min-h-[70vh] items-center pt-32 lg:px-4 lg:pt-8">
-        <div className="w-full lg:grid lg:grid-cols-5 lg:gap-8 lg:px-12">
-          <div className="px-2 sm:px-6 sm:text-center lg:col-span-3 lg:flex lg:items-center lg:px-0 lg:text-left">
-            <div className="lg:py-2 lg:pl-16">
-              <h1 className="mt-4 flex flex-col gap-y-2 text-center text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-5xl lg:mt-6 lg:text-left xl:text-6xl">
-                <span className="block whitespace-pre-line">
-                  {translate('hero_heading_part1')}
-                </span>
-                <span className="block text-indigo-400">
-                  {translate('hero_heading_part2')}
-                </span>
-              </h1>
-              <p className="mt-3 whitespace-pre-line text-center text-base text-gray-300 sm:mt-5 sm:text-xl lg:max-w-3xl lg:text-left lg:text-lg xl:text-xl">
-                {translate('hero_subheading')}
-              </p>
-              <div className="mx-auto mt-10 sm:mt-12">
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
-                  <a
-                    href={process.env.NEXT_PUBLIC_DAPP_BASE_URL || '#'}
-                    className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent border-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                  >
-                    {translate('hero_try_free')}
-                  </a>
-                  <a
-                    href={
-                      process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'
-                    }
-                    className="inline-flex flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                  >
-                    {translate('hero_button_book_demo')}
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center py-8 lg:col-span-2 lg:py-0">
-            <Image
-              src="/hero_snippet.png"
-              width={579}
-              height={377}
-              alt="Snippet code"
-            />
-          </div>
+    <>
+      <div className="px-6 py-24 sm:py-32 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="hubot-sans text-6xl font-black tracking-tight text-gray-900 sm:text-6xl">
+            WEB3 DEVTOOL
+          </h2>
+          <p className="mt-1 text-lg leading-8 text-gray-600">
+            🏁The Fatest Way to Fix Github Issues 🐙 for Open Source Project 🦄
+          </p>
         </div>
       </div>
-    </section>
+    </>
   )
 }
 

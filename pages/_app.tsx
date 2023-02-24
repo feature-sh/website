@@ -47,6 +47,13 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
           })(window,document,'script','dataLayer','GTM-5QL9D3K');
         `}
       </Script>
+      <link
+        rel="preload"
+        href="Hubot-Sans.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin="true"
+      ></link>
       {withLayout(<Component {...pageProps} />)}
     </>
   )

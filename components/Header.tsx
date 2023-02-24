@@ -30,14 +30,6 @@ const solutions = [
     href: 'https://docs.feature.sh',
     icon: BookOpenIcon,
   },
-  /*
-  {
-    name: 'Blog',
-    description: "Your customers' data will be safe and secure.",
-    href: '#',
-    icon: ChatIcon,
-  },
-  */
 ]
 const resources = [
   {
@@ -104,14 +96,8 @@ const Header: React.FC = () => {
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
           <Popover.Group as="nav" className="flex space-x-10">
             <Link
-              href="/features"
-              className="text-base font-medium text-neutral-200 hover:text-white"
-            >
-              {translate('navitem_features')}
-            </Link>
-            <Link
               href="https://docs.feature.sh"
-              className="ml-8 text-base font-medium text-neutral-200 hover:text-white"
+              className="ml-8 text-base font-medium text-black hover:text-green-700"
             >
               {translate('navitem_docs')}
             </Link>
@@ -119,13 +105,13 @@ const Header: React.FC = () => {
           <div className="flex items-center md:ml-12">
             <Link
               href="https://v1.dashboard.feature.sh"
-              className="ml-8 text-base font-medium text-neutral-200 hover:text-white"
+              className="ml-8 text-base font-medium text-black hover:text-red-700"
             >
               {translate('navitem_dashboard')}
             </Link>
             <Link
               href={process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'}
-              className="ml-8 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+              className="ml-8 inline-flex items-center justify-center border border-transparent bg-black px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700"
             >
               {translate('navitem_book')}
             </Link>

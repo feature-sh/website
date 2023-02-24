@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        hubot: ['Hubot Sans', 'sans-serif'],
+      },
       keyframes: {
         growingFadeIn: {
           from: { opacity: '0', transform: 'scale(0.95)' },

@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Hubot Sans';
+    src:
+      url('../public/Hubot-Sans.woff2') format('woff2 supports variations'),
+      url('../public/Hubot-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
 html, body, #__next {
     height: 100%;
-    background: linear-gradient(90deg, #000 calc(100% - 1px), #fdcece 0);
-    background-size: calc((100% - 11px)/12 + 11px) 100%;
+    background: linear-gradient(90deg, #fff calc(100% - 1px), #fdcece 0);
+    background-size: calc((100% - 11*11px)/12 + 11px) 100%;
+}
+
+.hubot-sans {
+    font-family: 'Hubot Sans', sans-serif;
+    font-weight: 900;
+    font-stretch: 125%;
 }
