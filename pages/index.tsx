@@ -73,6 +73,23 @@ const BuildFasterSection: React.FC = () => {
   )
 }
 
+const BuildCheaperSection: React.FC = () => {
+  const { t: translate } = useTranslation('homepage')
+
+  return (
+    <section className="grid min-h-[70vh] grid-cols-12 bg-white text-center">
+      <div className="hubot-sans2 col-span-8 col-start-3 border-[1px] border-b-0 border-black text-8xl font-extrabold">
+        BUILD CHEAPER
+      </div>
+      <div className="mona-sans col-span-8 col-start-3 border-[1px] border-t-0 border-black text-6xl font-extrabold">
+        Enjoy 0% Fee 😎
+        <br />
+        Peer-to-Peer Transaction
+      </div>
+    </section>
+  )
+}
+
 const FeaturesSection = () => {
   const { t: translate } = useTranslation('homepage')
 
@@ -389,7 +406,7 @@ const BlogSection: React.FC = () => {
 
 const BlockchainAvailable: React.FC = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-transparent">
       <div className="mx-auto max-w-7xl py-12 lg:py-16">
         <p className="text-center text-base font-semibold uppercase tracking-wider text-gray-600">
           Deployed on
@@ -457,11 +474,13 @@ const Home: NextPageWithLayout = () => {
       <main>
         <HeroSection />
         <BuildFasterSection />
-        <FeaturesSection />
+        <div className="h-[50vh]" />
+        <BuildCheaperSection />
+        <div className="h-[50vh]" />
         <BlockchainAvailable />
-        <TestimonialSection n={10} slideInterval={3} />
+        {/* <TestimonialSection n={10} slideInterval={3} /> */}
         {/*<BlogSection />*/}
-        <CTA />
+        {/* <CTA /> */}
       </main>
     </>
   )
