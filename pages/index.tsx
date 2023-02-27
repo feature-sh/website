@@ -77,11 +77,11 @@ const BuildCheaperSection: React.FC = () => {
   const { t: translate } = useTranslation('homepage')
 
   return (
-    <section className="grid min-h-[70vh] grid-cols-12 bg-white text-center">
-      <div className="hubot-sans2 col-span-8 col-start-3 border-[1px] border-b-0 border-black text-8xl font-extrabold">
+    <section className="grid min-h-[70vh] grid-cols-12 text-center">
+      <div className="hubot-sans2 col-span-8 col-start-3 border-[1px] border-b-0 border-black bg-white text-8xl font-extrabold">
         BUILD CHEAPER
       </div>
-      <div className="mona-sans col-span-8 col-start-3 border-[1px] border-t-0 border-black text-6xl font-extrabold">
+      <div className="mona-sans col-span-8 col-start-3 border-[1px] border-t-0 border-black bg-white text-6xl font-extrabold">
         Enjoy 0% Fee 😎
         <br />
         Peer-to-Peer Transaction
@@ -406,36 +406,38 @@ const BlogSection: React.FC = () => {
 
 const BlockchainAvailable: React.FC = () => {
   return (
-    <div className="bg-transparent">
-      <div className="mx-auto max-w-7xl py-12 lg:py-16">
-        <p className="text-center text-base font-semibold uppercase tracking-wider text-gray-600">
-          Deployed on
-        </p>
-        <div className="mt-6 grid grid-cols-1 gap-0.5 md:grid-cols-3 lg:mt-8">
-          <div className="col-span-1 flex justify-center bg-gray-50 px-8 py-8">
-            <img
-              className="contrast-240 max-h-12 grayscale"
-              src="/xdai-logo.png"
-              alt="Xdai logo"
-            />
-          </div>
-          <div className="col-span-1 flex justify-center bg-gray-50 px-8 py-8">
-            <img
-              className="max-h-12 contrast-50 grayscale"
-              src="/polygon-logo.webp"
-              alt="Polygon logo"
-            />
-          </div>
-          <div className="col-span-1 flex justify-center bg-gray-50 px-8 py-8">
-            <img
-              className="contrast-70 max-h-12 grayscale"
-              src="/arbitrum-logo.png"
-              alt="Arbitrum logo"
-            />
+    <section>
+      <p className="text-center text-base font-semibold uppercase tracking-wider text-gray-600">
+        Deployed on
+      </p>
+      <div className="mt-6 grid grid-cols-1 bg-gray-50 md:grid-cols-12 lg:mt-8">
+        <div className="col-span-1 md:col-span-8 md:col-start-3">
+          <div className="flex h-20 w-full justify-between ">
+            <div className="flex-1 self-center">
+              <img
+                className="contrast-240 m-auto w-[15rem] grayscale"
+                src="/xdai-logo.png"
+                alt="Xdai logo"
+              />
+            </div>
+            <div className="flex-1 self-center">
+              <img
+                className="m-auto w-[12.8rem] contrast-50  grayscale"
+                src="/polygon-logo.webp"
+                alt="Polygon logo"
+              />
+            </div>
+            <div className="flex-1 self-center">
+              <img
+                className="contrast-70 m-auto w-[15rem] grayscale"
+                src="/arbitrum-logo.png"
+                alt="Arbitrum logo"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
