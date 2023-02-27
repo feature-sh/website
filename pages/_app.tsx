@@ -34,25 +34,10 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
           gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
         `}
       </Script>
-      <Script
+      {/* <Script
         src={`https://www.googleoptimize.com/optimize.js?id=${process.env.NEXT_PUBLIC_OPTIMIZE_CONTAINER_ID}`}
         id="google-optimize"
-      />
-      <Script id="matomo">
-        {`
-          var _paq = window._paq = window._paq || [];
-          /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-          _paq.push(['trackPageView']);
-          _paq.push(['enableLinkTracking']);
-          (function() {
-            var u="https://feature.matomo.cloud/";
-            _paq.push(['setTrackerUrl', u+'matomo.php']);
-            _paq.push(['setSiteId', '1']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.async=true; g.src='//cdn.matomo.cloud/feature.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-          })();
-        `}
-      </Script>
+      /> */}
       <Script id="gtm">
         {`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -62,6 +47,13 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
           })(window,document,'script','dataLayer','GTM-5QL9D3K');
         `}
       </Script>
+      <link
+        rel="preload"
+        href="Hubot-Sans.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin="true"
+      ></link>
       {withLayout(<Component {...pageProps} />)}
     </>
   )

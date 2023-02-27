@@ -30,15 +30,6 @@ const solutions = [
     href: 'https://docs.feature.sh',
     icon: BookOpenIcon,
   },
-  /*
-  {
-    name: 'Blog',
-    description: "Your customers' data will be safe and secure.",
-    href: '#',
-    icon: ChatIcon,
-  },
-  */
-  
 ]
 const resources = [
   {
@@ -68,151 +59,41 @@ const resources = [
 
 const Header: React.FC = () => {
   const { t: translate } = useTranslation('header')
-  const [isOpaque, setIsOpaque] = useState(true)
-
-  const handleScroll = () => {
-    setIsOpaque(window.scrollY > 20)
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
 
   return (
-    <Popover
-      className={`fixed top-0 left-0 right-0 z-40 transition ${
-        isOpaque ? 'bg-gray-900/[.99] drop-shadow-lg' : 'bg-transparent'
-      }`}
-    >
+    <Popover>
       <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
           <Link passHref={true} href="/" className="flex">
             <span className="sr-only">Feature</span>
-            <Image
-              src="/logo.svg"
-              width={40}
-              height={40}
-              alt="feature's logo"
-            />
+            <Image src="/logo.svg" width={40} height={40} alt="FEATURE logo" />
           </Link>
         </div>
         <div className="-my-2 -mr-2 md:hidden">
-          <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+          <Popover.Button className="inline-flex items-center justify-center bg-black p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
             <span className="sr-only">Open menu</span>
             <MenuIcon className="h-6 w-6" aria-hidden="true" />
           </Popover.Button>
         </div>
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
-          {/* TODO this part is commented in waiting the pages implementation */}
           <Popover.Group as="nav" className="flex space-x-10">
-            <Link href="/features" className="text-base font-medium text-neutral-200 hover:text-white">
-              {translate('navitem_features')}
-            </Link>
-            <Link href="https://docs.feature.sh"  className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
+            <Link
+              href="https://docs.feature.sh"
+              className="ml-8 text-base font-medium text-black hover:text-green-700"
+            >
               {translate('navitem_docs')}
             </Link>
-            {/* <Popover className="relative">
-              {({ open }) => (
-                <>
-                  <Popover.Button
-                    className={classNames(
-                      open ? 'text-white' : 'text-neutral-200',
-                      'group inline-flex items-center rounded-md bg-transparent text-base font-medium hover:text-white focus:outline-none '
-                    )}
-                  >
-                    {translate('navitem_features')}
-                    <ChevronDownIcon
-                      className={classNames(
-                        open ? 'text-neutral-200' : 'text-neutral-100',
-                        'ml-2 h-5 w-5 group-hover:text-white'
-                      )}
-                      aria-hidden="true"
-                    />
-                  </Popover.Button>
-
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-200"
-                    enterFrom="opacity-0 translate-y-1"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in duration-150"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 translate-y-1"
-                  >
-                    <Popover.Panel className="absolute z-10 mt-3 -ml-4 w-screen max-w-md transform lg:max-w-3xl">
-                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                          {solutions.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
-                            >
-                              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                                <item.icon
-                                  className="h-6 w-6"
-                                  aria-hidden="true"
-                                />
-                              </div>
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                        <div className="bg-gray-50 p-5 sm:p-8">
-                          <a
-                            href="#"
-                            className="-m-3 flow-root rounded-md p-3 hover:bg-gray-100"
-                          >
-                            <div className="flex items-center">
-                              <div className="text-base font-medium text-gray-900">
-                                Enterprise
-                              </div>
-                              <span className="ml-3 inline-flex items-center rounded-full bg-indigo-100 px-3 py-0.5 text-xs font-medium leading-5 text-indigo-800">
-                                New
-                              </span>
-                            </div>
-                            <p className="mt-1 text-sm text-gray-500">
-                              Empower your entire team with even more advanced
-                              tools.
-                            </p>
-                          </a>
-                        </div>
-                      </div>
-                    </Popover.Panel>
-                  </Transition>
-                </>
-              )}
-            </Popover>
-            */}
-
-            {/*
-            <Link href="/blog">
-              <a className="text-base font-medium text-neutral-200 hover:text-white">
-                {translate('navitem_blog')}
-              </a>
-            </Link>
-            */}
           </Popover.Group>
-          {/* FIXME remove this div if there is any item menu */}
-          <div />
           <div className="flex items-center md:ml-12">
-            <Link href="https://v1.dashboard.feature.sh" className="ml-8 text-base font-medium text-neutral-200 hover:text-white">
+            <Link
+              href="https://v1.dashboard.feature.sh"
+              className="ml-8 text-base font-medium text-black hover:text-green-700"
+            >
               {translate('navitem_dashboard')}
             </Link>
             <Link
               href={process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'}
-              className="ml-8 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+              className="ml-8 inline-flex items-center justify-center border border-transparent bg-black px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-700"
             >
               {translate('navitem_book')}
             </Link>
@@ -231,9 +112,9 @@ const Header: React.FC = () => {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
+          className="absolute inset-x-0 top-0 z-40 origin-top-right transform p-2 transition md:hidden"
         >
-          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="divide-y-2 divide-gray-50 bg-black shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -257,12 +138,13 @@ const Header: React.FC = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
+                      className="-m-3 flex items-center p-3 text-white hover:bg-gray-50 hover:text-black"
+                      passHref={true}
                     >
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white">
+                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center bg-indigo-500 text-white">
                         <item.icon className="h-6 w-6" aria-hidden="true" />
                       </div>
-                      <div className="ml-4 text-base font-medium text-gray-900">
+                      <div className="ml-4 text-base font-medium">
                         {item.name}
                       </div>
                     </Link>
@@ -272,10 +154,16 @@ const Header: React.FC = () => {
             </div>
             <div className="px-5 py-6">
               <div>
-                  <a href={process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'} className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
-                    {translate('navitem_book')}
-                  </a>
-                <Link href="https://v1.dashboard.feature.sh"  className="mt-5 block text-center text-indigo-600 hover:text-indigo-500">
+                <a
+                  href={process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'}
+                  className="flex w-full items-center justify-center border border-transparent bg-white px-4 py-2 text-base font-medium text-black shadow-sm hover:bg-yellow-500"
+                >
+                  {translate('navitem_book')}
+                </a>
+                <Link
+                  href="https://v1.dashboard.feature.sh"
+                  className="mt-5 block text-center text-indigo-600 hover:text-indigo-500"
+                >
                   Sign in
                 </Link>
               </div>

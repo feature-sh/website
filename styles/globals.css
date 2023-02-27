@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Work+Sans:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Hubot Sans';
+    src:
+      url('../public/Hubot-Sans.woff2') format('woff2 supports variations'),
+      url('../public/Hubot-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+@font-face {
+    font-family: 'Mona Sans';
+    src:
+      url('../public/Mona-Sans.woff2') format('woff2 supports variations'),
+      url('../public/Mona-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+  }
+
 html, body, #__next {
     height: 100%;
+    background: linear-gradient(90deg,  #fdcece, white 1px);
+    background-size: calc(100% / 12) 100%;
+}
+
+.hubot-sans {
+    font-family: 'Hubot Sans', sans-serif;
+    font-weight: 900;
+    font-stretch: 125%;
+}
+
+.hubot-sans2 {
+    font-family: 'Hubot Sans', sans-serif;
+    font-weight: 800;
+    font-stretch: 125%;
+}
+
+.mona-sans {
+    font-family: 'Mona Sans', sans-serif;
+    font-weight: 900;
+    font-stretch: 125%;
+}
+
+.mona-sans2 {
+    font-family: 'Mona Sans', sans-serif;
+    font-weight: 600;
+    font-stretch: 125%;
 }

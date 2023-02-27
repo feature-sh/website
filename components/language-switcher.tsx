@@ -49,7 +49,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
         {({ open }) => (
           <>
             <div className="relative mt-1">
-              <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+              <Listbox.Button className="relative w-full cursor-default border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-green-500 sm:text-sm">
                 <span className="block truncate">
                   {translate(
                     languages[router.locale as string].i18nDisplayName
@@ -79,7 +79,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
                         className={({ active }) =>
                           classNames(
                             active
-                              ? 'bg-indigo-600 text-white'
+                              ? 'bg-yellow-500 text-white'
                               : 'text-gray-900',
                             'relative cursor-default select-none py-2 pl-8 pr-4'
                           )
@@ -100,7 +100,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
                             {selected ? (
                               <span
                                 className={classNames(
-                                  active ? 'text-white' : 'text-indigo-600',
+                                  active ? 'text-white' : 'text-green-600',
                                   'absolute inset-y-0 left-0 flex items-center pl-1.5'
                                 )}
                               >

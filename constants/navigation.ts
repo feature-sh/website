@@ -28,7 +28,7 @@ export const items: { [key: string]: NavigationItem } = {
 
   book: {
     i18nLabel: 'navitem_book',
-    route: '/book-a-demo',
+    route: process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#',
   },
 
   pricing: {
