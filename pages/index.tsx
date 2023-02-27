@@ -56,9 +56,9 @@ const BuildFasterSection: React.FC = () => {
         Incentives to Contribute
       </div>
       <div className="mona-sans col-span-4 border-[1px] border-black p-7 text-center text-3xl font-extrabold">
-        Give Economic 🤑
+        Crowdsource the
         <br />
-        Incentives to Contribute
+        Code Review 🧐
       </div>
       <div className="mona-sans col-span-4 border-[1px]  border-t-0 border-black p-7 text-center text-3xl font-extrabold">
         Pay Contributors
