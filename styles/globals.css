@@ -45,3 +45,9 @@ html, body, #__next {
     font-weight: 900;
     font-stretch: 125%;
 }
+
+.mona-sans2 {
+    font-family: 'Mona Sans', sans-serif;
+    font-weight: 600;
+    font-stretch: 125%;
+}

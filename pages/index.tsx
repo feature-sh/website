@@ -1,18 +1,14 @@
-import { useRef, useState, useMemo } from 'react'
+import { useState } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import { ArrowRightIcon } from '@heroicons/react/outline'
 import { Fade } from 'react-awesome-reveal'
 
 import { NextPageWithLayout } from './_app'
 import { useInterval } from '../hooks/useInterval'
 import withMainLayout from '../layouts/withMainLayout'
-import { VideoDemo, videoDemos } from '../constants/videoDemo'
-import { features } from '../constants/features'
 import { testimonials } from '../constants/testimonials'
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
@@ -90,53 +86,63 @@ const BuildCheaperSection: React.FC = () => {
   )
 }
 
-const FeaturesSection = () => {
+const BuildTrustlessSection: React.FC = () => {
   const { t: translate } = useTranslation('homepage')
 
   return (
-    <section className="bg-white px-2 pt-16 pb-4 lg:pt-28 lg:pt-8">
-      <h2 className="text-center text-2xl font-normal font-bold uppercase sm:text-3xl xl:text-4xl">
-        {translate('features_subheading')}
-      </h2>
-      <h3 className="mt-4 text-center text-3xl font-bold sm:text-4xl xl:text-5xl">
-        {translate('features_heading')}
-      </h3>
-      <p className="text-md mx-auto mt-6 max-w-7xl text-center text-gray-800 sm:text-lg lg:text-xl xl:text-2xl">
-        {translate('features_description')}
-      </p>
-      <div className="mx-auto mt-20 max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <dl className="space-y-10 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
-          {features.map((feature) => (
-            <div key={feature.i18nLabel}>
-              <dt>
-                <div className="flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
-                  <feature.icon className="h-6 w-6" aria-hidden="true" />
-                </div>
-                <p className="mt-5 flex h-12 w-full items-center justify-between text-lg font-medium leading-6 text-gray-900">
-                  <span>{translate(feature.i18nLabel)}</span>
-                  {feature.isPremium && (
-                    <span className="rounded bg-orange-400/50 px-3 py-1 text-sm font-bold uppercase">
-                      Premium
-                    </span>
-                  )}
-                </p>
-              </dt>
-              <dd className="mt-2 text-base text-gray-500">
-                {translate(feature.i18nDescription)}
-              </dd>
-            </div>
-          ))}
-        </dl>
-        <div className="flex justify-center lg:justify-end">
-          <Link
-            passHref
-            href="/features"
-            className="mt-12 flex items-center gap-x-2 text-right"
+    <section className="grid grid-cols-12">
+      <div className="hubot-sans2 col-span-8 col-start-3 text-8xl font-extrabold">
+        BUILD
+        <br />
+        TRUSTLESS
+      </div>
+      <div className="mona-sans2 col-span-8 col-start-3 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl">
+        <div className="text-center">Escrow Smart Contract</div>
+      </div>
+      <div className="relative col-span-1 col-start-4 h-24">
+        <div className="absolute bottom-0 right-0 h-3 w-3">
+          <svg
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            className="absolute inset-0 h-full w-full"
           >
-            {translate('features_more')}
-            <ArrowRightIcon className="h-5 w-5" />
-          </Link>
+            <path d="M 0 0 L 100 100" stroke="black" strokeWidth="16" />
+          </svg>
         </div>
+      </div>
+      <div className="relative col-span-1 col-start-5 h-24 border-l-[2px] border-r-[2px] border-black">
+        <div className="absolute bottom-0 left-0 h-3 w-3">
+          <svg
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            className="absolute inset-0 h-full w-full"
+          >
+            <path d="M 0 100 L 100 0" stroke="black" strokeWidth="16" />
+          </svg>
+        </div>
+        <div className="absolute right-0 h-3 w-3">
+          <svg
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            className="absolute inset-0 h-full w-full"
+          >
+            <path d="M 0 100 L 100 0" stroke="black" strokeWidth="16" />
+          </svg>
+        </div>
+      </div>
+      <div className="relative col-span-1 col-start-6 h-24">
+        <div className="absolute h-3 w-3">
+          <svg
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            className="absolute inset-0 h-full w-full"
+          >
+            <path d="M 0 0 L 100 100" stroke="black" strokeWidth="16" />
+          </svg>
+        </div>
+      </div>
+      <div className="mona-sans2 col-span-8 col-start-3 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl">
+        <div className="text-center">Dispute Resolution</div>
       </div>
     </section>
   )
@@ -479,7 +485,10 @@ const Home: NextPageWithLayout = () => {
         <div className="h-[50vh]" />
         <BuildCheaperSection />
         <div className="h-[50vh]" />
+        <BuildTrustlessSection />
+        <div className="h-[50vh]" />
         <BlockchainAvailable />
+        <div className="h-[30vh]" />
         {/* <TestimonialSection n={10} slideInterval={3} /> */}
         {/*<BlogSection />*/}
         {/* <CTA /> */}
