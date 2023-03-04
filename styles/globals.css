@@ -28,6 +28,27 @@ html, body, #__next {
     background-size: calc(100% / 12) 100%;
 }
 
+@media screen and (max-width: 1024px) {
+    html, body, #__next {
+        background: linear-gradient(90deg,  #fdcece, white 1px);
+        background-size: calc(100% / 6) 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html, body, #__next {
+        background: linear-gradient(90deg,  #fdcece, white 1px);
+        background-size: calc(100% / 6) 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    html, body, #__next {
+        background: linear-gradient(90deg,  #fdcece, white 1px);
+        background-size: calc(100% / 4) 100%;
+    }
+}
+
 .hubot-sans {
     font-family: 'Hubot Sans', sans-serif;
     font-weight: 900;

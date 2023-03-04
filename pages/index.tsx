@@ -29,11 +29,11 @@ const HeroSection: React.FC = () => {
   return (
     <>
       <div className="mx-auto px-4 py-32 lg:-mt-[90px] lg:flex lg:h-screen lg:items-center">
-        <div className="mx-auto -mt-12 max-w-xl text-center">
-          <h1 className="hubot-sans text-6xl font-black tracking-tight text-gray-900 sm:text-6xl">
+        <div className="mx-auto -mt-12 text-center">
+          <h1 className="hubot-sans text-4xl font-black tracking-tight text-gray-900 sm:text-6xl">
             WEB3 DEVTOOL
           </h1>
-          <h2 className="mt-1 font-inter text-lg font-extralight leading-8 text-black">
+          <h2 className="mt-1 font-inter text-xs font-extralight leading-8 text-black sm:text-sm lg:text-lg">
             🏁The Fatest Way to Fix Github Issues 🐙 for Open Source Project 🦄
           </h2>
         </div>
@@ -46,21 +46,21 @@ const BuildFasterSection: React.FC = () => {
   const { t: translate } = useTranslation('homepage')
 
   return (
-    <section className="grid grid-cols-12">
-      <div className="hubot-sans2 col-span-4 col-start-3 row-span-3 border-[1px] border-r-0 border-black text-8xl font-extrabold">
+    <section className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12">
+      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-2xl text-4xl font-extrabold sm:col-span-2 sm:col-start-2 sm:row-span-3 sm:border-b-[1px] sm:border-r-0 md:col-span-2 md:col-start-2 md:row-span-3 md:text-5xl lg:col-span-4 lg:col-start-3 lg:row-span-3 lg:text-6xl">
         BUILD FASTER
       </div>
-      <div className="mona-sans col-span-4 border-[1px] border-b-0 border-black p-7 text-center text-3xl font-extrabold">
+      <div className="mona-sans col-span-4 border-[1px] border-b-0 border-black bg-white p-7 text-center font-extrabold sm:col-span-2 md:col-span-2 lg:col-span-4 lg:text-3xl">
         Give Economic 🤑
         <br />
         Incentives to Contribute
       </div>
-      <div className="mona-sans col-span-4 border-[1px] border-black p-7 text-center text-3xl font-extrabold">
+      <div className="mona-sans col-span-4 border-[1px] border-black bg-white p-7 text-center font-extrabold sm:col-span-2 md:col-span-2 lg:col-span-4 lg:text-3xl">
         Crowdsource the
         <br />
         Code Review 🧐
       </div>
-      <div className="mona-sans col-span-4 border-[1px]  border-t-0 border-black p-7 text-center text-3xl font-extrabold">
+      <div className="mona-sans col-span-4 border-[1px] border-t-0 border-black bg-white p-7 text-center font-extrabold sm:col-span-2 md:col-span-2 lg:col-span-4 lg:text-3xl">
         Pay Contributors
         <br />
         Automatically 🤖
