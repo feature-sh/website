@@ -73,11 +73,11 @@ const BuildCheaperSection: React.FC = () => {
   const { t: translate } = useTranslation('homepage')
 
   return (
-    <section className="grid min-h-[70vh] grid-cols-12 text-center">
-      <div className="hubot-sans2 col-span-8 col-start-3 border-[1px] border-b-0 border-black bg-white text-8xl font-extrabold">
+    <section className="grid min-h-[70vh] grid-cols-4 text-center sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12">
+      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-4xl font-extrabold sm:col-start-2 lg:col-span-8 lg:col-start-3 lg:text-8xl">
         BUILD CHEAPER
       </div>
-      <div className="mona-sans col-span-8 col-start-3 border-[1px] border-t-0 border-black bg-white text-6xl font-extrabold">
+      <div className="mona-sans col-span-4 border-[1px] border-t-0 border-black bg-white text-2xl font-extrabold sm:col-start-2 lg:col-span-8 lg:col-start-3 lg:text-6xl">
         Enjoy 0% Fee 😎
         <br />
         Peer-to-Peer Transaction
@@ -90,16 +90,14 @@ const BuildTrustlessSection: React.FC = () => {
   const { t: translate } = useTranslation('homepage')
 
   return (
-    <section className="grid grid-cols-12">
-      <div className="hubot-sans2 col-span-8 col-start-3 text-8xl font-extrabold">
-        BUILD
-        <br />
-        TRUSTLESS
+    <section className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12">
+      <div className="hubot-sans2 col-span-4 text-4xl font-extrabold sm:col-span-4 sm:col-start-2 sm:text-5xl md:text-6xl lg:col-span-8 lg:col-start-3 lg:text-8xl">
+        BUILD TRUSTLESS
       </div>
-      <div className="mona-sans2 col-span-8 col-start-3 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl">
+      <div className="mona-sans2 col-span-4 col-start-1 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl sm:col-start-2 lg:col-span-8 lg:col-start-3">
         <div className="text-center">Escrow Smart Contract</div>
       </div>
-      <div className="relative col-span-1 col-start-4 h-24">
+      <div className="relative col-span-1 col-start-1 h-24 sm:col-start-2 lg:col-start-4">
         <div className="absolute bottom-0 right-0 h-3 w-3">
           <svg
             viewBox="0 0 100 100"
@@ -110,7 +108,7 @@ const BuildTrustlessSection: React.FC = () => {
           </svg>
         </div>
       </div>
-      <div className="relative col-span-1 col-start-5 h-24 border-l-[2px] border-r-[2px] border-black">
+      <div className="relative col-span-1 col-start-2 h-24 border-l-[2px] border-r-[2px] border-black sm:col-start-3 lg:col-start-5">
         <div className="absolute bottom-0 left-0 h-3 w-3">
           <svg
             viewBox="0 0 100 100"
@@ -130,7 +128,7 @@ const BuildTrustlessSection: React.FC = () => {
           </svg>
         </div>
       </div>
-      <div className="relative col-span-1 col-start-6 h-24">
+      <div className="relative col-span-1 col-start-3 h-24 sm:col-start-4 lg:col-start-6">
         <div className="absolute h-3 w-3">
           <svg
             viewBox="0 0 100 100"
@@ -141,7 +139,7 @@ const BuildTrustlessSection: React.FC = () => {
           </svg>
         </div>
       </div>
-      <div className="mona-sans2 col-span-8 col-start-3 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl">
+      <div className="mona-sans2 col-span-4 col-start-1 col-start-3 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl sm:col-start-2 lg:col-span-8 lg:col-start-3">
         <div className="text-center">Dispute Resolution</div>
       </div>
     </section>
@@ -416,9 +414,9 @@ const BlockchainAvailable: React.FC = () => {
       <p className="text-center text-base font-semibold uppercase tracking-wider text-gray-600">
         Deployed on
       </p>
-      <div className="mt-6 grid grid-cols-1 bg-gray-50 md:grid-cols-12 lg:mt-8">
+      <div className="mt-6 grid grid-cols-1 sm:bg-gray-50 md:grid-cols-12 lg:mt-8">
         <div className="col-span-1 md:col-span-8 md:col-start-3">
-          <div className="flex h-20 w-full justify-between ">
+          <div className="flex h-20 w-full flex-col justify-between sm:flex-row ">
             <div className="flex-1 self-center">
               <img
                 className="contrast-240 m-auto w-[15rem] grayscale"
@@ -426,14 +424,14 @@ const BlockchainAvailable: React.FC = () => {
                 alt="Xdai logo"
               />
             </div>
-            <div className="flex-1 self-center">
+            <div className="mt-6 flex-1 self-center sm:mt-0">
               <img
                 className="m-auto w-[12.8rem] contrast-50  grayscale"
                 src="/polygon-logo.webp"
                 alt="Polygon logo"
               />
             </div>
-            <div className="flex-1 self-center">
+            <div className="mt-6 flex-1 self-center sm:mt-0">
               <img
                 className="contrast-70 m-auto w-[15rem] grayscale"
                 src="/arbitrum-logo.png"
