@@ -139,7 +139,7 @@ const BuildTrustlessSection: React.FC = () => {
           </svg>
         </div>
       </div>
-      <div className="mona-sans2 col-span-4 col-start-1 col-start-3 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl sm:col-start-2 lg:col-span-8 lg:col-start-3">
+      <div className="mona-sans2 col-span-4 col-start-1 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl sm:col-start-2 lg:col-span-8 lg:col-start-3">
         <div className="text-center">Dispute Resolution</div>
       </div>
     </section>
