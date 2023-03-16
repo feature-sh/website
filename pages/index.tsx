@@ -47,7 +47,7 @@ const BuildFasterSection: React.FC = () => {
 
   return (
     <section className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12">
-      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-2xl text-4xl font-extrabold sm:col-span-2 sm:col-start-2 sm:row-span-3 sm:border-b-[1px] sm:border-r-0 md:col-span-2 md:col-start-2 md:row-span-3 md:text-5xl lg:col-span-4 lg:col-start-3 lg:row-span-3 lg:text-6xl">
+      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-2xl font-extrabold sm:col-span-2 sm:text-2xl sm:col-start-2 sm:row-span-3 sm:border-b-[1px] sm:border-r-0 md:col-span-2 md:col-start-2 md:row-span-3 md:text-3xl lg:col-span-4 lg:col-start-3 lg:row-span-3 lg:text-4xl">
         {translate('build_faster_title_section')}
       </div>
       <div className="mona-sans col-span-4 border-[1px] border-b-0 border-black bg-white p-7 text-center font-extrabold sm:col-span-2 md:col-span-2 lg:col-span-4 lg:text-3xl">
@@ -74,7 +74,7 @@ const BuildCheaperSection: React.FC = () => {
 
   return (
     <section className="grid min-h-[70vh] grid-cols-4 text-center sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12">
-      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-4xl font-extrabold sm:col-start-2 lg:col-span-8 lg:col-start-3 lg:text-8xl">
+      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-4xl font-extrabold sm:col-start-2 lg:col-span-8 lg:col-start-3 lg:text-7xl">
         {translate('build_cheaper_title_section')}
       </div>
       <div className="mona-sans col-span-4 border-[1px] border-t-0 border-black bg-white text-2xl font-extrabold sm:col-start-2 lg:col-span-8 lg:col-start-3 lg:text-6xl">
@@ -91,7 +91,7 @@ const BuildTrustlessSection: React.FC = () => {
 
   return (
     <section className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12">
-      <div className="hubot-sans2 col-span-4 text-4xl font-extrabold sm:col-span-4 sm:col-start-2 sm:text-5xl md:text-6xl lg:col-span-8 lg:col-start-3 lg:text-8xl">
+      <div className="hubot-sans2 col-span-4 text-4xl font-extrabold sm:col-span-4 sm:col-start-2 sm:text-5xl md:text-6xl lg:col-span-8 lg:col-start-3 lg:text-7xl">
         {translate('build_trustless_title_section')}
       </div>
       <div className="mona-sans2 col-span-4 col-start-1 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl sm:col-start-2 lg:col-span-8 lg:col-start-3">
