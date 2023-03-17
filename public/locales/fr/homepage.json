@@ -1,17 +1,17 @@
 {
-  "title_h1": "OUTIL DE TRAVAIL WEB3",
-  "title_h2": "🏁La manière la plus rapide de résoudre les problèmes sur Github 🐙 pour les projets Open Source 🦄",
-  "build_faster_title_section": "CONSTRUIRE PLUS VITE",
+  "title_main": "DEVTOOL WEB3",
+  "subtitle_main": "🏁La manière la plus rapide de résoudre les problèmes sur Github 🐙 pour les projets Open Source 🦄",
+  "build_faster_title_section": "+ RAPIDE",
   "build_faster_text1_row1_section": "Accorder une aide économique 🤑",
   "build_faster_text1_row2_section": "Incitations à la contribution",
   "build_faster_text2_row1_section": "L'examen du code",
   "build_faster_text2_row2_section": "Par la communauté 🧐",
-  "build_faster_text3_row1_section": "Payer les cotisants",
+  "build_faster_text3_row1_section": "Payer les contributeurs",
   "build_faster_text3_row2_section": "Automatiquement 🤖",
-  "build_cheaper_title_section": "CONSTRUIRE MOINS CHER",
+  "build_cheaper_title_section": "- CHER",
   "build_cheaper_text_row1_section": "Bénéficier de 0 % de frais 😎",
   "build_cheaper_text_row2_section": "Transaction de pair à pair",
-  "build_trustless_title_section": "CONSTRUIRE SANS CONFIANCE",
+  "build_trustless_title_section": "+ CONFIANCE",
   "build_trustless_text1_section": "Contrat intelligent Escrow",
   "build_trustless_text2_section": "Résolution des litiges",
   "blockchain_available_title_section": "Déployée sur",
@@ -52,7 +52,7 @@
   "features_accounting_heading": "Comptabilité",
   "features_accounting_description": "La comptabilité est souvent une tâche pénible, d'autant plus s'il s'agit de cryptomonnaies, qui sont souvent très volatiles. Une interface simple calcule l'équivalent en euros et en dollars pour vous simplifier la vie.",
 
-  "features_more": "Plus de fonctionnalités",
+  "features_more": "Fonctionnalités",
 
   "testimonial_at": "à",
 

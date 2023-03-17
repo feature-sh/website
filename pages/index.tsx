@@ -31,10 +31,10 @@ const HeroSection: React.FC = () => {
       <div className="mx-auto px-4 py-32 lg:-mt-[90px] lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto -mt-12 text-center">
           <h1 className="hubot-sans text-4xl font-black tracking-tight text-gray-900 sm:text-6xl">
-          {translate('title_h1')}
+          {translate('title_main')}
           </h1>
           <h2 className="mt-1 font-inter text-xs font-extralight leading-8 text-black sm:text-sm lg:text-lg">
-            {translate('title_h2')}
+            {translate('subtitle_main')}
           </h2>
         </div>
       </div>
@@ -47,7 +47,7 @@ const BuildFasterSection: React.FC = () => {
 
   return (
     <section className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12">
-      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-2xl font-extrabold sm:col-span-2 sm:text-2xl sm:col-start-2 sm:row-span-3 sm:border-b-[1px] sm:border-r-0 md:col-span-2 md:col-start-2 md:row-span-3 md:text-3xl lg:col-span-4 lg:col-start-3 lg:row-span-3 lg:text-4xl">
+      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-4xl font-extrabold sm:col-span-2 sm:col-start-2 sm:row-span-3 sm:border-b-[1px] sm:border-r-0 md:col-span-2 md:col-start-2 md:row-span-3 lg:col-span-4 lg:col-start-3 lg:row-span-3 lg:text-6xl">
         {translate('build_faster_title_section')}
       </div>
       <div className="mona-sans col-span-4 border-[1px] border-b-0 border-black bg-white p-7 text-center font-extrabold sm:col-span-2 md:col-span-2 lg:col-span-4 lg:text-3xl">
@@ -74,7 +74,7 @@ const BuildCheaperSection: React.FC = () => {
 
   return (
     <section className="grid min-h-[70vh] grid-cols-4 text-center sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12">
-      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-4xl font-extrabold sm:col-start-2 lg:col-span-8 lg:col-start-3 lg:text-7xl">
+      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-4xl font-extrabold sm:col-start-2 sm:text-5xl md:text-6xl lg:col-span-8 lg:col-start-3 lg:text-7xl">
         {translate('build_cheaper_title_section')}
       </div>
       <div className="mona-sans col-span-4 border-[1px] border-t-0 border-black bg-white text-2xl font-extrabold sm:col-start-2 lg:col-span-8 lg:col-start-3 lg:text-6xl">
