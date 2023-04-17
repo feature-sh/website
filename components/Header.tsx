@@ -70,9 +70,9 @@ const Header: React.FC = () => {
           </Link>
         </div>
         <div className="-my-2 -mr-2 md:hidden">
-          <Popover.Button className="inline-flex items-center justify-center bg-black p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+          <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-black hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
             <span className="sr-only">Open menu</span>
-            <MenuIcon className="h-6 w-6" aria-hidden="true" />
+            <MenuIcon className="w-6 h-6" aria-hidden="true" />
           </Popover.Button>
         </div>
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
@@ -92,11 +92,17 @@ const Header: React.FC = () => {
               {translate('navitem_dashboard')}
             </Link>
             <Link
+              href="https://github.com/marketplace/feature-bot"
+              className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-black border border-transparent shadow-sm hover:bg-green-700"
+            >
+              {translate('navitem_sign_up')}
+            </Link>
+            {/* <Link
               href={process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'}
-              className="ml-8 inline-flex items-center justify-center border border-transparent bg-black px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-700"
+              className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-black border border-transparent shadow-sm hover:bg-green-700"
             >
               {translate('navitem_book')}
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
@@ -112,9 +118,9 @@ const Header: React.FC = () => {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 z-40 origin-top-right transform p-2 transition md:hidden"
+          className="absolute inset-x-0 top-0 z-40 p-2 transition origin-top-right transform md:hidden"
         >
-          <div className="divide-y-2 divide-gray-50 bg-black shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="bg-black divide-y-2 shadow-lg divide-gray-50 ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -126,9 +132,9 @@ const Header: React.FC = () => {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <XIcon className="w-6 h-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -138,11 +144,11 @@ const Header: React.FC = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="-m-3 flex items-center p-3 text-white hover:bg-gray-50 hover:text-black"
+                      className="flex items-center p-3 -m-3 text-white hover:bg-gray-50 hover:text-black"
                       passHref={true}
                     >
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center bg-indigo-500 text-white">
-                        <item.icon className="h-6 w-6" aria-hidden="true" />
+                      <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500">
+                        <item.icon className="w-6 h-6" aria-hidden="true" />
                       </div>
                       <div className="ml-4 text-base font-medium">
                         {item.name}
@@ -156,13 +162,13 @@ const Header: React.FC = () => {
               <div>
                 <a
                   href={process.env.NEXT_PUBLIC_CALENDAR_URL_BOOK_A_DEMO || '#'}
-                  className="flex w-full items-center justify-center border border-transparent bg-white px-4 py-2 text-base font-medium text-black shadow-sm hover:bg-yellow-500"
+                  className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-black bg-white border border-transparent shadow-sm hover:bg-yellow-500"
                 >
                   {translate('navitem_book')}
                 </a>
                 <Link
                   href="https://v1.dashboard.feature.sh"
-                  className="mt-5 block text-center text-indigo-600 hover:text-indigo-500"
+                  className="block mt-5 text-center text-indigo-600 hover:text-indigo-500"
                 >
                   Sign in
                 </Link>
