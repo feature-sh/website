@@ -31,10 +31,10 @@ const HeroSection: React.FC = () => {
       <div className="mx-auto px-4 py-32 lg:-mt-[90px] lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto -mt-12 text-center">
           <h1 className="hubot-sans text-4xl font-black tracking-tight text-gray-900 sm:text-6xl">
-            WEB3 DEVTOOL
+          {translate('title_main')}
           </h1>
           <h2 className="mt-1 font-inter text-xs font-extralight leading-8 text-black sm:text-sm lg:text-lg">
-            🏁The Fatest Way to Fix Github Issues 🐙 for Open Source Project 🦄
+            {translate('subtitle_main')}
           </h2>
         </div>
       </div>
@@ -47,23 +47,23 @@ const BuildFasterSection: React.FC = () => {
 
   return (
     <section className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12">
-      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-2xl text-4xl font-extrabold sm:col-span-2 sm:col-start-2 sm:row-span-3 sm:border-b-[1px] sm:border-r-0 md:col-span-2 md:col-start-2 md:row-span-3 md:text-5xl lg:col-span-4 lg:col-start-3 lg:row-span-3 lg:text-6xl">
-        BUILD FASTER
+      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-4xl font-extrabold sm:col-span-2 sm:col-start-2 sm:row-span-3 sm:border-b-[1px] sm:border-r-0 md:col-span-2 md:col-start-2 md:row-span-3 lg:col-span-4 lg:col-start-3 lg:row-span-3 lg:text-6xl">
+        {translate('build_faster_title_section')}
       </div>
       <div className="mona-sans col-span-4 border-[1px] border-b-0 border-black bg-white p-7 text-center font-extrabold sm:col-span-2 md:col-span-2 lg:col-span-4 lg:text-3xl">
-        Give Economic 🤑
+        {translate('build_faster_text1_row1_section')}
         <br />
-        Incentives to Contribute
+        {translate('build_faster_text1_row2_section')}
       </div>
       <div className="mona-sans col-span-4 border-[1px] border-black bg-white p-7 text-center font-extrabold sm:col-span-2 md:col-span-2 lg:col-span-4 lg:text-3xl">
-        Crowdsource the
+        {translate('build_faster_text2_row1_section')}
         <br />
-        Code Review 🧐
+        {translate('build_faster_text2_row2_section')}
       </div>
       <div className="mona-sans col-span-4 border-[1px] border-t-0 border-black bg-white p-7 text-center font-extrabold sm:col-span-2 md:col-span-2 lg:col-span-4 lg:text-3xl">
-        Pay Contributors
+        {translate('build_faster_text3_row1_section')}
         <br />
-        Automatically 🤖
+        {translate('build_faster_text3_row2_section')}
       </div>
     </section>
   )
@@ -74,13 +74,13 @@ const BuildCheaperSection: React.FC = () => {
 
   return (
     <section className="grid min-h-[70vh] grid-cols-4 text-center sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12">
-      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-4xl font-extrabold sm:col-start-2 lg:col-span-8 lg:col-start-3 lg:text-8xl">
-        BUILD CHEAPER
+      <div className="hubot-sans2 col-span-4 border-[1px] border-b-0 border-black bg-white text-4xl font-extrabold sm:col-start-2 sm:text-5xl md:text-6xl lg:col-span-8 lg:col-start-3 lg:text-7xl">
+        {translate('build_cheaper_title_section')}
       </div>
       <div className="mona-sans col-span-4 border-[1px] border-t-0 border-black bg-white text-2xl font-extrabold sm:col-start-2 lg:col-span-8 lg:col-start-3 lg:text-6xl">
-        Enjoy 0% Fee 😎
+        {translate('build_cheaper_text_row1_section')}
         <br />
-        Peer-to-Peer Transaction
+        {translate('build_cheaper_text_row2_section')}
       </div>
     </section>
   )
@@ -91,11 +91,11 @@ const BuildTrustlessSection: React.FC = () => {
 
   return (
     <section className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-12">
-      <div className="hubot-sans2 col-span-4 text-4xl font-extrabold sm:col-span-4 sm:col-start-2 sm:text-5xl md:text-6xl lg:col-span-8 lg:col-start-3 lg:text-8xl">
-        BUILD TRUSTLESS
+      <div className="hubot-sans2 col-span-4 text-4xl font-extrabold sm:col-span-4 sm:col-start-2 sm:text-5xl md:text-6xl lg:col-span-8 lg:col-start-3 lg:text-7xl">
+        {translate('build_trustless_title_section')}
       </div>
       <div className="mona-sans2 col-span-4 col-start-1 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl sm:col-start-2 lg:col-span-8 lg:col-start-3">
-        <div className="text-center">Escrow Smart Contract</div>
+        <div className="text-center">{translate('build_trustless_text1_section')}</div>
       </div>
       <div className="relative col-span-1 col-start-1 h-24 sm:col-start-2 lg:col-start-4">
         <div className="absolute bottom-0 right-0 h-3 w-3">
@@ -140,7 +140,7 @@ const BuildTrustlessSection: React.FC = () => {
         </div>
       </div>
       <div className="mona-sans2 col-span-4 col-start-1 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl sm:col-start-2 lg:col-span-8 lg:col-start-3">
-        <div className="text-center">Dispute Resolution</div>
+        <div className="text-center">{translate('build_trustless_text2_section')}</div>
       </div>
     </section>
   )
@@ -409,10 +409,12 @@ const BlogSection: React.FC = () => {
 }
 
 const BlockchainAvailable: React.FC = () => {
+  const { t: translate } = useTranslation('homepage')
+
   return (
     <section>
       <p className="text-center text-base font-semibold uppercase tracking-wider text-gray-600">
-        Deployed on
+        {translate('blockchain_available_title_section')}
       </p>
       <div className="mt-6 grid grid-cols-1 sm:bg-gray-50 md:grid-cols-12 lg:mt-8">
         <div className="col-span-1 md:col-span-8 md:col-start-3">
