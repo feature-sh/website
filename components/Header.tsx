@@ -57,6 +57,8 @@ const resources = [
   },
 ]
 
+const NEXT_PUBLIC_DASHBOARD_URL_LINK = process.env.NEXT_PUBLIC_DASHBOARD_URL_LINK
+
 const Header: React.FC = () => {
   const { t: translate } = useTranslation('header')
 
@@ -86,7 +88,7 @@ const Header: React.FC = () => {
           </Popover.Group>
           <div className="flex items-center md:ml-12">
             <Link
-              href="https://v1.dashboard.feature.sh"
+              href={NEXT_PUBLIC_DASHBOARD_URL_LINK || '#'}
               className="ml-8 text-base font-medium text-black hover:text-green-700"
             >
               {translate('navitem_dashboard')}
