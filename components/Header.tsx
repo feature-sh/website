@@ -169,7 +169,7 @@ const Header: React.FC = () => {
                   {translate('navitem_book')}
                 </a>
                 <Link
-                  href="https://v1.dashboard.feature.sh"
+                  href="https://dashboard.feature.sh"
                   className="block mt-5 text-center text-indigo-600 hover:text-indigo-500"
                 >
                   Sign in
