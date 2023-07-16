@@ -1,6 +1,6 @@
 # FEATURE
 
-The front-end for Feature.sh, built with [NextJS](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/).
+The front-end for [FEATURE.sh](https://feature.sh), built with [NextJS](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/).
 
 ## Development
 
