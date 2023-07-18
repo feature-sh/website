@@ -11,6 +11,7 @@ const FooterNav: React.FC<FooterProps> = ({ section }) => {
   const { t: translate } = useTranslation('footer')
 
   const navigation = {
+    /* FIXME: The Dune Analytics link because the data is broken */
     solutions: [
       {
         name: translate('footer_solutions_name_row1'),
@@ -23,10 +24,11 @@ const FooterNav: React.FC<FooterProps> = ({ section }) => {
       // { name: 'Pricing', href: '/pricing' },
     ],
     company: [
-      {
-        name: translate('footer_company_name_row1'),
-        href: 'https://dune.com/liljakun/Feature-Gnosis-Chain-(xDai)-usage',
-      },
+      /* FIXME: The Dune Analytics link because the data is broken */
+      // {
+      //   name: translate('footer_company_name_row1'),
+      //   href: 'https://dune.com/liljakun/Feature-Gnosis-Chain-(xDai)-usage',
+      // },
       { name: translate('footer_company_name_row2'), href: 'https://www.linkedin.com/company/feature-sh/' },
       // { name: 'Blog', href: '#' },
       // { name: 'Jobs', href: '#' },
@@ -138,20 +140,21 @@ const FooterNav: React.FC<FooterProps> = ({ section }) => {
       </div>
     break
 
-    case 'solutions':
-      content = <ul role="list" className="mt-4 space-y-4">
-        {navigation.solutions.map((item) => (
-          <li key={item.name}>
-            <a
-              href={item.href}
-              className="text-base text-gray-500 hover:text-gray-900"
-            >
-              {item.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-      break
+    /* FIXME: The Dune Analytics link because the data is broken */
+    // case 'solutions':
+    //   content = <ul role="list" className="mt-4 space-y-4">
+    //     {navigation.solutions.map((item) => (
+    //       <li key={item.name}>
+    //         <a
+    //           href={item.href}
+    //           className="text-base text-gray-500 hover:text-gray-900"
+    //         >
+    //           {item.name}
+    //         </a>
+    //       </li>
+    //     ))}
+    //   </ul>
+    //   break
 
     case 'support':
       content = <ul role="list" className="mt-4 space-y-4">
@@ -230,10 +233,11 @@ const Footer: React.FC = () => {
           <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+                {/* FIXME: The Dune Analytics link because the data is broken */}
+                {/* <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
                   {translate('footer_solutions_title')}
                 </h3>
-                <FooterNav section="solutions" />
+                <FooterNav section="solutions" /> */}
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
