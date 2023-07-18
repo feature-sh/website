@@ -12,12 +12,12 @@ const FooterNav: React.FC<FooterProps> = ({ section }) => {
 
   const navigation = {
     /* FIXME: The Dune Analytics link because the data is broken */
-    solutions: [
-      {
-        name: translate('footer_solutions_name_row1'),
-        href: 'https://dune.com/liljakun/Feature-Gnosis-Chain-(xDai)-usage',
-      },
-    ],
+    // solutions: [
+    //   {
+    //     name: translate('footer_solutions_name_row1'),
+    //     href: 'https://dune.com/liljakun/Feature-Gnosis-Chain-(xDai)-usage',
+    //   },
+    // ],
     support: [
       { name: translate('footer_support_name_row1'), href: 'https://docs.feature.sh' },
       { name: translate('footer_support_name_row2'), href: 'https://airtable.com/shr0HOfBp18fPhQWL' },
