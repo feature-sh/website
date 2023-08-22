@@ -14,7 +14,7 @@ const FooterNav: React.FC<FooterProps> = ({ section }) => {
     solutions: [
       {
         name: translate('footer_solutions_name_row1'),
-        href: 'https://dune.com/liljakun/Feature-Gnosis-Chain-(xDai)-usage',
+        href: 'https://dune.com/blockchaindevweb/feature-gnosis-chain-xdai-usage',
       },
     ],
     support: [
@@ -23,10 +23,6 @@ const FooterNav: React.FC<FooterProps> = ({ section }) => {
       // { name: 'Pricing', href: '/pricing' },
     ],
     company: [
-      {
-        name: translate('footer_company_name_row1'),
-        href: 'https://dune.com/liljakun/Feature-Gnosis-Chain-(xDai)-usage',
-      },
       { name: translate('footer_company_name_row2'), href: 'https://www.linkedin.com/company/feature-sh/' },
       // { name: 'Blog', href: '#' },
       // { name: 'Jobs', href: '#' },
