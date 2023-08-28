@@ -16,21 +16,8 @@ import {
 } from '@heroicons/react/outline'
 import { BookOpenIcon } from '@heroicons/react/solid'
 
-const solutions = [
-  {
-    name: 'Product',
-    description:
-      'Get a better understanding of where your traffic is coming from.',
-    href: '/features',
-    icon: ViewGridIcon,
-  },
-  {
-    name: 'Docs',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: 'https://docs.feature.sh',
-    icon: BookOpenIcon,
-  },
-]
+const NEXT_PUBLIC_DASHBOARD_URL_LINK = process.env.NEXT_PUBLIC_DASHBOARD_URL_LINK
+
 const resources = [
   {
     name: 'Help Center',
@@ -57,10 +44,24 @@ const resources = [
   },
 ]
 
-const NEXT_PUBLIC_DASHBOARD_URL_LINK = process.env.NEXT_PUBLIC_DASHBOARD_URL_LINK
-
 const Header: React.FC = () => {
   const { t: translate } = useTranslation('header')
+
+  const solutions = [
+    {
+      name: translate('navitem_product'),
+      description:
+        'Get a better understanding of where your traffic is coming from.',
+      href: '/features',
+      icon: ViewGridIcon,
+    },
+    {
+      name: translate('navitem_docs'),
+      description: 'Speak directly to your customers in a more meaningful way.',
+      href: 'https://docs.feature.sh',
+      icon: BookOpenIcon,
+    },
+  ]
 
   return (
     <Popover>
@@ -169,10 +170,16 @@ const Header: React.FC = () => {
                   {translate('navitem_book')}
                 </a>
                 <Link
+                  href="https://github.com/marketplace/feature-bot"
+                  className="block mt-5 text-center text-indigo-600 hover:text-indigo-500"
+                >
+                  {translate('navitem_sign_up')}
+                </Link>
+                <Link
                   href="https://dashboard.feature.sh"
                   className="block mt-5 text-center text-indigo-600 hover:text-indigo-500"
                 >
-                  Sign in
+                  {translate('navitem_dashboard')}
                 </Link>
               </div>
             </div>
