@@ -1,6 +1,8 @@
 {
   "footer_solutions_title": "Solutions",
-  "footer_solutions_name_row1": "Analytiques",
+  "footer_solutions_name_row1": "Lightpaper",
+  "footer_solutions_name_row1_url": "https://raw.githubusercontent.com/feature-sh/whitepaper/fb31cd7fe79751c01d0b468c6d2009c592611708/fr/lightpaper/FEATURE.pdf",
+  "footer_solutions_name_row2": "Analytiques",
   "footer_support_title": "Support",
   "footer_support_name_row1": "Documentation",
   "footer_support_name_row2": "Aide",

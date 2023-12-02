@@ -14,16 +14,29 @@ const FooterNav: React.FC<FooterProps> = ({ section }) => {
     solutions: [
       {
         name: translate('footer_solutions_name_row1'),
+        href: translate('footer_solutions_name_row1_url'),
+      },
+      {
+        name: translate('footer_solutions_name_row2'),
         href: 'https://dune.com/blockchaindevweb/feature-gnosis-chain-xdai-usage',
       },
     ],
     support: [
-      { name: translate('footer_support_name_row1'), href: 'https://docs.feature.sh' },
-      { name: translate('footer_support_name_row2'), href: 'https://airtable.com/shr0HOfBp18fPhQWL' },
+      {
+        name: translate('footer_support_name_row1'),
+        href: 'https://docs.feature.sh',
+      },
+      {
+        name: translate('footer_support_name_row2'),
+        href: 'https://airtable.com/shr0HOfBp18fPhQWL',
+      },
       // { name: 'Pricing', href: '/pricing' },
     ],
     company: [
-      { name: translate('footer_company_name_row2'), href: 'https://www.linkedin.com/company/feature-sh/' },
+      {
+        name: translate('footer_company_name_row2'),
+        href: 'https://www.linkedin.com/company/feature-sh/',
+      },
       // { name: 'Blog', href: '#' },
       // { name: 'Jobs', href: '#' },
       // { name: 'Press', href: '#' },
@@ -120,80 +133,90 @@ const FooterNav: React.FC<FooterProps> = ({ section }) => {
 
   switch (section) {
     case 'social':
-      content = <div className="flex space-x-6">
-        {navigation.social.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            className="text-gray-400 hover:text-gray-500"
-          >
-            <span className="sr-only">{item.name}</span>
-            <item.icon className="h-6 w-6" aria-hidden="true" />
-          </a>
-        ))}
-      </div>
-    break
+      content = (
+        <div className="flex space-x-6">
+          {navigation.social.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-gray-400 hover:text-gray-500"
+            >
+              <span className="sr-only">{item.name}</span>
+              <item.icon className="h-6 w-6" aria-hidden="true" />
+            </a>
+          ))}
+        </div>
+      )
+      break
 
     case 'solutions':
-      content = <ul role="list" className="mt-4 space-y-4">
-        {navigation.solutions.map((item) => (
-          <li key={item.name}>
-            <a
-              href={item.href}
-              className="text-base text-gray-500 hover:text-gray-900"
-            >
-              {item.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+      content = (
+        <ul role="list" className="mt-4 space-y-4">
+          {navigation.solutions.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className="text-base text-gray-500 hover:text-gray-900"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
       break
 
     case 'support':
-      content = <ul role="list" className="mt-4 space-y-4">
-        {navigation.support.map((item) => (
-          <li key={item.name}>
-            <a
-              href={item.href}
-              className="text-base text-gray-500 hover:text-gray-900"
-            >
-              {item.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+      content = (
+        <ul role="list" className="mt-4 space-y-4">
+          {navigation.support.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className="text-base text-gray-500 hover:text-gray-900"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
       break
-    
+
     case 'company':
-      content = <ul role="list" className="mt-4 space-y-4">
-        {navigation.company.map((item) => (
-          <li key={item.name}>
-            <a
-              href={item.href}
-              className="text-base text-gray-500 hover:text-gray-900"
-            >
-              {item.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+      content = (
+        <ul role="list" className="mt-4 space-y-4">
+          {navigation.company.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className="text-base text-gray-500 hover:text-gray-900"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
       break
 
     case 'legal':
-      content = <ul role="list" className="mt-4 space-y-4">
-        {navigation.legal.map((item) => (
-          <li key={item.name}>
-            <a
-              href={item.href}
-              className="text-base text-gray-500 hover:text-gray-900"
-            >
-              {item.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+      content = (
+        <ul role="list" className="mt-4 space-y-4">
+          {navigation.legal.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className="text-base text-gray-500 hover:text-gray-900"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
       break
-    
+
     default:
       break
   }
@@ -233,7 +256,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
-                {translate('footer_support_title')}
+                  {translate('footer_support_title')}
                 </h3>
                 <FooterNav section="support" />
               </div>
