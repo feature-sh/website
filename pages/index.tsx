@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
       <div className="mx-auto px-4 py-32 lg:-mt-[90px] lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto -mt-12 text-center">
           <h1 className="hubot-sans text-4xl font-black tracking-tight text-gray-900 sm:text-6xl">
-          {translate('title_main')}
+            {translate('title_main')}
           </h1>
           <h2 className="mt-1 font-inter text-xs font-extralight leading-8 text-black sm:text-sm lg:text-lg">
             {translate('subtitle_main')}
@@ -95,7 +95,9 @@ const BuildTrustlessSection: React.FC = () => {
         {translate('build_trustless_title_section')}
       </div>
       <div className="mona-sans2 col-span-4 col-start-1 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl sm:col-start-2 lg:col-span-8 lg:col-start-3">
-        <div className="text-center">{translate('build_trustless_text1_section')}</div>
+        <div className="text-center">
+          {translate('build_trustless_text1_section')}
+        </div>
       </div>
       <div className="relative col-span-1 col-start-1 h-24 sm:col-start-2 lg:col-start-4">
         <div className="absolute bottom-0 right-0 h-3 w-3">
@@ -140,7 +142,9 @@ const BuildTrustlessSection: React.FC = () => {
         </div>
       </div>
       <div className="mona-sans2 col-span-4 col-start-1 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl sm:col-start-2 lg:col-span-8 lg:col-start-3">
-        <div className="text-center">{translate('build_trustless_text2_section')}</div>
+        <div className="text-center">
+          {translate('build_trustless_text2_section')}
+        </div>
       </div>
     </section>
   )
@@ -419,6 +423,17 @@ const BlockchainAvailable: React.FC = () => {
       <div className="mt-6 grid grid-cols-1 sm:bg-gray-50 md:grid-cols-12 lg:mt-8">
         <div className="col-span-1 md:col-span-8 md:col-start-3">
           <div className="flex h-20 w-full flex-col justify-between sm:flex-row ">
+            <div className="mt-6 flex-1 self-center sm:mt-0">
+              <img
+                className="contrast-70 m-auto w-[12rem] grayscale"
+                src="/celo-logo.png"
+                alt="Celo logo"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="col-span-1 md:col-span-8 md:col-start-3">
+          <div className="flex h-20 w-full flex-col justify-between sm:flex-row ">
             <div className="flex-1 self-center">
               <img
                 className="contrast-240 m-auto w-[15rem] grayscale"
@@ -428,7 +443,7 @@ const BlockchainAvailable: React.FC = () => {
             </div>
             <div className="mt-6 flex-1 self-center sm:mt-0">
               <img
-                className="m-auto w-[12.8rem] contrast-50  grayscale"
+                className="m-auto w-[12.8rem] contrast-50 grayscale"
                 src="/polygon-logo.webp"
                 alt="Polygon logo"
               />
