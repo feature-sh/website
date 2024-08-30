@@ -425,7 +425,21 @@ const BlockchainAvailable: React.FC = () => {
           <div className="flex h-20 w-full flex-col justify-between sm:flex-row ">
             <div className="mt-6 flex-1 self-center sm:mt-0">
               <img
-                className="contrast-70 m-auto w-[12rem] grayscale"
+                className="contrast-50 m-auto w-[12rem] grayscale"
+                src="/internet-computer-logo.png"
+                alt="Internet Computer logo"
+              />
+            </div>
+            <div className="mt-6 flex-1 self-center sm:mt-0">
+              <img
+                className="contrast-50 m-auto w-[16rem] grayscale"
+                src="/bitfinity-logo.png"
+                alt="Bitfinity logo"
+              />
+            </div>
+            <div className="mt-6 flex-1 self-center sm:mt-0">
+              <img
+                className="contrast-60 m-auto w-[10rem] grayscale"
                 src="/celo-logo.png"
                 alt="Celo logo"
               />
