@@ -420,56 +420,48 @@ const BlockchainAvailable: React.FC = () => {
       <p className="text-center text-base font-semibold uppercase tracking-wider text-gray-600">
         {translate('blockchain_available_title_section')}
       </p>
-      <div className="mt-6 grid grid-cols-1 sm:bg-gray-50 md:grid-cols-12 lg:mt-8">
-        <div className="col-span-1 md:col-span-8 md:col-start-3">
-          <div className="flex h-20 w-full flex-col justify-between sm:flex-row ">
-            <div className="mt-6 flex-1 self-center sm:mt-0">
-              <img
-                className="contrast-50 m-auto w-[12rem] grayscale"
-                src="/internet-computer-logo.png"
-                alt="Internet Computer logo"
-              />
-            </div>
-            <div className="mt-6 flex-1 self-center sm:mt-0">
-              <img
-                className="contrast-50 m-auto w-[16rem] grayscale"
-                src="/bitfinity-logo.png"
-                alt="Bitfinity logo"
-              />
-            </div>
-            <div className="mt-6 flex-1 self-center sm:mt-0">
-              <img
-                className="contrast-60 m-auto w-[10rem] grayscale"
-                src="/celo-logo.png"
-                alt="Celo logo"
-              />
-            </div>
-          </div>
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 lg:mt-8 gap-4">
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-50 grayscale object-contain px-12 py-4"
+            src="/internet-computer-logo.png"
+            alt="Internet Computer logo"
+          />
         </div>
-        <div className="col-span-1 md:col-span-8 md:col-start-3">
-          <div className="flex h-20 w-full flex-col justify-between sm:flex-row ">
-            <div className="flex-1 self-center">
-              <img
-                className="contrast-240 m-auto w-[15rem] grayscale"
-                src="/xdai-logo.png"
-                alt="Xdai logo"
-              />
-            </div>
-            <div className="mt-6 flex-1 self-center sm:mt-0">
-              <img
-                className="m-auto w-[12.8rem] contrast-50 grayscale"
-                src="/polygon-logo.webp"
-                alt="Polygon logo"
-              />
-            </div>
-            <div className="mt-6 flex-1 self-center sm:mt-0">
-              <img
-                className="contrast-70 m-auto w-[15rem] grayscale"
-                src="/arbitrum-logo.png"
-                alt="Arbitrum logo"
-              />
-            </div>
-          </div>
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-50 grayscale object-contain px-10 py-4"
+            src="/bitfinity-logo.png"
+            alt="Bitfinity logo"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-50 grayscale object-contain px-24 py-4"
+            src="/celo-logo.png"
+            alt="Celo logo"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-240 grayscale object-contain px-12 py-4"
+            src="/xdai-logo.png"
+            alt="Xdai logo"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-50 grayscale object-contain px-12 py-4"
+            src="/polygon-logo.webp"
+            alt="Polygon logo"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-70 grayscale object-contain px-12 py-4"
+            src="/arbitrum-logo.png"
+            alt="Arbitrum logo"
+          />
         </div>
       </div>
     </section>
