@@ -7,11 +7,12 @@
   "footer_support_name_row1": "Documentation",
   "footer_support_name_row2": "Help",
   "footer_company_title": "Company",
-  "footer_company_name_row1": "Analytics",
-  "footer_company_name_row2": "About",
+  "footer_company_name_row1": "About",
+  "footer_company_name_row2": "Brandkit",
   "footer_legal_title": "Legal",
   "footer_legal_name_row1": "Policy",
 
+  "footer_language_switcher": "Choose language:",
   "language_french": "French",
   "language_english": "English",
 

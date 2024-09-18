@@ -34,8 +34,12 @@ const FooterNav: React.FC<FooterProps> = ({ section }) => {
     ],
     company: [
       {
-        name: translate('footer_company_name_row2'),
+        name: translate('footer_company_name_row1'),
         href: 'https://www.linkedin.com/company/feature-sh/',
+      },
+      {
+        name: translate('footer_company_name_row2'),
+        href: 'https://www.figma.com/design/lDV8mdvtiR8gwnO9JjveiF/FEATURE---BRANDING-KIT',
       },
       // { name: 'Blog', href: '#' },
       // { name: 'Jobs', href: '#' },
@@ -274,6 +278,9 @@ const Footer: React.FC = () => {
                 </h3>
                 <FooterNav section="legal" />
                 <div className="mt-14">
+                  <label className="text-base text-gray-500">
+                    {translate('footer_language_switcher')}
+                  </label>
                   <LanguageSwitcher languages={languages} hasIcon={false} />
                 </div>
               </div>
