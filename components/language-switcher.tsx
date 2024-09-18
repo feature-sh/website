@@ -27,7 +27,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   }
 
   return (
-    <div className={'flex items-center gap-x-2'}>
+    <div className="flex items-center gap-x-2 text-gray-500">
       {hasIcon && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
                           classNames(
                             active
                               ? 'bg-yellow-500 text-white'
-                              : 'text-gray-900',
+                              : 'text-gray-500',
                             'relative cursor-default select-none py-2 pl-8 pr-4'
                           )
                         }

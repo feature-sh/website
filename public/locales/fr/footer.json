@@ -7,11 +7,12 @@
   "footer_support_name_row1": "Documentation",
   "footer_support_name_row2": "Aide",
   "footer_company_title": "Entreprise",
-  "footer_company_name_row1": "Analyse",
-  "footer_company_name_row2": "À propos",
+  "footer_company_name_row1": "À propos",
+  "footer_company_name_row2": "Kit de marque",
   "footer_legal_title": "Juridique",
   "footer_legal_name_row1": "Politique",
 
+  "footer_language_switcher": "Choisir la langue :",
   "language_french": "Français",
   "language_english": "Anglais",
 
