@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
       <div className="mx-auto px-4 py-32 lg:-mt-[90px] lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto -mt-12 text-center">
           <h1 className="hubot-sans text-4xl font-black tracking-tight text-gray-900 sm:text-6xl">
-          {translate('title_main')}
+            {translate('title_main')}
           </h1>
           <h2 className="mt-1 font-inter text-xs font-extralight leading-8 text-black sm:text-sm lg:text-lg">
             {translate('subtitle_main')}
@@ -95,7 +95,9 @@ const BuildTrustlessSection: React.FC = () => {
         {translate('build_trustless_title_section')}
       </div>
       <div className="mona-sans2 col-span-4 col-start-1 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl sm:col-start-2 lg:col-span-8 lg:col-start-3">
-        <div className="text-center">{translate('build_trustless_text1_section')}</div>
+        <div className="text-center">
+          {translate('build_trustless_text1_section')}
+        </div>
       </div>
       <div className="relative col-span-1 col-start-1 h-24 sm:col-start-2 lg:col-start-4">
         <div className="absolute bottom-0 right-0 h-3 w-3">
@@ -140,7 +142,9 @@ const BuildTrustlessSection: React.FC = () => {
         </div>
       </div>
       <div className="mona-sans2 col-span-4 col-start-1 flex h-40 items-center justify-center border-[1px] border-black bg-white text-3xl sm:col-start-2 lg:col-span-8 lg:col-start-3">
-        <div className="text-center">{translate('build_trustless_text2_section')}</div>
+        <div className="text-center">
+          {translate('build_trustless_text2_section')}
+        </div>
       </div>
     </section>
   )
@@ -416,31 +420,48 @@ const BlockchainAvailable: React.FC = () => {
       <p className="text-center text-base font-semibold uppercase tracking-wider text-gray-600">
         {translate('blockchain_available_title_section')}
       </p>
-      <div className="mt-6 grid grid-cols-1 sm:bg-gray-50 md:grid-cols-12 lg:mt-8">
-        <div className="col-span-1 md:col-span-8 md:col-start-3">
-          <div className="flex h-20 w-full flex-col justify-between sm:flex-row ">
-            <div className="flex-1 self-center">
-              <img
-                className="contrast-240 m-auto w-[15rem] grayscale"
-                src="/xdai-logo.png"
-                alt="Xdai logo"
-              />
-            </div>
-            <div className="mt-6 flex-1 self-center sm:mt-0">
-              <img
-                className="m-auto w-[12.8rem] contrast-50  grayscale"
-                src="/polygon-logo.webp"
-                alt="Polygon logo"
-              />
-            </div>
-            <div className="mt-6 flex-1 self-center sm:mt-0">
-              <img
-                className="contrast-70 m-auto w-[15rem] grayscale"
-                src="/arbitrum-logo.png"
-                alt="Arbitrum logo"
-              />
-            </div>
-          </div>
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 lg:mt-8 gap-4">
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-50 grayscale object-contain px-12 py-4"
+            src="/internet-computer-logo.png"
+            alt="Internet Computer logo"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-50 grayscale object-contain px-10 py-4"
+            src="/bitfinity-logo.png"
+            alt="Bitfinity logo"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-50 grayscale object-contain px-24 py-4"
+            src="/celo-logo.png"
+            alt="Celo logo"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-240 grayscale object-contain px-12 py-4"
+            src="/xdai-logo.png"
+            alt="Xdai logo"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-50 grayscale object-contain px-12 py-4"
+            src="/polygon-logo.webp"
+            alt="Polygon logo"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center">
+          <img
+            className="contrast-70 grayscale object-contain px-12 py-4"
+            src="/arbitrum-logo.png"
+            alt="Arbitrum logo"
+          />
         </div>
       </div>
     </section>
