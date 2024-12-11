@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Run Release Please
-        uses: google-github-actions/release-please-action@v4
+        uses: googleapis/release-please-action@v4
         with:
           release-type: node
           token: ${{ secrets.GHPROJECT_TOKEN }}
