@@ -80,7 +80,7 @@ const CongratulationsPage: NextPageWithLayout = () => {
               
               <div className="mt-6">
                 <Link
-                  href="https://github.com/apps/feature-sh"
+                  href="https://github.com/apps/feature-bot"
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
                 >
                   Install FEATURE GitHub App
