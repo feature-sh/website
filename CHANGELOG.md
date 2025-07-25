@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.1](https://github.com/feature-sh/website/compare/v1.0.0...v1.0.1) (2025-07-25)
+
+
+### Bug Fixes
+
+* link ([db085cc](https://github.com/feature-sh/website/commit/db085cca0e6d3665e7dd6386f8948888b3043c85))
+* typos ([993d397](https://github.com/feature-sh/website/commit/993d39756f9a235da58747d980fb2e75139c2a18))
+* typos ([98eebb0](https://github.com/feature-sh/website/commit/98eebb0f5c51deb2e480b97b3416453897df3a4c))
+
 ## 1.0.0 (2024-12-11)
 
 
