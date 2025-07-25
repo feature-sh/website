@@ -423,27 +423,6 @@ const BlockchainAvailable: React.FC = () => {
       <div className="mt-6 grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 lg:mt-8 gap-4">
         <div className="col-span-1 flex justify-center">
           <img
-            className="contrast-50 grayscale object-contain px-12 py-4"
-            src="/internet-computer-logo.png"
-            alt="Internet Computer logo"
-          />
-        </div>
-        <div className="col-span-1 flex justify-center">
-          <img
-            className="contrast-50 grayscale object-contain px-10 py-4"
-            src="/bitfinity-logo.png"
-            alt="Bitfinity logo"
-          />
-        </div>
-        <div className="col-span-1 flex justify-center">
-          <img
-            className="contrast-50 grayscale object-contain px-24 py-4"
-            src="/celo-logo.png"
-            alt="Celo logo"
-          />
-        </div>
-        <div className="col-span-1 flex justify-center">
-          <img
             className="contrast-240 grayscale object-contain px-12 py-4"
             src="/xdai-logo.png"
             alt="Xdai logo"

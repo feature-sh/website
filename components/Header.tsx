@@ -20,7 +20,7 @@ const Header: React.FC = () => {
       <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
           <Link passHref={true} href="/" className="flex">
-            <span className="sr-only">Feature</span>
+            <span className="sr-only">FEATURE</span>
             <Image src="/logo.svg" width={40} height={40} alt="FEATURE logo" />
           </Link>
         </div>
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
           <Popover.Group as="nav" className="flex space-x-10">
             <Link
-              href={NEXT_PUBLIC_GITHUB_DOCS_LINK || '#'}
+              href="/docs"
               className="ml-8 text-base font-medium text-black hover:text-green-700"
             >
               {translate('navitem_docs')}
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
                     src="/logo.svg"
                     width={40}
                     height={40}
-                    alt="feature's logo"
+                    alt="FEATURE's logo"
                   />
                 </div>
                 <div className="-mr-2">
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
               <div className="mt-6">
                 <nav className="grid justify-center gap-2">
                   <Link
-                    href={NEXT_PUBLIC_GITHUB_DOCS_LINK || '#'}
+                    href="/docs"
                     className="-m-3 flex items-center p-3 text-white hover:bg-gray-50 hover:text-black"
                     passHref={true}
                   >
